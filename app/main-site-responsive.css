@@ -42,7 +42,40 @@ img, video, svg, canvas { max-width: 100%; }
   .international-site .global-hero h1 { font-size: clamp(38px, 12vw, 46px); }
 }
 
-/* Wide desktop: keep the same centred 1180px column. */
+/* Large monitors: exactly like wishly.bd (container becomes 1320px from 1500px up).
+   The navbar and footer already use this width, so page content now lines up with them. */
 @media (min-width: 1500px) {
-  .international-site .global-hero { padding-top: 110px; padding-bottom: 110px; }
+  html body .international-site .global-wrap,
+  html body .global-wrap {
+    width: min(1320px, calc(100% - 96px)) !important;
+    max-width: 1320px !important;
+  }
 }
+
+/* Guide article pages: same reading column as the wishly.bd guides (about 1010px),
+   at every screen size, so the 1320px rule above does not stretch long text. */
+html body .international-site .global-wrap.global-guide-article,
+html body .international-site .global-wrap.global-guide-byline,
+html body .international-site .global-wrap.global-guide-faq,
+html body .international-site .global-wrap.global-guide-related {
+  width: min(1010px, calc(100% - 32px)) !important;
+  max-width: 1010px !important;
+}
+@media (max-width: 700px) {
+  html body .international-site .global-wrap.global-guide-article,
+  html body .international-site .global-wrap.global-guide-byline,
+  html body .international-site .global-wrap.global-guide-faq,
+  html body .international-site .global-wrap.global-guide-related { width: min(100% - 22px, 1010px) !important; }
+}
+
+/* Every page-level block fills the same container as the navbar and footer. */
+.international-site .global-wrap > .global-heading-row,
+.international-site .global-wrap > .global-page-hero,
+.international-site .global-page-cta,
+.international-site .global-about-cta,
+.international-site .global-about-main-site,
+.international-site .global-category-cta,
+.international-site .global-faq-more { width: 100%; max-width: none; box-sizing: border-box; }
+.international-site .global-guides-grid,
+.international-site .global-template-grid,
+.international-site .global-occasion-grid { width: 100%; max-width: none; }

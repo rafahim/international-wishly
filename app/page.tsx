@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TemplateCard from '@/components/TemplateCard';
+import HeroShowcase from '@/components/HeroShowcase';
 import JsonLd from '@/components/JsonLd';
 import { SITE, abs, appLink } from '@/lib/site';
 import { pageMeta } from '@/lib/seo';
@@ -52,27 +53,21 @@ export default function Home() {
           <div className="global-trust-line global-stats-line"><span><b>11+</b> ways to celebrate</span><span><b>53+</b> templates and more</span></div>
         </div>
 
-        <div className="global-hero-art global-hero-art-featured" aria-label="A real preview of a Wishly website template">
+        <div className="global-hero-art global-hero-art-featured" aria-label="An animated tour of how a Wishly page is made">
           <div className="global-browser-card global-browser-card-featured">
             <div className="global-browser-top"><span></span><span></span><span></span><b>WISHLY TEMPLATE PREVIEW</b></div>
             <div className="global-browser-content global-browser-content-featured">
               <div className="global-photo-frame global-photo-frame-featured">
-                <img
-                  src="/template-shots/a-little-birthday-letter.webp"
-                  alt="The Lavender Birthday Letter, an actual Wishly template preview"
-                  width="960"
-                  height="600"
-                  fetchPriority="high"
-                />
+                <HeroShowcase />
               </div>
             </div>
             <div className="global-hero-template-meta">
               <div>
-                <span>FROM THE WISHLY DESIGN LIBRARY</span>
-                <strong>The Lavender Birthday Letter</strong>
-                <small>A real template preview · Birthday</small>
+                <span>FROM IDEA TO SHAREABLE LINK</span>
+                <strong>Everything Wishly does, in one tour</strong>
+                <small>Design · Words · Photos · Music · Surprises · Publish</small>
               </div>
-              <Link href="/template/a-little-birthday-letter/" className="global-hero-template-link">View design <ArrowUpRight size={15} /></Link>
+              <Link href="/templates/" className="global-hero-template-link">Explore designs <ArrowUpRight size={15} /></Link>
             </div>
           </div>
         </div>

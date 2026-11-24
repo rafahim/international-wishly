@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, Check, Images, Mail, Music2, PenLine, Smartphone, Sparkles, type LucideIcon } from 'lucide-react';
+import { ArrowUpRight, Cake, CalendarHeart, Check, Church, Gem, HandHeart, Handshake, Heart, HeartHandshake, Images, Mail, MailOpen, Music2, PenLine, Smartphone, Sparkles, Users, type LucideIcon } from 'lucide-react';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -9,8 +9,9 @@ import JsonLd from '@/components/JsonLd';
 import { SITE, abs, appLink } from '@/lib/site';
 import { pageMeta } from '@/lib/seo';
 import { features, steps } from '@/lib/content';
-import { occasionList, templates, templatesFor, coverSrc } from '@/lib/templates';
+import { occasionList, templates } from '@/lib/templates';
 import { guides } from '@/lib/guides';
+import './occasion-strip.css';
 
 export const metadata: Metadata = pageMeta({
   title: SITE.title,
@@ -21,7 +22,29 @@ export const metadata: Metadata = pageMeta({
 
 const featureIcons: Record<string, LucideIcon> = { pen: PenLine, images: Images, music: Music2, mail: Mail, phone: Smartphone, link: ArrowUpRight };
 
+// Occasion chips open the matching occasion page on the main Wishly website (wishly.bd).
+const feelings: [string, string, LucideIcon][] = [
+  ['birthday', 'Birthday', Cake],
+  ['proposal', 'Proposal', Gem],
+  ['wedding', 'Wedding', Church],
+  ['miss-you', 'Miss You', Heart],
+  ['sorry', 'Sorry', HeartHandshake],
+  ['letter', 'Letter', Mail],
+  ['best-friend', 'Best Friend', Handshake],
+  ['friendship', 'Friendship', Users],
+  ['anniversary', 'Anniversary', CalendarHeart],
+  ['thank-you', 'Thank You', HandHeart],
+  ['invitation', 'Invitation Cards', MailOpen],
+];
+
 export default function Home() {
+  const stats: [string, string][] = [
+    [`${templates.length}+`, 'ready-made templates and growing'],
+    [`${occasionList.length}+`, 'occasions, from birthdays to apologies'],
+    ['1 link', 'to share anywhere, no app needed'],
+    ['Mobile first', 'build and edit from your phone'],
+  ];
+
   const showcase = [
     ...templates.filter((template) => ['master', 'the-birthday-experience', 'wedding-proposal', 'love-letter', 'premium-sorry', 'our-love-map'].includes(template.slug)),
     ...templates,
@@ -73,29 +96,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="global-moments global-wrap" aria-labelledby="global-occasions-title">
-        <div className="global-occasion-heading">
-          <p className="global-overline">EXPLORE BY OCCASION</p>
-          <h2 id="global-occasions-title">Find an idea for every special moment.</h2>
-          <p>Start with the occasion. Explore designs and inspiration made for the people who matter.</p>
+      <section className="os-strip" aria-label="Wishly occasions">
+        <div className="os-stats global-wrap">
+          {stats.map(([big, small]) => <div key={small}><strong>{big}</strong><span>{small}</span></div>)}
         </div>
-        <div className="global-occasion-grid">
-          {['birthday', 'proposal', 'anniversary', 'wedding', 'friendship', 'letter'].map((key) => {
-            const occasion = occasionList.find((item) => item.key === key);
-            const template = templatesFor(key)[0];
-            if (!occasion || !template) return null;
-            const label = key === 'letter' ? 'Letters & Thank You' : key === 'proposal' ? 'Love & Proposal' : occasion.label;
-            return (
-              <Link href={`/templates/${key}/`} key={key} className="global-occasion-card">
-                <img src={coverSrc(template.slug)} alt={`${label} website inspiration`} width="960" height="600" loading="lazy" />
-                <span className="global-occasion-shade" />
-                <span className="global-occasion-card-copy"><b>{label}</b><small>{occasion.count} {occasion.count === 1 ? 'design' : 'designs'} to explore</small></span>
-                <span className="global-occasion-arrow"><ArrowUpRight size={17} /></span>
-              </Link>
-            );
-          })}
+        <div className="os-feel global-wrap">
+          <h2 className="os-feel-title">START WITH A FEELING</h2>
+          <ul className="os-chips">
+            {feelings.map(([key, label, Icon]) => (
+              <li key={key}>
+                <a href={appLink(`/templates/${key}`)}>
+                  <Icon size={19} strokeWidth={1.6} aria-hidden="true" />
+                  <span>{label}</span>
+                  <ArrowUpRight size={13} aria-hidden="true" />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="global-occasion-more"><Link href="/templates/" className="global-underlined-link">Explore all occasions <span>↗</span></Link></div>
       </section>
 
       <section className="global-template-section">

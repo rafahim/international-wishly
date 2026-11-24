@@ -185,7 +185,7 @@ body{font-family:var(--font-inter),Inter,Arial,sans-serif!important}
 .global-main-product-browser-bar i:nth-child(3){background:#686a7c;}
 .global-main-product-browser-bar span{margin-left:7px;}
 .global-main-product-browser img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:7px;}
-.global-main-product-sticker{position:absolute;right:-11px;bottom:18px;display:flex;gap:8px;align-items:center;padding:11px 14px;border:1px solid rgba(242,154,192,.36);border-radius:999px;background:#171321;color:#e8dce8;font-size:9px;letter-spacing:.12em;box-shadow:0 12px 30px rgba(0,0,0,.32);}
+.global-main-product-sticker{position:absolute;right:14px;bottom:18px;max-width:calc(100% - 28px);white-space:nowrap;display:flex;gap:8px;align-items:center;padding:11px 14px;border:1px solid rgba(242,154,192,.36);border-radius:999px;background:#171321;color:#e8dce8;font-size:9px;letter-spacing:.12em;box-shadow:0 12px 30px rgba(0,0,0,.32);}
 .global-main-product-sticker b{color:#f29ac0;}
 
 /* Every guide repeats the same plain-language route to the real Wishly product. */
@@ -220,7 +220,7 @@ body{font-family:var(--font-inter),Inter,Arial,sans-serif!important}
   .global-main-product-copy>p:not(.global-overline):not(.global-main-product-footnote){font-size:12px;}
   .global-main-product-points{grid-template-columns:1fr;gap:9px;margin:19px 0 22px;}
   .global-main-product-visual{width:96%;}
-  .global-main-product-sticker{right:-8px;bottom:9px;padding:9px 11px;font-size:8px;}
+  .global-main-product-sticker{right:10px;max-width:calc(100% - 20px);bottom:9px;padding:9px 11px;font-size:8px;}
   .global-guide-main-site{padding:22px 17px;margin-top:28px;margin-bottom:26px;}
   .global-guide-main-site-copy h2{font-size:30px;}
   .global-guide-main-site-copy>p:not(.global-overline){font-size:11px;}

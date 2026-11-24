@@ -35,7 +35,7 @@ img, video, svg, canvas { max-width: 100%; }
   .international-site .global-hero { padding-top: 50px; padding-bottom: 55px; }
   .international-site .global-template-section,
   .international-site .global-editorial { padding-block: 68px; }
-  .global-main-product-sticker { right: 6px; }
+  .global-main-product-sticker { right: 10px; }
 }
 
 @media (max-width: 360px) {

@@ -15,6 +15,7 @@ import './international.css';
 import './brand-theme.css';
 import './homepage-polish.css';
 import './hero-showcase.css';
+import './main-site-responsive.css';
 import { bnSans, inter } from './fonts';
 import JsonLd from '@/components/JsonLd';
 import { SITE } from '@/lib/site';

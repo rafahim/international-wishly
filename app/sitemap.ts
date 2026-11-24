@@ -9,6 +9,10 @@ export const dynamic = 'force-static';
 // Update this date whenever page content genuinely changes, so Google gets an honest lastmod.
 const LAST_UPDATED = new Date('2026-11-25T00:00:00Z');
 
+// Pexels image URLs carry query strings with raw "&" characters. Unescaped "&" is invalid XML and made
+// Google Search Console report a parsing error, so drop the query string (the bare image URL works).
+const sitemapImage = (src: string) => (src.startsWith('http') ? src.split('?')[0] : abs(src));
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const fixed: [string, number, 'weekly' | 'monthly'][] = [
     ['/', 1, 'weekly'],
@@ -31,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const guidePages = guides.map((guide) => ({
     url: abs(`/guides/${guide.slug}/`),
     ...(guide.updatedAt || guide.publishedAt ? { lastModified: new Date(`${guide.updatedAt || guide.publishedAt}T00:00:00Z`) } : {}),
-    images: [guideVisualFor(guide).src.startsWith('http') ? guideVisualFor(guide).src : abs(guideVisualFor(guide).src)],
+    images: [sitemapImage(guideVisualFor(guide).src)],
     changeFrequency: 'monthly' as const,
     priority: 0.72,
   }));

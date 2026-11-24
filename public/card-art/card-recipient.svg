@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A sealed envelope with a heart wax seal and a note addressed to one person">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2c1428"/><stop offset=".55" stop-color="#3a1a38"/><stop offset="1" stop-color="#1c1030"/></linearGradient>
+<radialGradient id="glow" cx=".5" cy=".55" r=".55"><stop offset="0" stop-color="#f04b9a" stop-opacity=".42"/><stop offset="1" stop-color="#f04b9a" stop-opacity="0"/></radialGradient>
+<linearGradient id="env" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7e3dc"/><stop offset="1" stop-color="#e7b9bd"/></linearGradient>
+<linearGradient id="flap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1cfcc"/><stop offset="1" stop-color="#dba2ae"/></linearGradient>
+<radialGradient id="wax" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#d9435f"/><stop offset=".6" stop-color="#a81f45"/><stop offset="1" stop-color="#6e1030"/></radialGradient>
+<linearGradient id="ph1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb199"/><stop offset="1" stop-color="#f04b9a"/></linearGradient>
+<linearGradient id="ph2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b6cff"/><stop offset="1" stop-color="#4cc9f0"/></linearGradient>
+<filter id="sh" filterUnits="userSpaceOnUse" x="-40" y="-40" width="600" height="500"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity=".45"/></filter>
+</defs>
+<rect width="520" height="420" fill="url(#bg)"/>
+<rect width="520" height="420" fill="url(#glow)"/>
+<path transform="translate(70 70) scale(0.9)" d="M0-10 2.2-2.2 10 0 2.2 2.2 0 10-2.2 2.2-10 0-2.2-2.2Z" fill="#ffd9e8" opacity="0.9"/><path transform="translate(450 60) scale(0.7)" d="M0-10 2.2-2.2 10 0 2.2 2.2 0 10-2.2 2.2-10 0-2.2-2.2Z" fill="#ffd9e8" opacity="0.7"/><path transform="translate(110 330) scale(0.6)" d="M0-10 2.2-2.2 10 0 2.2 2.2 0 10-2.2 2.2-10 0-2.2-2.2Z" fill="#ffd9e8" opacity="0.6"/><path transform="translate(470 300) scale(1.0)" d="M0-10 2.2-2.2 10 0 2.2 2.2 0 10-2.2 2.2-10 0-2.2-2.2Z" fill="#ffd9e8" opacity="0.85"/><path transform="translate(400 130) scale(0.5)" d="M0-10 2.2-2.2 10 0 2.2 2.2 0 10-2.2 2.2-10 0-2.2-2.2Z" fill="#ffd9e8" opacity="0.6"/><path transform="translate(60 200) scale(0.5)" d="M0-10 2.2-2.2 10 0 2.2 2.2 0 10-2.2 2.2-10 0-2.2-2.2Z" fill="#ffd9e8" opacity="0.5"/><path transform="translate(330 40) scale(0.6)" d="M0-10 2.2-2.2 10 0 2.2 2.2 0 10-2.2 2.2-10 0-2.2-2.2Z" fill="#ffd9e8" opacity="0.7"/>
+<!-- polaroids -->
+<g transform="rotate(-12 110 150)" filter="url(#sh)"><rect x="62" y="96" width="92" height="108" rx="4" fill="#fbf4f1"/><rect x="70" y="104" width="76" height="76" rx="2" fill="url(#ph1)"/><circle cx="108" cy="132" r="13" fill="#fff" opacity=".35"/><path d="M70 180 100 150 122 168 146 146V180Z" fill="#fff" opacity=".25"/></g>
+<g transform="rotate(10 420 170)" filter="url(#sh)"><rect x="372" y="116" width="92" height="108" rx="4" fill="#fbf4f1"/><rect x="380" y="124" width="76" height="76" rx="2" fill="url(#ph2)"/><circle cx="440" cy="146" r="9" fill="#fff" opacity=".4"/><path d="M380 200 410 166 430 186 456 160V200Z" fill="#fff" opacity=".22"/></g>
+<!-- note peeking out -->
+<g transform="rotate(-3 260 150)" filter="url(#sh)"><rect x="196" y="92" width="128" height="120" rx="5" fill="#fffaf6"/>
+<text x="260" y="140" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="12" letter-spacing="3" fill="#b08a8f">FOR</text>
+<text x="260" y="172" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="30" fill="#8e2f4f">Maya</text>
+<path d="M232 188h56" stroke="#e4c5c8" stroke-width="2" stroke-linecap="round"/></g>
+<!-- envelope -->
+<g filter="url(#sh)">
+<rect x="130" y="190" width="260" height="170" rx="10" fill="url(#env)"/>
+<path d="M130 200 260 292 390 200" fill="none" stroke="#d99aa7" stroke-width="1.5" opacity=".7"/>
+<path d="M130 350 232 268M390 350 288 268" stroke="#d99aa7" stroke-width="1.5" opacity=".55"/>
+<path d="M130 200Q130 190 140 190H380Q390 190 390 200L260 292Z" fill="url(#flap)"/>
+</g>
+<!-- wax seal -->
+<g filter="url(#sh)"><circle cx="260" cy="292" r="34" fill="url(#wax)"/><circle cx="260" cy="292" r="26" fill="none" stroke="#f08aa5" stroke-opacity=".4" stroke-width="1.5"/>
+<path d="M260 308c-14-9-22-17-22-26 0-7 5-12 11-12 5 0 9 3 11 7 2-4 6-7 11-7 6 0 11 5 11 12 0 9-8 17-22 26Z" fill="#ffd9e3" opacity=".92"/></g>
+</svg>

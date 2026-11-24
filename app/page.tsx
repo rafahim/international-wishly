@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, Cake, CalendarHeart, Check, Church, Gem, HandHeart, Handshake, Heart, HeartHandshake, Images, Mail, MailOpen, Music2, PenLine, Smartphone, Sparkles, Users, type LucideIcon } from 'lucide-react';
+import { ArrowUpRight, Cake, CalendarHeart, Check, Church, Gem, HandHeart, Handshake, Heart, HeartHandshake, Images, Mail, MailOpen, Music2, PenLine, Send, Smartphone, Sparkles, Users, type LucideIcon } from 'lucide-react';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -12,6 +12,7 @@ import { features, steps } from '@/lib/content';
 import { occasionList, templates } from '@/lib/templates';
 import { guides } from '@/lib/guides';
 import './occasion-strip.css';
+import './editorial-art.css';
 
 export const metadata: Metadata = pageMeta({
   title: SITE.title,
@@ -165,21 +166,18 @@ export default function Home() {
           <p>A personal web page lets a message arrive with a little atmosphere. It can open like a letter, reveal a memory or gather event details in one place. The design sets the scene; your words make it matter.</p>
           <Link href="/how-to-make-website/" className="global-underlined-link">See how the process works <span>↗</span></Link>
         </div>
-        <div className="global-editorial-cards">
-          <article className="global-editorial-card global-editorial-card-cream">
-            <span className="global-card-number">01</span>
-            <img className="global-editorial-card-image" src="/template-shots/love-letter.webp" alt="A real Wishly love letter template preview for one special recipient" width="960" height="600" loading="lazy" />
-            <div className="global-card-copy"><div className="global-card-icon">✳</div><h3>Made for one recipient</h3><p>Use a name, a shared memory and the details that would mean something to them.</p></div>
+        <div className="ea-cards">
+          <article className="ea-card ea-card-lead">
+            <div className="ea-art"><img src="/card-art/card-recipient.svg" alt="A sealed envelope with a heart wax seal and a note addressed to Maya" width="520" height="420" loading="lazy" decoding="async" /></div>
+            <div className="ea-copy"><span className="ea-ic"><Sparkles size={20} strokeWidth={1.75} aria-hidden="true" /></span><h3>Made for one recipient</h3><p>Use a name, a shared memory and the details that would mean something to them.</p></div>
           </article>
-          <article className="global-editorial-card global-editorial-card-blue">
-            <span className="global-card-number">02</span>
-            <img className="global-editorial-card-image" src="/template-shots/blue-sky-wedding-invitation.webp" alt="A digital wedding invitation template preview" width="960" height="600" loading="lazy" />
-            <div className="global-card-copy"><div className="global-card-icon">↗</div><h3>Easy to pass along</h3><p>Publish once and share the page by message, email or QR code where supported.</p></div>
+          <article className="ea-card">
+            <div className="ea-art"><img src="/card-art/card-share.svg" alt="A phone showing a shareable link and QR code" width="320" height="300" loading="lazy" decoding="async" /></div>
+            <div className="ea-copy"><span className="ea-ic"><Send size={19} strokeWidth={1.75} aria-hidden="true" /></span><h3>Easy to pass along</h3><p>Publish once and share the page by message, email or QR code where supported.</p></div>
           </article>
-          <article className="global-editorial-card global-editorial-card-peach">
-            <span className="global-card-number">03</span>
-            <img className="global-editorial-card-image" src="/template-shots/a-note-of-gratitude.webp" alt="A personalised gratitude page template with a message envelope" width="960" height="600" loading="lazy" />
-            <div className="global-card-copy"><div className="global-card-icon">♡</div><h3>Yours in the details</h3><p>Choose the mood, add your own photos and make the final message sound like you.</p></div>
+          <article className="ea-card">
+            <div className="ea-art"><img src="/card-art/card-details.svg" alt="A birthday page being customised with a photo, colours and a message" width="320" height="300" loading="lazy" decoding="async" /></div>
+            <div className="ea-copy"><span className="ea-ic"><Heart size={19} strokeWidth={1.75} aria-hidden="true" /></span><h3>Yours in the details</h3><p>Choose the mood, add your own photos and make the final message sound like you.</p></div>
           </article>
         </div>
       </section>

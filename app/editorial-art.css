@@ -1,0 +1,28 @@
+/* "A different kind of greeting": three cards with illustrated art panels. */
+.international-site .ea-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.international-site .ea-card {
+  position: relative; display: flex; overflow: hidden; min-width: 0;
+  border: 1px solid rgba(255,255,255,.10); border-radius: 22px;
+  background: linear-gradient(160deg, rgba(240,75,154,.07), rgba(139,108,255,.07)), #100f18;
+  transition: border-color .25s ease;
+}
+.international-site .ea-card:hover { border-color: rgba(240,75,154,.38); }
+.international-site .ea-card-lead { grid-column: 1 / -1; flex-direction: row; }
+.international-site .ea-card:not(.ea-card-lead) { flex-direction: column; }
+.ea-art { position: relative; margin: 10px; overflow: hidden; border-radius: 16px; background: #1a1230; }
+.ea-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ea-card-lead .ea-art { flex: 0 0 52%; min-height: 300px; }
+.ea-card:not(.ea-card-lead) .ea-art { aspect-ratio: 320 / 300; }
+.ea-copy { display: flex; flex-direction: column; justify-content: center; padding: 22px 26px 26px; }
+.ea-card-lead .ea-copy { padding: 26px 30px 26px 16px; }
+.ea-card:not(.ea-card-lead) .ea-copy { padding: 8px 24px 26px; }
+.ea-ic { display: inline-grid; place-items: center; width: 40px; height: 40px; margin-bottom: 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,.08); background: linear-gradient(145deg, rgba(240,75,154,.2), rgba(139,108,255,.16)); color: #f6a8cb; }
+.international-site .ea-copy h3 { margin: 0 0 8px; max-width: 280px; font: 500 clamp(22px, 2vw, 27px)/1.12 Georgia, "Times New Roman", serif; letter-spacing: -.03em; color: #f7f7fb; }
+.international-site .ea-copy p { margin: 0; max-width: 340px; font-size: 14px; line-height: 1.7; color: #b9bac7; }
+
+@media (max-width: 640px) {
+  .international-site .ea-cards { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .international-site .ea-card-lead { flex-direction: column; }
+  .ea-card-lead .ea-art { flex: none; height: 250px; min-height: 0; }
+  .ea-card-lead .ea-copy, .ea-card:not(.ea-card-lead) .ea-copy { padding: 8px 22px 24px; }
+}

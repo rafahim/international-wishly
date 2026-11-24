@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A page being customised with photo, colours and message">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a1330"/><stop offset="1" stop-color="#1a1238"/></linearGradient>
+<radialGradient id="glow" cx=".3" cy=".3" r=".7"><stop offset="0" stop-color="#f04b9a" stop-opacity=".35"/><stop offset="1" stop-color="#f04b9a" stop-opacity="0"/></radialGradient>
+<linearGradient id="ph" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb199"/><stop offset=".55" stop-color="#f04b9a"/><stop offset="1" stop-color="#8b6cff"/></linearGradient>
+<filter id="sh" filterUnits="userSpaceOnUse" x="-40" y="-40" width="400" height="380"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000" flood-opacity=".5"/></filter>
+</defs>
+<rect width="320" height="300" fill="url(#bg)"/><rect width="320" height="300" fill="url(#glow)"/>
+<!-- page card -->
+<g filter="url(#sh)" transform="rotate(-3 150 150)"><rect x="48" y="34" width="190" height="236" rx="14" fill="#fffaf6"/>
+<rect x="62" y="48" width="162" height="98" rx="8" fill="url(#ph)"/>
+<circle cx="190" cy="78" r="14" fill="#fff" opacity=".45"/><path d="M62 146 112 98 152 130 184 104 224 146Z" fill="#fff" opacity=".26"/>
+<text x="143" y="178" text-anchor="middle" font-family="Georgia,serif" font-size="17" fill="#3b1c3a">Happy birthday,</text>
+<text x="143" y="198" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="19" fill="#c2255c">Maya</text>
+<rect x="84" y="214" width="118" height="5" rx="2.5" fill="#e8d6d6"/><rect x="100" y="226" width="86" height="5" rx="2.5" fill="#e8d6d6"/><rect x="112" y="238" width="62" height="5" rx="2.5" fill="#e8d6d6"/></g>
+<!-- selection on title -->
+<g transform="rotate(-3 150 150)"><rect x="76" y="162" width="136" height="42" rx="2" fill="none" stroke="#8b6cff" stroke-width="1.6"/>
+<rect x="72" y="158" width="7" height="7" rx="1.5" fill="#fff" stroke="#8b6cff"/><rect x="209" y="158" width="7" height="7" rx="1.5" fill="#fff" stroke="#8b6cff"/><rect x="72" y="201" width="7" height="7" rx="1.5" fill="#fff" stroke="#8b6cff"/><rect x="209" y="201" width="7" height="7" rx="1.5" fill="#fff" stroke="#8b6cff"/></g>
+<!-- palette -->
+<g filter="url(#sh)"><rect x="214" y="70" width="86" height="116" rx="14" fill="#14111f" stroke="#ffffff" stroke-opacity=".14"/>
+<text x="228" y="92" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="9" fill="#a9a7b8" letter-spacing="1">COLOUR</text>
+<circle cx="234" cy="112" r="9" fill="#f04b9a"/><circle cx="234" cy="112" r="13" fill="none" stroke="#fff" stroke-width="1.6"/>
+<circle cx="266" cy="112" r="9" fill="#8b6cff"/><circle cx="234" cy="144" r="9" fill="#4cc9f0"/><circle cx="266" cy="144" r="9" fill="#ffb703"/>
+<rect x="226" y="162" width="62" height="16" rx="8" fill="#ffffff" fill-opacity=".08"/><text x="257" y="173.5" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#fff">Aa  Serif</text></g>
+<!-- pen -->
+<g transform="translate(236 214) rotate(35)" filter="url(#sh)"><rect x="0" y="0" width="12" height="62" rx="3" fill="#f6a8cb"/><rect x="0" y="0" width="12" height="12" rx="3" fill="#8b6cff"/><path d="M0 62h12L6 76Z" fill="#fff4e8"/><path d="M4 70h4l-2 6Z" fill="#3b1c3a"/></g>
+<path transform="translate(40 252)" d="M10 2c5-8 17 0 0 13C-7 2 5-6 10 2Z" fill="#f29ac0" opacity=".85"/>
+</svg>

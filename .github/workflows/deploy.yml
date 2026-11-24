@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+  NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://wishly.rafahim.com' }}
   NEXT_PUBLIC_APP_URL: https://wishly.bd
   NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
   NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ vars.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}
@@ -29,7 +29,7 @@ jobs:
         shell: bash
         run: |
           if [ -z "$NEXT_PUBLIC_SITE_URL" ]; then
-            echo "Set the GitHub Actions repository variable NEXT_PUBLIC_SITE_URL to the independent international domain before deploying."
+            echo "Set the GitHub Actions repository variable NEXT_PUBLIC_SITE_URL to https://wishly.rafahim.com before deploying."
             exit 1
           fi
           SITE_HOST="${NEXT_PUBLIC_SITE_URL#https://}"

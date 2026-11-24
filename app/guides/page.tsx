@@ -6,13 +6,13 @@ import { guides } from '@/lib/guides';
 
 export const metadata = pageMeta({
   title: 'Ideas & Guides for Personal Websites, Birthday Pages and Digital Letters',
-  description: 'Thoughtful ideas and practical guides for birthday websites, digital love letters and online proposal pages. Plan the message before choosing the design.',
+  description: 'International ideas and practical guides for birthday websites, romantic pages, digital love letters, anniversaries, proposals and online invitations. Learn how to plan a thoughtful page before choosing a design.',
   path: '/guides/',
 });
 
 export default function GuidesPage() {
   return (
-    <PageShell kicker="IDEAS & GUIDES" title="A few good ideas before you start." lead="Practical notes for making an occasion page feel personal. Start with the message, find the right mood and let the design do its part." path="/guides/" name="Ideas & guides" cta={false}>
+    <PageShell kicker="IDEAS & GUIDES" title="Ideas for birthday websites, love letters and personal pages." lead="Explore practical guides for birthday websites, romantic pages, digital love letters, anniversaries, proposals and invitations. Find the right words and plan the page before choosing a design." path="/guides/" name="Ideas & guides" cta={false}>
       <section className="global-wrap global-guides-grid">
         {guides.map((guide, index) => <article className="global-guide-card" key={guide.slug}>
           <span className="global-guide-index">0{index + 1}</span>

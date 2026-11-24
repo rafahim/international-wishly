@@ -1,53 +1,25 @@
-# Wishly International — public site and SEO guide
+# Wishly International Website
 
-This project is the international-facing discovery site for Wishly. It has its own visual identity, English editorial pages, occasion collections and practical guides. It is intentionally separate from the Wishly product application.
+Primary marketing/SEO domain: https://wishly.rafahim.com
+Product, login, signup, editor, dashboard, payments and template publishing: https://wishly.bd
 
-## What lives where
+## Brand alignment
+- Uses the same Wishly logo assets and pink/violet brand palette as the main Wishly.bd source.
+- Header follows the main Wishly navigation style, with **Try it free** and **Login** actions.
+- Main product actions and menu items not hosted on this international site route to wishly.bd with UTM attribution.
+- The homepage communicates **11+ ways to celebrate** and **53+ templates and more**, without treating those as a fixed catalogue limit.
 
-**This international site** contains the homepage, template catalogue, occasion pages, individual template information pages and editorial guides.
+## SEO content
+- 29 English-language guides targeting distinct international search intents.
+- Canonical URLs and Open Graph metadata use wishly.rafahim.com.
+- Sitemap and robots files are included; submit the sitemap in Google Search Console after deployment.
+- Search-volume values are not fabricated. Validate keyword demand with Google Search Console / Keyword Planner after launch.
 
-**https://wishly.bd** remains the only product destination. Login, signup, account profiles, editor, dashboard, payments, live demos, custom requests and published websites all open on wishly.bd. Outbound links include UTM parameters so traffic from this site can be attributed in analytics.
+## Deploy
+1. Keep the GitHub Pages custom domain as `wishly.rafahim.com` (the `public/CNAME` file is already set).
+2. Point the DNS for `wishly.rafahim.com` to the hosting provider serving this project and remove the old redirect to wishly.bd.
+3. Set `NEXT_PUBLIC_SITE_URL=https://wishly.rafahim.com` and `NEXT_PUBLIC_APP_URL=https://wishly.bd`.
+4. Configure the repository's build workflow and deploy.
+5. Verify canonical tags, sitemap, robots.txt, and the login/signup links after deployment.
 
-## Run locally
-
-```bash
-npm ci
-npm run dev
-```
-
-For a local build:
-
-```bash
-NEXT_PUBLIC_SITE_URL=https://your-international-domain.com npm run build
-```
-
-The Next.js static export is written to `./out` and can be deployed with GitHub Pages or another static host.
-
-## Important: choose an independent international domain before launch
-
-The supplied archive originally used `wishly.rafahim.com`. The currently published Wishly site says that the old `wishly.rafahim.com` address redirects to `wishly.bd`. A redirecting domain cannot serve this international site as a separate searchable destination.
-
-Before deploying, you can keep `wishly.rafahim.com` as the international hostname, but you must remove its current redirect to `wishly.bd` and point it to this static site instead. Alternatively, choose another independent domain. Do not host this public SEO site on the same exact hostname as the Wishly app.
-
-1. In `public/CNAME`, set the exact international hostname, without `https://` or a path. It currently contains `wishly.rafahim.com`.
-2. In GitHub repository **Settings → Secrets and variables → Actions → Variables**, create `NEXT_PUBLIC_SITE_URL` with the full canonical URL, for example `https://wishly.rafahim.com`.
-3. Point that hostname's DNS to GitHub Pages and add the same host in **Settings → Pages → Custom domain**. Remove any Cloudflare redirect/worker/page rule that sends it to `wishly.bd`. Enable HTTPS after GitHub provisions the certificate.
-4. The deployment workflow checks that `NEXT_PUBLIC_SITE_URL` and `public/CNAME` match. It intentionally stops if the domain has not been configured.
-
-The app destination can be changed with `NEXT_PUBLIC_APP_URL`, but it defaults to `https://wishly.bd` and should stay there unless the real Wishly app moves.
-
-## SEO and content notes
-
-- Canonical URLs and the sitemap use `NEXT_PUBLIC_SITE_URL`.
-- `robots.txt`, structured data, Open Graph metadata and page-level titles/descriptions are generated from the international site's URL.
-- `/guides/` contains original informational content about birthday website ideas, digital love letters and online proposal pages. These pages are designed to answer useful searches, not repeat the Wishly app homepage.
-- Occasion and template pages keep the existing template catalogue and preview images, but use rewritten international copy and link creation/demo actions to wishly.bd.
-- The site is English-first and identifies selected Bengali-language templates. It does not currently publish paired translated URLs, so no `hreflang` pairs are declared.
-
-After the domain is live, verify it in Google Search Console, submit `/sitemap.xml`, and connect a GA4 measurement ID through the `NEXT_PUBLIC_GA_ID` repository variable. Ranking and traffic depend on domain history, competition, backlinks, page quality and indexing; the redesign itself cannot guarantee a traffic volume or ranking position.
-
-## Optional GitHub Actions variables
-
-- `NEXT_PUBLIC_SITE_URL` — required; full public URL of the independent international domain.
-- `NEXT_PUBLIC_GA_ID` — optional GA4 measurement ID.
-- `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` — optional Google Search Console verification token.
+The uploaded Wishly.bd source archive was used as the reference for the logo, navigation component styling, and brand CSS. This package is a separate international marketing site; it does not copy the Wishly.bd account backend.

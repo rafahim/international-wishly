@@ -1,7 +1,7 @@
 /**
  * Public-facing international site configuration.
  * Keep the marketing site on its own domain; account and product flows remain on wishly.bd.
- * Set NEXT_PUBLIC_SITE_URL to the independent domain selected for the international launch.
+ * The international discovery site lives at wishly.rafahim.com; all product flows stay on wishly.bd.
  */
 const cleanUrl = (value: string) => value.replace(/\/$/, '');
 const publicUrl = cleanUrl(process.env.NEXT_PUBLIC_SITE_URL || 'https://wishly.rafahim.com');
@@ -13,9 +13,9 @@ export const SITE = {
   host: new URL(publicUrl).host,
   appUrl: cleanUrl(process.env.NEXT_PUBLIC_APP_URL || 'https://wishly.bd'),
   utmSource: 'international-site',
-  title: 'Personal Websites for Birthdays, Love Letters & Life Moments',
+  title: 'Birthday Website Maker & Personal Pages for Every Moment',
   description:
-    'Create a personal website for a birthday, proposal, anniversary, invitation or heartfelt note. Choose a design, add your memories and share one thoughtful link with anyone, anywhere.',
+    'Make a personal birthday website, romantic webpage, digital love letter or online invitation. Choose a template, add your own photos and message, then share one thoughtful link anywhere in the world.',
   ogImage: '/template-shots/the-birthday-experience.webp',
   social: ['https://www.instagram.com/wishly.bd_', 'https://www.facebook.com/wishlyhq'],
 } as const;

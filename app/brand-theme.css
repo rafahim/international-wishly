@@ -1,0 +1,41 @@
+/* Wishly.bd brand system applied to the international discovery site */
+:root {
+ color-scheme:dark !important;
+ --g-bg:#07070b; --g-paper:#0e0f15; --g-ink:#f7f7fb; --g-muted:#b4b6c2;
+ --g-line:rgba(255,255,255,.10); --g-blue:#f04b9a; --g-blue-dark:#8b6cff;
+ --g-orange:#f04b9a; --g-peach:rgba(240,75,154,.14); --g-green:rgba(139,108,255,.14);
+ --g-width:1180px;
+}
+html,body{background:#07070b!important;color:#f7f7fb!important;color-scheme:dark!important}
+body{font-family:var(--font-inter),var(--font-bn-sans),Inter,Arial,sans-serif!important}
+.international-site{background:#07070b!important;color:#f7f7fb!important}
+.international-site section{color:#f7f7fb}
+.international-site p,.international-site li{color:#b4b6c2}
+.international-site h1,.international-site h2,.international-site h3,.international-site strong{color:#f7f7fb}
+.international-site .global-overline,.international-site .section-kicker{color:#f29ac0!important}
+.international-site .global-paper-back,.international-site .global-browser-card,.international-site .global-art-note,
+.international-site .global-moment-list a,.international-site .global-template-grid>*,
+.international-site .global-guide-card,.international-site .global-feature-card,
+.international-site .global-step-card,.international-site .global-faq-item{
+ background:#0e0f15!important;border-color:rgba(255,255,255,.10)!important;color:#f7f7fb!important;
+}
+.international-site .global-button-primary,.international-site .global-nav-cta{
+ background:linear-gradient(135deg,#f04b9a,#8b6cff)!important;color:#fff!important;
+}
+.international-site .global-text-action,.international-site a:hover{color:#f29ac0}
+.global-login-pill{margin-left:2px;text-decoration:none}
+.global-login-pill .wp-av{width:30px;height:30px}
+.global-stats-line{margin-top:16px;gap:18px}
+.global-stats-line span{display:flex;align-items:center;gap:6px;color:#b4b6c2}
+.global-stats-line b{font-size:20px;color:#f29ac0}
+.global-mobile-menu{display:none}
+@media(max-width:900px){
+ .premium-nav-links{display:none!important}
+ .global-mobile-menu{display:inline-flex!important;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(255,255,255,.05);color:#fff}
+ .global-mobile-panel{position:absolute;top:calc(100% + 8px);left:12px;right:12px;z-index:500;display:grid;gap:6px;padding:14px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:#101018;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+ .global-mobile-panel>a,.global-mobile-account>a{padding:12px;border-radius:12px;color:#fff!important}
+ .global-mobile-account{display:flex;gap:8px;border-top:1px solid rgba(255,255,255,.1);padding-top:10px}
+ .global-mobile-account>a:last-child{background:linear-gradient(135deg,#f04b9a,#8b6cff)}
+ .global-nav-actions .nav-cta{min-height:38px;padding:0 13px}
+ .global-login-pill{display:none!important}
+}

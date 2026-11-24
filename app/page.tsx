@@ -49,12 +49,13 @@ export default function Home() {
         <div className="global-hero-copy">
           <p className="global-overline"><span className="global-overline-mark">✳</span> A PERSONAL PAGE FOR A MOMENT THAT MATTERS</p>
           <h1>A little website can say what a <em>message can’t.</em></h1>
-          <p className="global-hero-lead">Give a birthday wish, a love letter or an invitation its own place online. Choose a design, add the details only you know, and send one link to someone anywhere in the world.</p>
+          <p className="global-hero-lead">Use Wishly as a birthday website maker, a home for a digital love letter or a place to share an online invitation. Choose a template, add your own photos and words, then send one personal link to someone anywhere in the world.</p>
           <div className="global-hero-actions">
             <a href={appLink('/signup')} className="global-button global-button-primary">Make your first page <ArrowUpRight size={17} /></a>
             <Link href="/templates/" className="global-text-action">Find a design <span>↗</span></Link>
           </div>
           <div className="global-trust-line"><span><Check size={14} /> No coding</span><span><Check size={14} /> Opens in a browser</span><span><Check size={14} /> One shareable link</span></div>
+          <div className="global-trust-line global-stats-line"><span><b>11+</b> ways to celebrate</span><span><b>53+</b> templates and more</span></div>
         </div>
 
         <div className="global-hero-art" aria-label="A preview of a personalised birthday page">
@@ -74,8 +75,8 @@ export default function Home() {
 
       <section className="global-moments global-wrap" aria-label="Occasions">
         <div className="global-section-intro global-section-intro-inline">
-          <p className="global-overline">START WITH THE OCCASION</p>
-          <h2>What are you celebrating?</h2>
+          <p className="global-overline">MORE WAYS TO MAKE IT PERSONAL</p>
+          <h2>A growing collection for every kind of moment</h2>
         </div>
         <div className="global-moment-list">
           {occasionList.map((occasion) => {
@@ -107,7 +108,7 @@ export default function Home() {
               <h2>Start with a look. Make it yours.</h2>
               <p>Explore pages for different occasions and personalities. Preview a design first, then take the one you like into the Wishly editor.</p>
             </div>
-            <Link href="/templates/" className="global-underlined-link">Explore all {templates.length} designs <span>↗</span></Link>
+            <Link href="/templates/" className="global-underlined-link">Explore 53+ templates and more <span>↗</span></Link>
           </div>
           <div className="tc-grid global-template-grid">{showcase.map((template, index) => <TemplateCard key={template.slug} template={template} priority={index < 3} />)}</div>
         </div>
@@ -139,7 +140,7 @@ export default function Home() {
       <section className="global-wrap global-guide-promo">
         <div className="global-guide-promo-head"><p className="global-overline">NOT SURE WHERE TO BEGIN?</p><h2>A few ideas to get your words moving.</h2><Link className="global-underlined-link" href="/guides/">All ideas & guides <span>↗</span></Link></div>
         <div className="global-guide-promo-list">
-          {guides.map((guide) => <article key={guide.slug}><span>{guide.category}</span><h3><Link href={`/guides/${guide.slug}/`}>{guide.title}</Link></h3><Link href={`/guides/${guide.slug}/`} className="global-guide-arrow" aria-label={`Read ${guide.title}`}><ArrowUpRight size={17} /></Link></article>)}
+          {guides.slice(0, 4).map((guide) => <article key={guide.slug}><span>{guide.category}</span><h3><Link href={`/guides/${guide.slug}/`}>{guide.title}</Link></h3><Link href={`/guides/${guide.slug}/`} className="global-guide-arrow" aria-label={`Read ${guide.title}`}><ArrowUpRight size={17} /></Link></article>)}
         </div>
       </section>
 

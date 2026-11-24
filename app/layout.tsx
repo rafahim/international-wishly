@@ -2,6 +2,12 @@ import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import './globals.css';
 import './international.css';
+import './nav-premium.css';
+import './nav-profile.css';
+import './nav-luxe.css';
+import './responsive-fixes.css';
+import './tablet.css';
+import './brand-theme.css';
 import { bnSans, inter } from './fonts';
 import JsonLd from '@/components/JsonLd';
 import { SITE } from '@/lib/site';
@@ -19,7 +25,7 @@ export const metadata: Metadata = {
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } : undefined,
 };
 
-export const viewport: Viewport = { width: 'device-width', initialScale: 1, themeColor: '#f7f5ef' };
+export const viewport: Viewport = { width: 'device-width', initialScale: 1, themeColor: '#07070b' };
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -33,7 +39,7 @@ const GA = process.env.NEXT_PUBLIC_GA_ID;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${bnSans.variable}`} style={{ backgroundColor: '#f7f5ef', colorScheme: 'light' }}>
+    <html lang="en" className={`${inter.variable} ${bnSans.variable}`} style={{ backgroundColor: '#07070b', colorScheme: 'dark' }}>
       <body>
         <JsonLd data={structuredData} />
         {children}

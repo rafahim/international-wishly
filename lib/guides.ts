@@ -1,3 +1,4 @@
+import { additionalGuides } from './additional-guides';
 export type GuideSection = { heading: string; paragraphs: string[]; bullets?: string[] };
 export type Guide = {
   slug: string;
@@ -34,8 +35,8 @@ export const guides: Guide[] = [
     category: 'BIRTHDAYS',
     readTime: '5 MIN READ',
     title: '9 birthday website ideas that feel personal, not predictable',
-    seoTitle: '9 Birthday Website Ideas for a Personal Online Surprise',
-    description: 'Find thoughtful birthday website ideas, from a shared-memory timeline to a photo-led letter, and learn how to make a page feel like it was made for one person.',
+    seoTitle: '9 Birthday Website Ideas for a Personal Online',
+    description: 'Find thoughtful birthday website ideas, from a shared-memory timeline to a photo-led letter, and learn how to make a page feel like it was made for one.',
     intro: 'A birthday website does not have to be a giant production. The strongest ones usually begin with one real detail: a favourite place, a running joke, a photograph you both love or a sentence you have been meaning to say. Use these ideas as a starting point, then choose only the parts that fit the person.',
     sections: [
       { heading: '1. Build the page around one shared memory', paragraphs: ['Choose a moment that belongs to the two of you: the day you met, a trip that went slightly wrong, or an ordinary afternoon that became a favourite. Give that memory the opening scene and let the birthday message follow it.', 'A specific detail is more memorable than a generic birthday slogan. It also helps the recipient understand immediately why you made the page.'] },
@@ -66,7 +67,7 @@ export const guides: Guide[] = [
     category: 'LETTERS',
     readTime: '4 MIN READ',
     title: 'How to write a digital love letter that still feels like a letter',
-    seoTitle: 'How to Write a Digital Love Letter That Feels Personal',
+    seoTitle: 'How to Write a Digital Love Letter That Feels',
     description: 'A practical guide to writing a digital love letter: find one clear idea, use specific memories, choose a calm layout and make the ending feel sincere.',
     intro: 'A digital love letter can have animation, photographs or an envelope that opens on screen. But the design is only the setting. What makes it feel like a letter is the thought behind the words: a voice the recipient recognises, a memory they share and a message that does not sound copied from somewhere else.',
     sections: [
@@ -83,8 +84,8 @@ export const guides: Guide[] = [
   },
   {
     slug: 'online-proposal-website',
-    primaryKeyword: 'online proposal website',
-    supportingKeywords: ['proposal webpage', 'romantic online proposal', 'personal proposal page'],
+    primaryKeyword: 'private proposal website ideas',
+    supportingKeywords: ['private online proposal page', 'proposal website privacy', 'share a proposal page thoughtfully'],
     relatedGuides: ['proposal-website-ideas', 'digital-love-letter-website-ideas', 'anniversary-website-ideas'],
     faqs: [
       ['What is an online proposal website?', 'It is a personal webpage that uses a short story, photos or a letter to express a proposal or relationship question.'],
@@ -94,8 +95,8 @@ export const guides: Guide[] = [
     publishedAt: '2026-11-24', updatedAt: '2026-11-24',
     category: 'PROPOSALS',
     readTime: '5 MIN READ',
-    title: 'Planning an online proposal page? Start with the person, not the effect',
-    seoTitle: 'How to Plan an Online Proposal Website: A Thoughtful Guide',
+    title: 'Private proposal website ideas: make the moment feel comfortable',
+    seoTitle: 'How to Plan an Online Proposal Website: A',
     description: 'Plan an online proposal page with a personal story, a clear question, a design that suits the recipient and a considerate way to share the link.',
     intro: 'A proposal website can be a playful surprise or a quiet digital letter. There is no single correct style. The useful question is not how elaborate the reveal can be, but what would make the other person feel seen and comfortable in that moment.',
     sections: [
@@ -116,7 +117,7 @@ export const guides: Guide[] = [
     supportingKeywords: ['birthday website for her', 'online birthday surprise for girlfriend', 'romantic birthday webpage', 'personalized birthday page for girlfriend'],
     category: 'BIRTHDAYS', readTime: '6 MIN READ',
     title: 'How to make a birthday website for your girlfriend feel like her',
-    seoTitle: 'Birthday Website for Girlfriend: Ideas for a Personal Surprise',
+    seoTitle: 'Birthday Website for Girlfriend: Ideas for a',
     description: 'Plan a thoughtful birthday website for your girlfriend with shared memories, a personal note, a photo sequence and a design that matches her personality.',
     intro: 'A birthday website for your girlfriend can be romantic without feeling copied from a movie. The details that make it special are usually familiar ones: a place you both remember, a phrase she uses, a photograph that makes you laugh or something you have wanted to thank her for. Build the page around her, not around a list of effects.',
     sections: [
@@ -142,7 +143,7 @@ export const guides: Guide[] = [
     supportingKeywords: ['birthday website for him', 'birthday surprise website for boyfriend', 'online birthday gift for boyfriend', 'personal birthday webpage for him'],
     category: 'BIRTHDAYS', readTime: '5 MIN READ',
     title: 'Birthday website for your boyfriend: make the surprise sound like you',
-    seoTitle: 'Birthday Website for Boyfriend: Personal Surprise Ideas',
+    seoTitle: 'Birthday Website for Boyfriend: Personal Surprise',
     description: 'Create a birthday website for your boyfriend with inside jokes, favourite photos, a sincere message and a visual style that fits his personality.',
     intro: 'The best birthday website for your boyfriend is the one he recognises as yours. It might be funny, understated, romantic or full of little references that would mean nothing to anyone else. Decide what kind of reaction you hope to create, then build a short page around the details that make your relationship yours.',
     sections: [
@@ -164,12 +165,12 @@ export const guides: Guide[] = [
   },
   {
     slug: 'birthday-surprise-website-for-best-friend',
-    primaryKeyword: 'birthday website for best friend',
-    supportingKeywords: ['best friend birthday website ideas', 'online birthday surprise for friend', 'birthday webpage for a friend', 'funny birthday website'],
+    primaryKeyword: 'best friend birthday page ideas with inside jokes',
+    supportingKeywords: ['best friend birthday page inside jokes', 'friendship memory page', 'birthday website for close friend'],
     category: 'FRIENDSHIP', readTime: '5 MIN READ',
     title: 'A birthday website for your best friend: funny, specific and full of memories',
-    seoTitle: 'Birthday Website for Best Friend: Funny & Personal Ideas',
-    description: 'Make a birthday website for your best friend with shared jokes, memorable photos, a friendship timeline and a message that feels genuine.',
+    seoTitle: 'Best Friend Birthday Page Ideas Built on Inside Jokes',
+    description: 'Plan a best-friend birthday page around shared jokes, favourite photos and a friendship timeline. Use details only your friend will recognise.',
     intro: 'A best friend birthday surprise works best when it could only be for that person. You do not need a grand speech or a perfect collection of photographs. Use the moments that define your friendship: the joke that never gets old, the plan that went wrong, the small ritual you still keep or the reason you trust them.',
     sections: [
       { heading: 'Turn an inside joke into the first screen', paragraphs: ['Start with a phrase, nickname or reference your friend will recognise immediately. It gives the page a warm, funny opening and makes it feel different from a generic birthday card. If the joke needs a little explanation, add it as a caption later in the page.', 'Keep humour affectionate. The aim is to make your friend laugh and feel appreciated, not to embarrass them.'] },
@@ -190,12 +191,12 @@ export const guides: Guide[] = [
   },
   {
     slug: 'how-to-make-a-birthday-website',
-    primaryKeyword: 'how to make a birthday website',
-    supportingKeywords: ['birthday website maker', 'make a birthday webpage', 'create a birthday website online', 'birthday page builder'],
+    primaryKeyword: 'birthday website layout checklist',
+    supportingKeywords: ['birthday website sections', 'birthday page layout checklist', 'what to include on a birthday website'],
     category: 'HOW TO', readTime: '7 MIN READ',
-    title: 'How to make a birthday website: a practical step-by-step guide',
-    seoTitle: 'How to Make a Birthday Website: Step-by-Step Guide',
-    description: 'Learn how to make a birthday website from choosing a template to writing the message, adding photos, previewing on mobile and sharing the finished link.',
+    title: 'Birthday website layout checklist: what to include and where',
+    seoTitle: 'How to Make a Birthday Website: Step-by-Step',
+    description: 'Use this birthday website layout checklist to plan a clear opening, memory section, message and closing. See what to prepare before choosing a design.',
     intro: 'You do not need to know web design to make a birthday website. A template-led builder can give you the layout; your part is choosing the right experience and adding the details that make it personal. This guide walks through the decisions in the order that makes the process easier.',
     sections: [
       { heading: '1. Decide who the page is for and what it should do', paragraphs: ['A birthday page for a partner may be a romantic note; a page for a friend may be funny; a family page may focus on memories and gratitude. Write down the recipient, the tone and the one thing you most want them to remember. This small brief will help you choose a design.', 'Decide whether the page is a private surprise for one person or an invitation that several guests need to read. The audience changes what information belongs near the top.'] },
@@ -221,8 +222,8 @@ export const guides: Guide[] = [
     supportingKeywords: ['online birthday card maker', 'birthday ecard vs website', 'personalized birthday page', 'digital birthday greeting'],
     category: 'IDEAS', readTime: '5 MIN READ',
     title: 'Birthday website or digital birthday card: which suits the moment?',
-    seoTitle: 'Birthday Website vs Digital Birthday Card: What to Choose',
-    description: 'Compare a personal birthday website with a digital birthday card and choose based on the message, photos, interaction, audience and how you plan to share it.',
+    seoTitle: 'Birthday Website vs Digital Birthday Card: What to',
+    description: 'Compare a personal birthday website with a digital birthday card and choose based on the message, photos, interaction, audience and how you plan to.',
     intro: 'A digital birthday card and a birthday website both let you send a greeting online, but they solve slightly different problems. A card is usually a compact message with a design. A personal website can give the message more room, bring together several sections and create a small experience the recipient explores. Neither is automatically better.',
     sections: [
       { heading: 'Choose a digital birthday card for a quick greeting', paragraphs: ['An e-card is useful when you want to send a short message in a familiar format. It can be a good fit for colleagues, acquaintances, relatives or a large list of recipients, especially when you want one greeting that is easy to send by email or message.', 'Cards are often quicker to choose and may be easier to reuse for different people. The trade-off is that the experience is usually more compact, with less room for a longer story or several memories.'] },
@@ -242,11 +243,11 @@ export const guides: Guide[] = [
   },
   {
     slug: 'long-distance-birthday-surprise-ideas',
-    primaryKeyword: 'long distance birthday surprise ideas',
-    supportingKeywords: ['online birthday surprise for someone far away', 'birthday website long distance', 'virtual birthday gift ideas', 'birthday surprise across time zones'],
+    primaryKeyword: 'long distance birthday page planning',
+    supportingKeywords: ['birthday website across time zones', 'long distance birthday page', 'when to send a digital birthday gift'],
     category: 'LONG DISTANCE', readTime: '6 MIN READ',
-    title: 'Long-distance birthday surprise ideas that feel close across time zones',
-    seoTitle: 'Long-Distance Birthday Surprise Ideas for Someone Far Away',
+    title: 'Planning a long-distance birthday page across time zones',
+    seoTitle: 'Long-Distance Birthday Surprise Ideas for Someone',
     description: 'Plan a long-distance birthday surprise with a personal website, shared photos, voice notes, coordinated messages and considerate timing across time zones.',
     intro: 'When someone you care about lives far away, the hardest part of a birthday surprise is often not distance itself but timing. You want the message to arrive when they can enjoy it, the link to work on their phone and the gesture to feel personal rather than like a calendar notification. These ideas are designed to travel well.',
     sections: [
@@ -268,12 +269,12 @@ export const guides: Guide[] = [
   },
   {
     slug: 'how-to-write-birthday-website-message',
-    primaryKeyword: 'birthday website message ideas',
-    supportingKeywords: ['what to write on a birthday website', 'personal birthday message examples', 'birthday wish for someone special', 'birthday website wording'],
+    primaryKeyword: 'birthday website message structure',
+    supportingKeywords: ['birthday website opening line', 'birthday page message format', 'personal birthday website copy'],
     category: 'WRITING IDEAS', readTime: '6 MIN READ',
-    title: 'What to write on a birthday website: a simple message-writing guide',
-    seoTitle: 'What to Write on a Birthday Website: Message Ideas & Tips',
-    description: 'Find a clear structure for a personal birthday website message, with prompts for opening lines, shared memories, appreciation and a meaningful closing wish.',
+    title: 'Birthday website message structure: open, remember and close',
+    seoTitle: 'Birthday Website Message Structure: What to Write',
+    description: 'Use a simple structure for a birthday website message: a warm opening, one shared memory, a specific appreciation and a closing wish that sounds like you.',
     intro: 'A blank message box can be harder than choosing a template. The easiest way to write a birthday website message is to stop trying to sound impressive and start with what you know about the person. A clear structure can help you turn those thoughts into a note that feels natural.',
     sections: [
       { heading: 'Use a four-part message structure', bullets: ['Opening: say their name and why the page exists.', 'Memory: mention one moment you both remember.', 'Appreciation: name something you genuinely value about them.', 'Wish: close with a hope or plan for the year ahead.'], paragraphs: ['You can write this in four short paragraphs or combine it into one note. The structure is a starting point, not a formula you have to follow exactly.'] },
@@ -294,12 +295,12 @@ export const guides: Guide[] = [
   },
   {
     slug: 'anniversary-website-ideas',
-    primaryKeyword: 'anniversary website ideas',
-    supportingKeywords: ['anniversary website maker', 'anniversary webpage for couples', 'online anniversary surprise', 'personalized anniversary page'],
+    primaryKeyword: 'anniversary website timeline ideas',
+    supportingKeywords: ['anniversary photo timeline page', 'relationship milestone website', 'anniversary memory page layout'],
     category: 'ANNIVERSARIES', readTime: '6 MIN READ',
-    title: 'Anniversary website ideas: turn shared memories into a page',
-    seoTitle: 'Anniversary Website Ideas for a Personal Online Surprise',
-    description: 'Explore anniversary website ideas including a photo timeline, a letter, a map of meaningful places and a page that looks towards your next chapter.',
+    title: 'Anniversary website timeline ideas for shared memories',
+    seoTitle: 'Anniversary Website Timeline Ideas for Shared Memories',
+    description: 'Plan an anniversary website timeline with meaningful milestones, a small photo sequence and a note about the memories you want to carry forward.',
     intro: 'An anniversary website can be a small celebration of how a relationship has grown. Rather than trying to document every year, choose a few moments that explain what you value about the time you have shared. A page works best when it looks back with warmth and also gives the next chapter somewhere to begin.',
     sections: [
       { heading: 'Create a short timeline of meaningful moments', paragraphs: ['Choose three to five milestones: the first meeting, a favourite trip, a difficult season you navigated together or a day that became a family story. Add a date only when it helps the memory make sense. A timeline should feel like a path, not a complete archive.', 'Mix major milestones with everyday photographs. The ordinary moments can be the ones that feel most recognisable.'] },
@@ -320,12 +321,12 @@ export const guides: Guide[] = [
   },
   {
     slug: 'digital-love-letter-website-ideas',
-    primaryKeyword: 'digital love letter website ideas',
-    supportingKeywords: ['love letter website', 'romantic website for girlfriend', 'romantic website for boyfriend', 'online love letter page', 'personal love website'],
+    primaryKeyword: 'digital love letter page layout ideas',
+    supportingKeywords: ['digital love letter page design', 'online love letter layout', 'romantic letter page structure'],
     category: 'LOVE LETTERS', readTime: '6 MIN READ',
-    title: 'Digital love letter website ideas: six ways to give your words a home',
-    seoTitle: 'Digital Love Letter Website Ideas for a Romantic Page',
-    description: 'Find digital love letter website ideas including an envelope reveal, shared-memory timeline, photo journal, playlist note and a simple page for long-distance love.',
+    title: 'Digital love letter layout ideas: six ways to frame your words',
+    seoTitle: 'Digital Love Letter Page Layout Ideas',
+    description: 'Compare digital love letter layouts, from an envelope reveal to a photo journal. Choose a structure that gives the message room and stays easy to read.',
     intro: 'A digital love letter is more than a message typed onto a pretty background. It gives your words a setting and can bring together photographs, a sequence of memories or a small reveal. The strongest idea is the one that supports what you want to say without making the recipient work to find the message.',
     sections: [
       { heading: '1. An envelope that opens into a letter', paragraphs: ['Use an envelope or note-inspired visual as the first moment, then let the main message appear in a calm, readable section. This format suits a short letter, a thank-you or a message you have wanted to write for a while.', 'Keep the reveal simple. The recipient should be able to understand how to open it, and the letter should remain accessible if animation is unavailable.'] },
@@ -347,12 +348,12 @@ export const guides: Guide[] = [
   },
   {
     slug: 'proposal-website-ideas',
-    primaryKeyword: 'proposal website ideas',
+    primaryKeyword: 'proposal website reveal ideas',
     supportingKeywords: ['romantic proposal webpage', 'proposal website for girlfriend', 'proposal website for boyfriend', 'online proposal page'],
     category: 'PROPOSALS', readTime: '6 MIN READ',
     title: 'Seven proposal website ideas, from a quiet letter to a story-led reveal',
-    seoTitle: '7 Proposal Website Ideas for a Personal Question',
-    description: 'Explore proposal website ideas including a memory timeline, a letter, a photo journey and a simple final question, with tips for keeping the moment respectful.',
+    seoTitle: '7 Proposal Website Ideas for a Personal',
+    description: 'Explore proposal website ideas including a memory timeline, a letter, a photo journey and a simple final question, with tips for keeping the moment.',
     intro: 'A proposal page can be playful, romantic or understated. The format should reflect the person receiving it and the meaning of the question. Treat the webpage as a way to express yourself—not as a device that creates pressure or makes the other person feel they have to answer a certain way.',
     sections: [
       { heading: '1. A story of how it began', paragraphs: ['Use a few moments from the relationship to create a short sequence: the first conversation, a day you remember and something you have learned together. Keep the story accurate and avoid turning it into a long biography.', 'The final question should be easy to find. The story is context, not a maze the recipient has to complete.'] },
@@ -380,8 +381,8 @@ export const guides: Guide[] = [
     supportingKeywords: ['digital wedding invitation website', 'wedding invitation webpage', 'wedding website invitation ideas', 'shareable wedding invitation link'],
     category: 'WEDDINGS', readTime: '7 MIN READ',
     title: 'Online wedding invitation website checklist: details guests need first',
-    seoTitle: 'Online Wedding Invitation Website Checklist for Couples',
-    description: 'Plan an online wedding invitation website with the essential event details, schedule, location, RSVP instructions, accessibility checks and a clear shareable link.',
+    seoTitle: 'Online Wedding Invitation Website Checklist for',
+    description: 'Plan an online wedding invitation website with the essential event details, schedule, location, RSVP instructions, accessibility checks and a clear.',
     intro: 'An online wedding invitation website can give guests one place to find the details of your celebration. The design matters, but clarity matters more: guests should be able to confirm the date, understand where to go and know how to respond without searching through several messages.',
     sections: [
       { heading: 'Put the essential details near the top', bullets: ['Names of the couple or hosts.', 'Event date and local start time, including the time zone when relevant.', 'Venue name and full address.', 'Dress code or important arrival notes, if any.', 'A clear RSVP deadline and response method.'], paragraphs: ['Do not hide practical information behind decorative sections. Guests may open the invitation on a small phone screen while making plans.'] },
@@ -407,7 +408,7 @@ export const guides: Guide[] = [
     supportingKeywords: ['miss you webpage', 'long distance relationship website', 'online message for someone far away', 'digital miss you letter'],
     category: 'LONG DISTANCE', readTime: '5 MIN READ',
     title: 'A miss-you website for a long-distance relationship: what to include',
-    seoTitle: 'Miss-You Website for Long Distance: Personal Page Ideas',
+    seoTitle: 'Miss-You Website for Long Distance: Personal Page',
     description: 'Create a thoughtful miss-you website for someone far away with a shared memory, a short letter, photographs and a future plan that feels hopeful.',
     intro: 'When someone is far away, “I miss you” can feel too small for everything you want to say. A dedicated page can hold a photograph, a memory and a short letter in one place. Keep the experience gentle and honest: the goal is to help the other person feel close, not to make the distance feel heavier.',
     sections: [
@@ -429,12 +430,12 @@ export const guides: Guide[] = [
   },
   {
     slug: 'personal-website-for-someone-you-love',
-    primaryKeyword: 'make a website for someone you love',
-    supportingKeywords: ['personal website for someone special', 'website gift for someone', 'make a small personal website', 'personal webpage maker'],
+    primaryKeyword: 'personal website gift planning ideas',
+    supportingKeywords: ['personal website gift idea', 'digital gift page planning', 'website as a personal gift'],
     category: 'HOW TO', readTime: '6 MIN READ',
     title: 'How to make a small personal website for someone you love',
-    seoTitle: 'Make a Website for Someone You Love: A Personal Guide',
-    description: 'Learn how to make a small personal website for someone special, from choosing an occasion and template to writing content, checking privacy and sharing one link.',
+    seoTitle: 'Personal Website Gift Planning Ideas',
+    description: 'Plan a personal website as a digital gift: decide who it is for, which memories to include and how the recipient will open the page.',
     intro: 'A personal website can be a digital gift: a small place for a birthday wish, a letter, a thank-you or a shared memory. It does not need to be a full portfolio or a complicated project. Start with one person and one reason for making the page, then keep the experience focused on what you want them to receive.',
     sections: [
       { heading: 'Give the website one clear purpose', paragraphs: ['Decide whether you are making a birthday surprise, a romantic note, an anniversary page, an apology or an invitation. A clear purpose helps you decide what belongs on the page and what can be left out.', 'Write a one-sentence description of the page before you start. If you cannot explain what the recipient should take away, simplify the idea.'] },
@@ -456,12 +457,12 @@ export const guides: Guide[] = [
   },
   {
     slug: 'apology-website-how-to-say-sorry',
-    primaryKeyword: 'apology website message',
-    supportingKeywords: ['online apology letter', 'how to write a sincere apology message', 'sorry website ideas', 'digital apology page'],
+    primaryKeyword: 'apology website page structure',
+    supportingKeywords: ['apology page structure', 'online apology page sections', 'accountability message website'],
     category: 'APOLOGIES', readTime: '6 MIN READ',
-    title: 'An apology website should make room for accountability, not pressure',
-    seoTitle: 'Apology Website Message: How to Write a Sincere Online Apology',
-    description: 'Plan a sincere apology page by naming what happened, acknowledging its impact, taking responsibility and leaving room for the other person to respond.',
+    title: 'Apology website message examples built around accountability',
+    seoTitle: 'Apology Website Page Structure for an Honest Message',
+    description: 'Structure an apology page around responsibility, the impact of your actions, what you intend to change and room for the other person to respond.',
     intro: 'A designed apology can give your words a little more space, but the design cannot do the difficult part for you. A sincere apology names what happened, recognises its effect and explains what you intend to change. It should not ask the other person to forgive you on a deadline or make them responsible for reassuring you.',
     sections: [
       { heading: 'Check whether a message is welcome', paragraphs: ['Before sending a link, consider whether the person has asked for space or requested no contact. Respect that boundary. A carefully designed page is still an unwanted message if the recipient has made it clear they do not want to hear from you.', 'If contact is appropriate, use the channel the person is comfortable with and keep the introduction brief.'] },
@@ -482,11 +483,11 @@ export const guides: Guide[] = [
   },
   {
     slug: 'thank-you-website-ideas',
-    primaryKeyword: 'thank you website ideas',
-    supportingKeywords: ['online thank you page', 'personal thank you webpage', 'digital thank you message', 'thank you letter website'],
+    primaryKeyword: 'digital appreciation page ideas',
+    supportingKeywords: ['online appreciation page layout', 'personal gratitude page', 'thank-you message page ideas'],
     category: 'GRATITUDE', readTime: '5 MIN READ',
-    title: 'Thank-you website ideas for a gesture you want someone to remember',
-    seoTitle: 'Thank-You Website Ideas: A Personal Way to Show Gratitude',
+    title: 'Digital appreciation page ideas for a meaningful thank-you',
+    seoTitle: 'Thank-You Website Ideas: A Personal Way to Show',
     description: 'Make a personal thank-you website with a specific message, a meaningful photograph and a clear explanation of why someone’s kindness mattered.',
     intro: 'A thank-you page can be a small keepsake for a person whose help mattered. It might be for a friend who showed up, a teacher who encouraged you, a colleague who made work easier or a family member who did something thoughtful. The page does not need to be elaborate; gratitude feels genuine when it is specific.',
     sections: [
@@ -512,7 +513,7 @@ export const guides: Guide[] = [
     supportingKeywords: ['monthsary page maker', 'monthly anniversary website', 'monthsary message website', 'love page for monthsary'],
     category: 'ANNIVERSARIES', readTime: '5 MIN READ',
     title: 'Monthsary website ideas: mark the small milestones with a personal page',
-    seoTitle: 'Monthsary Website Ideas for a Monthly Anniversary Surprise',
+    seoTitle: 'Monthsary Website Ideas for a Monthly Anniversary',
     description: 'Plan a monthsary website with a short letter, a favourite photo, a small shared memory and a note about what you look forward to next.',
     intro: 'A monthsary is a small relationship milestone that some couples enjoy celebrating each month. A dedicated page can be a simple way to mark it without making every month feel like a major event. Keep the gesture light: one memory, one message and a little thought about the month ahead.',
     sections: [
@@ -532,8 +533,6 @@ export const guides: Guide[] = [
     ],
     publishedAt: '2026-11-24', updatedAt: '2026-11-24',
   },
-
-,
   {
     "slug": "birthday-website-for-mom",
     "primaryKeyword": "birthday website for mom",
@@ -546,7 +545,7 @@ export const guides: Guide[] = [
     "relatedGuides": [
       "birthday-website-ideas",
       "how-to-make-a-birthday-website",
-      "digital-love-letter-website"
+      "digital-love-letter-website-ideas"
     ],
     "faqs": [
       [
@@ -567,8 +566,8 @@ export const guides: Guide[] = [
     "category": "BIRTHDAYS",
     "readTime": "4 MIN READ",
     "title": "Birthday Website for Mom: Thoughtful Ideas She’ll Remember",
-    "seoTitle": "Birthday Website for Mom: Thoughtful Ideas She’ll Remember | Wishly",
-    "description": "Create a birthday website for your mom with family photos, a heartfelt letter, favourite memories and a personal birthday message. A simple guide to making it meaningful.",
+    "seoTitle": "Birthday Website for Mom: Thoughtful Ideas She’ll",
+    "description": "Create a birthday website for your mom with family photos, a heartfelt letter, favourite memories and a personal birthday message. A simple guide to.",
     "intro": "A birthday website for your mom can be a thoughtful way to gather family memories in one place. It does not need elaborate effects. Start with a warm welcome, choose photographs that tell a story, and write a message in your own voice.",
     "sections": [
       {
@@ -620,7 +619,7 @@ export const guides: Guide[] = [
     "relatedGuides": [
       "birthday-website-ideas",
       "how-to-make-a-birthday-website",
-      "digital-love-letter-website"
+      "digital-love-letter-website-ideas"
     ],
     "faqs": [
       [
@@ -641,7 +640,7 @@ export const guides: Guide[] = [
     "category": "BIRTHDAYS",
     "readTime": "4 MIN READ",
     "title": "Birthday Website for Dad: Personal Ideas and Message Inspiration",
-    "seoTitle": "Birthday Website for Dad: Personal Ideas and Message Inspiration | Wishly",
+    "seoTitle": "Birthday Website for Dad: Personal Ideas and",
     "description": "Make a birthday website for dad with family photos, stories, a favourite song and a message that feels genuine. Explore a simple planning guide.",
     "intro": "A birthday page for your dad works best when it reflects the details that make him himself. Collect family photographs, a few stories and one sincere message before choosing the design.",
     "sections": [
@@ -694,7 +693,7 @@ export const guides: Guide[] = [
     "relatedGuides": [
       "birthday-website-ideas",
       "how-to-make-a-birthday-website",
-      "digital-love-letter-website"
+      "digital-love-letter-website-ideas"
     ],
     "faqs": [
       [
@@ -715,7 +714,7 @@ export const guides: Guide[] = [
     "category": "ANNIVERSARIES",
     "readTime": "4 MIN READ",
     "title": "Long-Distance Anniversary Ideas: Make the Day Feel Close",
-    "seoTitle": "Long-Distance Anniversary Ideas: Make the Day Feel Close | Wishly",
+    "seoTitle": "Long-Distance Anniversary Ideas: Make the Day Feel",
     "description": "Discover thoughtful long-distance anniversary ideas, including a shared digital memory page, video message, online date and personal letter.",
     "intro": "Distance changes how you celebrate, but it does not have to make the day feel ordinary. Plan one shared moment across time zones and give your partner something personal to revisit.",
     "sections": [
@@ -768,7 +767,7 @@ export const guides: Guide[] = [
     "relatedGuides": [
       "birthday-website-ideas",
       "how-to-make-a-birthday-website",
-      "digital-love-letter-website"
+      "digital-love-letter-website-ideas"
     ],
     "faqs": [
       [
@@ -789,7 +788,7 @@ export const guides: Guide[] = [
     "category": "LOVE LETTERS",
     "readTime": "4 MIN READ",
     "title": "Digital Love Letter Examples and Ideas for a Personal Page",
-    "seoTitle": "Digital Love Letter Examples and Ideas for a Personal Page | Wishly",
+    "seoTitle": "Digital Love Letter Examples and Ideas for a",
     "description": "Find digital love letter examples, writing prompts and ideas for turning meaningful words, photos and memories into a shareable personal page.",
     "intro": "A digital love letter can be more than a block of text. Combine a clear opening, a few specific memories and a closing thought that sounds like you.",
     "sections": [
@@ -842,7 +841,7 @@ export const guides: Guide[] = [
     "relatedGuides": [
       "birthday-website-ideas",
       "how-to-make-a-birthday-website",
-      "digital-love-letter-website"
+      "digital-love-letter-website-ideas"
     ],
     "faqs": [
       [
@@ -863,7 +862,7 @@ export const guides: Guide[] = [
     "category": "SURPRISES",
     "readTime": "4 MIN READ",
     "title": "Surprise Website for Boyfriend: Ideas to Make It Personal",
-    "seoTitle": "Surprise Website for Boyfriend: Ideas to Make It Personal | Wishly",
+    "seoTitle": "Surprise Website for Boyfriend: Ideas to Make It",
     "description": "Plan a surprise website for your boyfriend with a personal note, favourite photos, music and shared memories. Learn what to include and how to share it.",
     "intro": "A surprise website for your boyfriend gives you a place to collect details that matter to both of you. Keep the experience focused and make the first screen feel personal.",
     "sections": [
@@ -916,7 +915,7 @@ export const guides: Guide[] = [
     "relatedGuides": [
       "birthday-website-ideas",
       "how-to-make-a-birthday-website",
-      "digital-love-letter-website"
+      "digital-love-letter-website-ideas"
     ],
     "faqs": [
       [
@@ -937,8 +936,8 @@ export const guides: Guide[] = [
     "category": "PROPOSALS",
     "readTime": "4 MIN READ",
     "title": "Online Proposal Ideas: Create a Meaningful Digital Moment",
-    "seoTitle": "Online Proposal Ideas: Create a Meaningful Digital Moment | Wishly",
-    "description": "Explore online proposal ideas, from a personal webpage and photo timeline to a video message. Plan a thoughtful digital proposal without overcomplicating it.",
+    "seoTitle": "Online Proposal Ideas: Create a Meaningful Digital",
+    "description": "Explore online proposal ideas, from a personal webpage and photo timeline to a video message. Plan a thoughtful digital proposal without.",
     "intro": "An online proposal can feel intimate when it reflects your relationship rather than relying on a dramatic effect. Think about the story you want the page to tell.",
     "sections": [
       {
@@ -990,7 +989,7 @@ export const guides: Guide[] = [
     "relatedGuides": [
       "birthday-website-ideas",
       "how-to-make-a-birthday-website",
-      "digital-love-letter-website"
+      "digital-love-letter-website-ideas"
     ],
     "faqs": [
       [
@@ -1011,7 +1010,7 @@ export const guides: Guide[] = [
     "category": "WEDDINGS",
     "readTime": "4 MIN READ",
     "title": "Digital Wedding Invitation Wording: Examples and Tips",
-    "seoTitle": "Digital Wedding Invitation Wording: Examples and Tips | Wishly",
+    "seoTitle": "Digital Wedding Invitation Wording: Examples and",
     "description": "Write clear digital wedding invitation wording with the essential details, a warm welcome, RSVP instructions and a mobile-friendly link for guests.",
     "intro": "A good digital wedding invitation helps guests understand the celebration quickly. Put the names, date, venue and RSVP information where people can find them.",
     "sections": [
@@ -1064,7 +1063,7 @@ export const guides: Guide[] = [
     "relatedGuides": [
       "birthday-website-ideas",
       "how-to-make-a-birthday-website",
-      "digital-love-letter-website"
+      "digital-love-letter-website-ideas"
     ],
     "faqs": [
       [
@@ -1085,7 +1084,7 @@ export const guides: Guide[] = [
     "category": "MESSAGES",
     "readTime": "4 MIN READ",
     "title": "Personalized Thank You Page: Ideas for a Memorable Message",
-    "seoTitle": "Personalized Thank You Page: Ideas for a Memorable Message | Wishly",
+    "seoTitle": "Personalized Thank You Page: Ideas for a Memorable",
     "description": "Create a personalized thank you page for a friend, partner, guest or colleague with a thoughtful message, photos and a shareable link.",
     "intro": "A personalized thank-you page turns a quick note into something someone can revisit. Keep the message specific: mention what the person did and why it mattered.",
     "sections": [
@@ -1125,7 +1124,8 @@ export const guides: Guide[] = [
     "conclusion": "The most memorable personal pages are built from real details. Keep the design simple, make the message specific and share the link when the moment feels right.",
     "relatedPath": "/guides/",
     "relatedLabel": "Explore more personal page ideas"
-  }
+  },
+  ...additionalGuides,
 ];
 
 export const guideBySlug = (slug: string) => guides.find((guide) => guide.slug === slug);

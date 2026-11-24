@@ -83,9 +83,6 @@
 .hp-foot{border-top:1px solid rgba(255,255,255,.07);padding:22px 0}.hp-foot-brand{display:flex;flex-direction:column;align-items:flex-start;gap:9px}
 .hp-foot-row{display:flex;align-items:center;justify-content:space-between;gap:20px 28px;flex-wrap:wrap}
 .hp-foot .brand-lockup b{font-size:15px}
-.developer-badge{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.035);color:#85889b;font-size:10px;font-weight:700;transition:.2s;backdrop-filter:blur(10px)}
-.developer-badge:hover{border-color:rgba(240,75,154,.28);background:rgba(240,75,154,.06);color:#e8e9f1;transform:translateY(-1px)}
-.developer-badge strong{color:#d7d9e4;font-weight:900}.developer-dot{width:7px;height:7px;border-radius:50%;background:#f04b9a;box-shadow:0 0 0 3px rgba(240,75,154,.1)}
 .hp-foot nav{display:flex;gap:6px 24px;flex-wrap:wrap}
 .hp-foot nav a{font-size:13px;color:#8d8fa2;transition:color .15s}
 .hp-foot nav a:hover{color:#fff}

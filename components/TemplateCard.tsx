@@ -24,8 +24,9 @@ export default function TemplateCard({ template: t, priority = false }: { templa
           </div>
         </div>
         <span className="tc-tag"><i aria-hidden>{t.emoji}</i>{occasionLabel(t.category)}</span>
+        <span className="tc-preview-cue">Preview design <span aria-hidden>↗</span></span>
         {t.premium && <span className="tc-badge tc-badge-premium">👑 Premium</span>}
-        {t.language === 'Bengali' && <span className="tc-badge tc-badge-new">বাংলা</span>}
+        <span className={`tc-language-badge${t.language === 'Bengali' ? ' is-bengali' : ''}`}>{t.language === 'Bengali' ? 'বাংলা' : 'ENGLISH'}</span>
       </Link>
       <div className="tc-card-body">
         <h2>{t.name}</h2>

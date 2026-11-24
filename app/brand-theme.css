@@ -1,41 +1,287 @@
-/* Wishly.bd brand system applied to the international discovery site */
-:root {
- color-scheme:dark !important;
- --g-bg:#07070b; --g-paper:#0e0f15; --g-ink:#f7f7fb; --g-muted:#b4b6c2;
- --g-line:rgba(255,255,255,.10); --g-blue:#f04b9a; --g-blue-dark:#8b6cff;
- --g-orange:#f04b9a; --g-peach:rgba(240,75,154,.14); --g-green:rgba(139,108,255,.14);
- --g-width:1180px;
-}
+/* International content surfaces use the original Wishly.bd dark, pink and violet brand system.
+   Shared design-system and navigation styles load first; these rules only skin the international content. */
+:root{color-scheme:dark!important;--g-bg:#07070b;--g-paper:#0e0f15;--g-ink:#f7f7fb;--g-muted:#b4b6c2;--g-line:rgba(255,255,255,.10);--g-blue:#f04b9a;--g-blue-dark:#8b6cff;--g-orange:#f04b9a;--g-peach:rgba(240,75,154,.14);--g-green:rgba(139,108,255,.14);--g-width:1180px}
 html,body{background:#07070b!important;color:#f7f7fb!important;color-scheme:dark!important}
-body{font-family:var(--font-inter),var(--font-bn-sans),Inter,Arial,sans-serif!important}
+body{font-family:var(--font-inter),Inter,Arial,sans-serif!important}
 .international-site{background:#07070b!important;color:#f7f7fb!important}
 .international-site section{color:#f7f7fb}
 .international-site p,.international-site li{color:#b4b6c2}
 .international-site h1,.international-site h2,.international-site h3,.international-site strong{color:#f7f7fb}
 .international-site .global-overline,.international-site .section-kicker{color:#f29ac0!important}
-.international-site .global-paper-back,.international-site .global-browser-card,.international-site .global-art-note,
-.international-site .global-moment-list a,.international-site .global-template-grid>*,
-.international-site .global-guide-card,.international-site .global-feature-card,
-.international-site .global-step-card,.international-site .global-faq-item{
- background:#0e0f15!important;border-color:rgba(255,255,255,.10)!important;color:#f7f7fb!important;
-}
-.international-site .global-button-primary,.international-site .global-nav-cta{
- background:linear-gradient(135deg,#f04b9a,#8b6cff)!important;color:#fff!important;
-}
-.international-site .global-text-action,.international-site a:hover{color:#f29ac0}
-.global-login-pill{margin-left:2px;text-decoration:none}
-.global-login-pill .wp-av{width:30px;height:30px}
+.international-site .global-paper-back,.international-site .global-browser-card,.international-site .global-art-note,.international-site .global-moment-list a,.international-site .global-template-grid>*,.international-site .global-guide-card,.international-site .global-feature-card,.international-site .global-step-card,.international-site .global-faq-item{background:#0e0f15!important;border-color:rgba(255,255,255,.10)!important;color:#f7f7fb!important}
+.international-site .global-button-primary{background:linear-gradient(135deg,#f04b9a,#8b6cff)!important;color:#fff!important}
+.international-site .global-text-action{color:#f29ac0}
 .global-stats-line{margin-top:16px;gap:18px}
 .global-stats-line span{display:flex;align-items:center;gap:6px;color:#b4b6c2}
 .global-stats-line b{font-size:20px;color:#f29ac0}
-.global-mobile-menu{display:none}
+
+/* Align all international CTA treatments with Wishly.bd's pink-to-violet gradient. */
+.international-site .global-button-primary,
+.international-site .premium-button:not(.premium-button-ghost),
+.international-site .tc-card-actions .premium-button:not(.premium-button-ghost),
+.international-site .td-actions .premium-button:not(.premium-button-ghost),
+.international-site .cta-panel .premium-button,
+.international-site .nav-cta,
+.international-site .sf-btn {
+  background: linear-gradient(135deg, #f04b9a, #8b6cff) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+.international-site .premium-button-ghost,
+.international-site .global-button-light {
+  border: 1px solid rgba(255,255,255,.12) !important;
+  background: #181923 !important;
+  color: #f7f7fb !important;
+}
+
+/* Use Wishly's neutral dark surfaces rather than a separate editorial colour palette. */
+.international-site .global-story-band,
+.international-site .cta-panel {
+  border: 1px solid rgba(255,255,255,.09);
+  background: linear-gradient(135deg, rgba(240,75,154,.10), rgba(139,108,255,.10)), #12131a !important;
+}
+.international-site .global-final-cta,
+.international-site .global-page-cta,
+.international-site .global-browser-card,
+.international-site .global-art-note,
+.international-site .global-guide-card,
+.international-site .global-feature-card,
+.international-site .global-step-card,
+.international-site .global-faq-item,
+.international-site .tc-card,
+.international-site .hp-steps li,
+.international-site .hp-feat article {
+  border-color: rgba(255,255,255,.09) !important;
+  background-color: #0e0f15 !important;
+}
+.international-site .global-icon,
+.international-site .hp-feat .ic {
+  background: rgba(240,75,154,.12) !important;
+  color: #f29ac0 !important;
+}
+.international-site .tc-chip.is-active,
+.international-site .tc-pill.is-active,
+.international-site .tc-ptile.is-active {
+  border-color: rgba(240,75,154,.65) !important;
+  background: linear-gradient(135deg, rgba(240,75,154,.17), rgba(139,108,255,.17)) !important;
+  color: #f7f7fb !important;
+}
+
+/* Preserve the original Wishly footer's own typography and contrast inside the international shell. */
+.international-site .sf-tag,
+.international-site .sf-col a { color: #8d8fa2 !important; }
+.international-site .sf-col h3,
+.international-site .sf-cta h3,
+.international-site .sf-ig-text b { color: #d7d9e4 !important; }
+.international-site .sf-col a:hover { color: #fff !important; }
+.international-site .sf-cta p { color: #a2a5b8 !important; }
+.international-site .sf-bottom { color: #6f7180 !important; }
+.international-site .sf-copy a { color: #f6a6cc !important; }
+.international-site .sf-made i { color: #f04b9a !important; }
+
+
+/* International SEO content pages: premium dark surfaces with Wishly's pink/violet brand accents. */
+.global-about-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px auto 72px}
+.global-about-stats>div{padding:22px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:linear-gradient(140deg,rgba(240,75,154,.08),rgba(139,108,255,.07)),#0e0f15;display:flex;flex-direction:column;gap:7px}
+.global-about-stats strong{font-size:clamp(26px,3vw,38px);letter-spacing:-.05em;background:linear-gradient(100deg,#f29ac0,#a995ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.global-about-stats span{font-size:13px;color:#b4b6c2}
+.global-about-story{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,6vw,84px);align-items:center;padding-top:16px;padding-bottom:82px}
+.global-about-story-art{min-height:340px;position:relative;border:1px solid rgba(255,255,255,.1);border-radius:28px;background:radial-gradient(circle at 25% 22%,rgba(240,75,154,.2),transparent 34%),radial-gradient(circle at 80% 72%,rgba(139,108,255,.2),transparent 35%),#101018;display:grid;place-items:center;overflow:hidden}
+.global-about-story-card{width:min(74%,360px);min-height:230px;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:26px;background:linear-gradient(155deg,rgba(255,255,255,.06),rgba(255,255,255,.015)),#171720;box-shadow:0 30px 80px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-4deg)}
+.global-about-story-card strong{font-family:Georgia,serif;font-size:clamp(24px,3.5vw,36px);line-height:1.12;letter-spacing:-.03em;color:#fff}
+.global-about-story-card>span:last-child{font-size:12px;color:#b4b6c2}
+.global-about-story-mark{position:absolute;right:10%;top:10%;font-size:52px;color:#f29ac0}
+.global-about-story-copy h2,.global-section-intro h2{letter-spacing:-.04em}
+.global-about-story-copy>p:not(.global-overline){color:#b4b6c2;line-height:1.85;font-size:15px}
+.global-about-how,.global-about-values,.global-about-showcase,.global-category-seo,.global-category-tips,.global-category-faq,.global-template-selection-guide,.global-guides-intro,.global-feature-workflow,.global-feature-faq,.global-howto-intro,.global-howto-aftercare{padding-top:58px;padding-bottom:64px}
+.global-about-how>ol{list-style:none;padding:0;margin:30px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.global-about-how>ol>li{display:flex;gap:16px;padding:22px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:#0e0f15}
+.global-about-how>ol>li>span{font-size:20px;font-weight:750;color:#f29ac0}
+.global-about-how h3,.global-about-inside-grid h3,.global-about-values h3,.global-template-selection-grid h3,.global-feature-workflow h3{font-size:18px;margin:0 0 9px;color:#f7f7fb}
+.global-about-how p,.global-about-inside-grid p,.global-about-values p,.global-template-selection-grid p,.global-feature-workflow p{font-size:14px;line-height:1.8;color:#b4b6c2;margin:0}
+.global-about-inside{padding:72px 0;background:linear-gradient(120deg,rgba(240,75,154,.07),rgba(139,108,255,.07)),#0b0c12;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07)}
+.global-about-inside-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:32px}
+.global-about-inside-grid article{padding:24px;border:1px solid rgba(255,255,255,.09);border-radius:18px;background:#11121a}
+.global-about-inside-grid article>span{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:rgba(240,75,154,.13);color:#f29ac0;margin-bottom:18px}
+.global-about-values>div:last-child{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:28px}
+.global-about-values article{display:flex;gap:18px;padding:20px 0;border-top:1px solid rgba(255,255,255,.1)}
+.global-about-values article>span{font-size:14px;color:#f29ac0;font-weight:750}
+.global-about-main-site{padding:40px 42px;margin-top:16px;margin-bottom:58px;border:1px solid rgba(240,75,154,.2);border-radius:24px;background:linear-gradient(120deg,rgba(240,75,154,.12),rgba(139,108,255,.1)),#11121a}
+.global-about-main-site h2{font-size:clamp(24px,3vw,36px);max-width:800px;line-height:1.18;letter-spacing:-.04em}
+.global-about-main-site h2 a{color:#f29ac0;text-decoration:underline;text-decoration-color:rgba(242,154,192,.45);text-underline-offset:5px}
+.global-about-main-site p{max-width:850px;color:#c0c1cc;line-height:1.85}
+.global-about-main-site .global-button{margin-top:12px}
+.global-about-cta{display:flex;align-items:center;justify-content:space-between;gap:26px;margin-top:55px;margin-bottom:70px;padding:32px;border:1px solid rgba(255,255,255,.1);border-radius:24px;background:linear-gradient(135deg,rgba(240,75,154,.13),rgba(139,108,255,.12)),#11121a}
+.global-about-cta h2{font-size:clamp(24px,3vw,34px);max-width:660px;line-height:1.15;letter-spacing:-.04em}
+.global-about-cta p:not(.global-overline){color:#b4b6c2;max-width:600px;line-height:1.75}
+.global-about-cta-actions{display:flex;gap:10px;flex-wrap:wrap}
+.global-template-selection-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px}
+.global-template-selection-grid article{padding:22px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:#0e0f15}
+.global-template-selection-grid a,.global-guides-topic-links a,.global-howto-links a{display:inline-block;color:#f29ac0;font-size:13px;font-weight:650;margin-top:15px;text-decoration:none}
+.global-guides-topic-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.global-guides-topic-links a{margin:0;padding:10px 14px;border:1px solid rgba(255,255,255,.11);border-radius:999px;background:#0e0f15}
+.global-category-seo{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start}
+.global-category-seo .global-section-intro p:not(.global-overline){color:#b4b6c2;line-height:1.85}
+.global-category-checklist{padding:26px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:#0e0f15}
+.global-category-checklist h3{font-size:18px;margin:0 0 16px}
+.global-category-checklist ul,.global-feature-workflow ul{padding-left:19px;margin:0}
+.global-category-checklist li,.global-feature-workflow li{padding:6px 0;color:#b4b6c2;font-size:14px;line-height:1.65}
+.global-category-tips .td-step-grid{margin-top:26px}
+.global-category-faq{padding-top:36px}
+.global-category-cta,.global-faq-more{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:28px;margin-bottom:65px;padding:28px;border:1px solid rgba(255,255,255,.1);border-radius:22px;background:linear-gradient(130deg,rgba(240,75,154,.1),rgba(139,108,255,.1)),#0e0f15}
+.global-category-cta h2,.global-faq-more h2{font-size:26px;line-height:1.2;letter-spacing:-.03em}
+.global-category-cta p:not(.global-overline),.global-faq-more p:not(.global-overline){color:#b4b6c2;max-width:720px;line-height:1.7}
+.global-features-intro{padding-top:35px;padding-bottom:12px}
+.global-feature-workflow-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.global-feature-workflow-grid article{padding:24px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:#0e0f15}
+.global-feature-workflow-grid ul{margin-top:18px}
+.global-feature-faq{padding-top:25px}
+.global-howto-intro{display:grid;grid-template-columns:1fr .85fr;gap:34px;align-items:start}
+.global-howto-aftercare{display:grid;grid-template-columns:1fr .65fr;gap:30px;align-items:center}
+.global-howto-aftercare p{color:#b4b6c2;line-height:1.85}
+.global-howto-links{display:flex;flex-direction:column;gap:10px;padding:24px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:#0e0f15}
+@media(max-width:800px){.global-about-stats{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:50px}.global-about-story{grid-template-columns:1fr;padding-bottom:55px}.global-about-how>ol,.global-about-inside-grid,.global-template-selection-grid,.global-feature-workflow-grid{grid-template-columns:1fr}.global-about-values>div:last-child{grid-template-columns:1fr}.global-category-seo,.global-howto-intro,.global-howto-aftercare{grid-template-columns:1fr}.global-about-cta,.global-category-cta,.global-faq-more{align-items:flex-start;flex-direction:column}.global-about-main-site{padding:26px 22px}.global-about-showcase{padding-top:35px}}
+@media(max-width:480px){.global-about-stats>div{padding:17px}.global-about-story-art{min-height:270px}.global-about-story-card{min-height:190px;padding:20px}.global-about-how>ol>li{padding:18px}.global-about-cta{padding:24px}.global-category-cta,.global-faq-more{padding:22px}}
+
+
+/* Keep legacy editorial card variants inside Wishly's dark product palette. */
+.international-site .global-editorial-card-cream,.international-site .global-editorial-card-blue,.international-site .global-editorial-card-peach{background:linear-gradient(145deg,rgba(240,75,154,.08),rgba(139,108,255,.08)),#0e0f15!important;border-color:rgba(255,255,255,.10)!important;color:#f7f7fb!important}
+.international-site .global-editorial-card .global-card-icon{color:#f29ac0!important}
+.international-site .global-template-faq{padding-top:48px;padding-bottom:60px}
+.international-site .global-template-faq .section-heading{margin-bottom:24px}
+.international-site .td-desc,.international-site .td-intro{color:#b4b6c2!important}
+.international-site .td-badges span{border-color:rgba(255,255,255,.12)!important;background:#171720!important;color:#f7f7fb!important}
+
+/* Image-led editorial cards: real design previews and custom still-life imagery, not empty colour blocks. */
+.international-site .global-editorial-card{overflow:hidden;isolation:isolate;border-color:rgba(255,255,255,.12)!important;background:#111019!important;}
+.international-site .global-editorial-card-image{display:block;position:absolute;z-index:-1;object-fit:cover;}
+.international-site .global-editorial-card:first-child .global-editorial-card-image{inset:0;width:100%;height:100%;opacity:.76;filter:saturate(.9);}
+.international-site .global-editorial-card:first-child::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,7,14,.06) 8%,rgba(8,7,14,.12) 38%,rgba(8,7,14,.94) 100%);pointer-events:none;}
+.international-site .global-editorial-card:first-child .global-card-copy{position:relative;z-index:1;}
+.international-site .global-editorial-card:not(:first-child){display:flex;flex-direction:column;justify-content:center;}
+.international-site .global-editorial-card:not(:first-child) .global-editorial-card-image{inset:0 auto 0 0;width:38%;height:100%;opacity:.82;}
+.international-site .global-editorial-card:not(:first-child)::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,8,16,.04) 0%,rgba(9,8,16,.18) 30%,rgba(12,10,20,.97) 43%,rgba(12,10,20,.98) 100%);pointer-events:none;}
+.international-site .global-editorial-card:not(:first-child) .global-card-copy{position:relative;z-index:1;margin-left:38%;padding-left:15px;}
+.international-site .global-card-number{z-index:2;color:#f4d9e7!important;}
+.international-site .global-card-icon{margin-bottom:13px;color:#f29ac0!important;font-size:31px;}
+.international-site .global-editorial-card h3{color:#fff!important;}
+.international-site .global-editorial-card p{color:#d0cbd8!important;}
+
+/* Make the product destination unmistakable on the international homepage. */
+.global-main-product{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(28px,5vw,72px);margin-top:62px;margin-bottom:82px;padding:clamp(26px,4vw,52px);border:1px solid rgba(240,75,154,.24);border-radius:22px;background:radial-gradient(circle at 90% 10%,rgba(139,108,255,.18),transparent 35%),radial-gradient(circle at 5% 90%,rgba(240,75,154,.16),transparent 34%),#101018;overflow:hidden;}
+.global-main-product-copy>.global-overline{display:flex;align-items:center;gap:8px;}
+.global-main-product-copy h2{max-width:590px;margin:12px 0 17px;font:500 clamp(34px,4vw,53px)/1.02 var(--g-serif);letter-spacing:-.05em;color:#fff;}
+.global-main-product-copy h2 em{color:#f29ac0;font-style:normal;}
+.global-main-product-copy>p:not(.global-overline):not(.global-main-product-footnote){max-width:600px;color:#c3c0cf;font-size:14px;line-height:1.85;}
+.global-main-product-copy>p strong{color:#fff;}
+.global-main-product-points{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;margin:24px 0 26px;}
+.global-main-product-points span{display:flex;align-items:center;gap:8px;color:#e7e2ed;font-size:12px;line-height:1.5;}
+.global-main-product-points svg{flex:0 0 auto;color:#f29ac0;}
+.global-main-product-footnote{margin:14px 0 0;color:#9391a2;font-size:10px;line-height:1.6;}
+.global-main-product-browser{position:relative;padding:10px;border:1px solid rgba(255,255,255,.16);border-radius:15px;background:#0a0a10;box-shadow:0 30px 75px rgba(0,0,0,.45);transform:rotate(1deg);}
+.global-main-product-browser-bar{height:25px;display:flex;align-items:center;gap:6px;padding:0 8px 8px;color:#8e8c9a;font-size:9px;}
+.global-main-product-browser-bar i{width:7px;height:7px;border-radius:50%;background:#f29ac0;}
+.global-main-product-browser-bar i:nth-child(2){background:#9b82e9;}
+.global-main-product-browser-bar i:nth-child(3){background:#686a7c;}
+.global-main-product-browser-bar span{margin-left:7px;}
+.global-main-product-browser img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:7px;}
+.global-main-product-sticker{position:absolute;right:-11px;bottom:18px;display:flex;gap:8px;align-items:center;padding:11px 14px;border:1px solid rgba(242,154,192,.36);border-radius:999px;background:#171321;color:#e8dce8;font-size:9px;letter-spacing:.12em;box-shadow:0 12px 30px rgba(0,0,0,.32);}
+.global-main-product-sticker b{color:#f29ac0;}
+
+/* Every guide repeats the same plain-language route to the real Wishly product. */
+.global-guide-main-site{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;margin-top:44px;margin-bottom:38px;padding:clamp(23px,3vw,36px);border:1px solid rgba(240,75,154,.22);border-radius:18px;background:linear-gradient(125deg,rgba(240,75,154,.11),rgba(139,108,255,.10)),#101018;}
+.global-guide-main-site-copy>.global-overline{display:flex;align-items:center;gap:8px;}
+.global-guide-main-site-copy h2{max-width:610px;margin:10px 0 12px;font:500 clamp(27px,3vw,38px)/1.07 var(--g-serif);letter-spacing:-.04em;color:#fff;}
+.global-guide-main-site-copy>p:not(.global-overline){max-width:690px;color:#c1bdcb;font-size:13px;line-height:1.8;}
+.global-guide-main-site-copy>p strong{color:#fff;}
+.global-guide-main-site-copy .global-button{margin-top:9px;}
+.global-guide-main-site-plain{display:inline-flex;align-items:center;gap:6px;margin-left:15px;color:#f3b0d0;font-size:11px;text-decoration:underline;text-underline-offset:4px;}
+.global-guide-main-site-points{display:grid;gap:10px;}
+.global-guide-main-site-points>div{display:grid;grid-template-columns:39px 1fr;column-gap:11px;align-items:center;padding:12px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(9,9,15,.55);}
+.global-guide-main-site-points>div>span{grid-row:span 2;width:36px;height:36px;display:grid;place-items:center;border-radius:10px;background:rgba(240,75,154,.13);color:#f29ac0;}
+.global-guide-main-site-points b{color:#f3eff8;font-size:11px;}
+.global-guide-main-site-points small{color:#a9a6b4;font-size:9px;line-height:1.5;}
+
 @media(max-width:900px){
- .premium-nav-links{display:none!important}
- .global-mobile-menu{display:inline-flex!important;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(255,255,255,.05);color:#fff}
- .global-mobile-panel{position:absolute;top:calc(100% + 8px);left:12px;right:12px;z-index:500;display:grid;gap:6px;padding:14px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:#101018;box-shadow:0 24px 60px rgba(0,0,0,.5)}
- .global-mobile-panel>a,.global-mobile-account>a{padding:12px;border-radius:12px;color:#fff!important}
- .global-mobile-account{display:flex;gap:8px;border-top:1px solid rgba(255,255,255,.1);padding-top:10px}
- .global-mobile-account>a:last-child{background:linear-gradient(135deg,#f04b9a,#8b6cff)}
- .global-nav-actions .nav-cta{min-height:38px;padding:0 13px}
- .global-login-pill{display:none!important}
+  .global-main-product{grid-template-columns:1fr;gap:32px;margin-top:48px;margin-bottom:62px;}
+  .global-main-product-visual{max-width:680px;width:94%;margin:0 auto;}
+  .global-guide-main-site{grid-template-columns:1fr;}
+  .global-guide-main-site-points{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .global-guide-main-site-points>div{grid-template-columns:1fr;}
+  .global-guide-main-site-points>div>span{grid-row:auto;margin-bottom:7px;}
+}
+@media(max-width:600px){
+  .international-site .global-editorial-card:not(:first-child) .global-editorial-card-image{width:34%;}
+  .international-site .global-editorial-card:not(:first-child) .global-card-copy{margin-left:34%;padding-left:10px;}
+  .international-site .global-editorial-card h3{font-size:20px;}
+  .international-site .global-editorial-card p{font-size:10px;line-height:1.55;}
+  .global-main-product{padding:24px 18px;border-radius:17px;}
+  .global-main-product-copy h2{font-size:36px;}
+  .global-main-product-copy>p:not(.global-overline):not(.global-main-product-footnote){font-size:12px;}
+  .global-main-product-points{grid-template-columns:1fr;gap:9px;margin:19px 0 22px;}
+  .global-main-product-visual{width:96%;}
+  .global-main-product-sticker{right:-8px;bottom:9px;padding:9px 11px;font-size:8px;}
+  .global-guide-main-site{padding:22px 17px;margin-top:28px;margin-bottom:26px;}
+  .global-guide-main-site-copy h2{font-size:30px;}
+  .global-guide-main-site-copy>p:not(.global-overline){font-size:11px;}
+  .global-guide-main-site-plain{margin:13px 0 0;}
+  .global-guide-main-site-points{grid-template-columns:1fr;}
+  .global-guide-main-site-points>div{grid-template-columns:39px 1fr;}
+  .global-guide-main-site-points>div>span{grid-row:span 2;margin:0;}
+}
+
+/* Homepage refresh: image-led occasion discovery, main product first, templates second. */
+.international-site .global-hero{padding-top:clamp(62px,7vw,92px);padding-bottom:clamp(42px,5vw,64px);}
+.international-site .global-hero h1 em{display:inline;color:#f29ac0;background:linear-gradient(100deg,#ff9bc9,#bd8cff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.international-site .global-hero-art{isolation:isolate;}
+.international-site .global-browser-card{border-color:rgba(242,154,192,.25);box-shadow:0 28px 85px rgba(122,43,130,.2),0 24px 65px rgba(0,0,0,.42);}
+.international-site .global-art-flower{color:#f29ac0;text-shadow:0 0 24px rgba(240,75,154,.55);}
+.international-site .global-main-product{margin-top:22px;margin-bottom:56px;}
+.international-site .global-moments{display:block;padding:clamp(40px,5vw,66px) 0 clamp(48px,5vw,70px);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);}
+.global-occasion-heading{max-width:720px;margin:0 auto 27px;text-align:center;}
+.global-occasion-heading h2{margin:10px 0 10px;font:500 clamp(31px,4vw,47px)/1.04 var(--g-serif);letter-spacing:-.045em;color:#fff;}
+.global-occasion-heading>p:last-child{max-width:590px;margin:0 auto;color:#b4b6c2;font-size:14px;line-height:1.75;}
+.global-occasion-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;}
+.global-occasion-card{position:relative;display:block;min-height:220px;overflow:hidden;border:1px solid rgba(242,154,192,.22);border-radius:17px;background:#14101b;isolation:isolate;box-shadow:0 12px 32px rgba(0,0,0,.18);text-decoration:none;transform:translateZ(0);}
+.global-occasion-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .45s cubic-bezier(.2,.7,.2,1),filter .35s ease;}
+.global-occasion-card:hover>img{transform:scale(1.055);filter:saturate(1.12);}
+.global-occasion-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,14,.02) 12%,rgba(8,6,14,.16) 42%,rgba(8,6,14,.92) 100%);}
+.global-occasion-card-copy{position:absolute;left:18px;right:52px;bottom:17px;display:grid;gap:5px;}
+.global-occasion-card-copy b{color:#fff;font:500 clamp(19px,2vw,25px)/1.05 var(--g-serif);letter-spacing:-.025em;}
+.global-occasion-card-copy small{color:#e0d5e2;font-size:11px;line-height:1.45;}
+.global-occasion-arrow{position:absolute;right:15px;bottom:15px;width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(13,10,20,.45);color:#fff;backdrop-filter:blur(8px);transition:background .2s,border-color .2s,transform .2s;}
+.global-occasion-card:hover .global-occasion-arrow{background:linear-gradient(135deg,#f04b9a,#8b6cff);border-color:transparent;transform:translate(2px,-2px);}
+.global-occasion-more{display:flex;justify-content:center;margin-top:24px;}
+.global-occasion-more .global-underlined-link{font-size:12px;}
+.international-site .global-template-section{padding:clamp(58px,6vw,82px) 0 clamp(65px,7vw,92px);background:linear-gradient(180deg,rgba(139,108,255,.045),rgba(240,75,154,.035)),#0b0b12;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);}
+.international-site .global-template-section .global-section-intro h2{max-width:620px;}
+.international-site .global-template-section .global-underlined-link{white-space:nowrap;}
+.international-site .global-template-grid .tc-card{overflow:hidden;border-radius:15px!important;box-shadow:0 14px 35px rgba(0,0,0,.2);}
+.international-site .global-template-grid .tc-thumb{overflow:hidden;}
+.international-site .global-template-grid .tc-thumb-shot{transition:transform .45s ease;}
+.international-site .global-template-grid .tc-card:hover .tc-thumb-shot{transform:scale(1.035);}
+@media(max-width:900px){
+ .global-occasion-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+ .global-occasion-card{min-height:205px;}
+ .international-site .global-main-product{margin-top:12px;margin-bottom:44px;}
+}
+@media(max-width:600px){
+ .global-occasion-heading{text-align:left;margin-bottom:19px;}
+ .global-occasion-heading h2{font-size:34px;}
+ .global-occasion-heading>p:last-child{margin-left:0;font-size:12px;}
+ .global-occasion-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}
+ .global-occasion-card{min-height:170px;border-radius:13px;}
+ .global-occasion-card-copy{left:11px;right:35px;bottom:12px;}
+ .global-occasion-card-copy b{font-size:18px;}
+ .global-occasion-card-copy small{font-size:9px;}
+ .global-occasion-arrow{right:9px;bottom:10px;width:27px;height:27px;}
+ .global-occasion-arrow svg{width:14px;height:14px;}
+ .global-occasion-more{margin-top:18px;}
+ .international-site .global-template-section{padding-top:48px;padding-bottom:55px;}
+ .international-site .global-template-section .global-heading-row{margin-bottom:19px;}
+}
+@media(max-width:380px){
+ .global-occasion-grid{grid-template-columns:1fr;}
+ .global-occasion-card{min-height:190px;}
+ .international-site .global-main-product-copy h2{font-size:31px;}
 }

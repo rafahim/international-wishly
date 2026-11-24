@@ -1,29 +1,24 @@
 import Link from 'next/link';
-import { ArrowUpRight, Cake, CalendarHeart, Check, Church, Gift, Heart, Mail, Music2, PenLine, Smartphone, Sparkles, Users, type LucideIcon } from 'lucide-react';
+import { ArrowUpRight, Check, Images, Mail, Music2, PenLine, Smartphone, Sparkles, type LucideIcon } from 'lucide-react';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TemplateCard from '@/components/TemplateCard';
-import Faq from '@/components/Faq';
 import JsonLd from '@/components/JsonLd';
 import { SITE, abs, appLink } from '@/lib/site';
-import { pageMeta, faqLd } from '@/lib/seo';
-import { faqs, features, steps } from '@/lib/content';
-import { occasionList, templates } from '@/lib/templates';
+import { pageMeta } from '@/lib/seo';
+import { features, steps } from '@/lib/content';
+import { occasionList, templates, templatesFor, coverSrc } from '@/lib/templates';
 import { guides } from '@/lib/guides';
 
 export const metadata: Metadata = pageMeta({
   title: SITE.title,
   description: SITE.description,
   path: '/',
+  keywords: ['personal website maker', 'digital gift website', 'make a website for someone you love', 'birthday website designs', 'online invitation page'],
 });
 
-const occasionIcons: Record<string, LucideIcon> = {
-  birthday: Cake, proposal: Heart, wedding: Church, 'miss-you': Mail,
-  sorry: Sparkles, letter: Mail, anniversary: CalendarHeart,
-  'best-friend': Users, friendship: Users, invitation: Gift, 'thank-you': Check,
-};
-const featureIcons: Record<string, LucideIcon> = { pen: PenLine, images: Gift, music: Music2, mail: Mail, phone: Smartphone, link: ArrowUpRight };
+const featureIcons: Record<string, LucideIcon> = { pen: PenLine, images: Images, music: Music2, mail: Mail, phone: Smartphone, link: ArrowUpRight };
 
 export default function Home() {
   const showcase = [
@@ -42,62 +37,70 @@ export default function Home() {
   return (
     <main className="premium-site international-site">
       <JsonLd data={ld} />
-      <JsonLd data={faqLd(faqs.slice(0, 7))} />
       <Navbar />
 
       <section className="global-hero global-wrap">
         <div className="global-hero-copy">
           <p className="global-overline"><span className="global-overline-mark">✳</span> A PERSONAL PAGE FOR A MOMENT THAT MATTERS</p>
-          <h1>A little website can say what a <em>message can’t.</em></h1>
-          <p className="global-hero-lead">Use Wishly as a birthday website maker, a home for a digital love letter or a place to share an online invitation. Choose a template, add your own photos and words, then send one personal link to someone anywhere in the world.</p>
+          <h1>Find the perfect idea. <em>Create something unforgettable.</em></h1>
+          <p className="global-hero-lead">Explore birthday website ideas, romantic page inspiration, anniversary surprises, digital love letters and online invitations. Find a starting point for someone special, compare real Wishly designs and continue to Wishly.bd when you are ready to create.</p>
           <div className="global-hero-actions">
-            <a href={appLink('/signup')} className="global-button global-button-primary">Make your first page <ArrowUpRight size={17} /></a>
-            <Link href="/templates/" className="global-text-action">Find a design <span>↗</span></Link>
+            <Link href="/guides/" className="global-button global-button-primary">Explore ideas <ArrowUpRight size={17} /></Link>
+            <a href={appLink('/signup')} className="global-text-action">Create on Wishly.bd <span>↗</span></a>
           </div>
           <div className="global-trust-line"><span><Check size={14} /> No coding</span><span><Check size={14} /> Opens in a browser</span><span><Check size={14} /> One shareable link</span></div>
           <div className="global-trust-line global-stats-line"><span><b>11+</b> ways to celebrate</span><span><b>53+</b> templates and more</span></div>
         </div>
 
-        <div className="global-hero-art" aria-label="A preview of a personalised birthday page">
-          <div className="global-art-stamp">MADE FOR<br />ONE PERSON</div>
-          <div className="global-paper-back"></div>
-          <div className="global-browser-card">
-            <div className="global-browser-top"><span></span><span></span><span></span><b>wishly / your-page</b></div>
-            <div className="global-browser-content">
-              <div className="global-photo-frame"><img src="/template-shots/the-birthday-experience.webp" alt="A preview from a birthday website template" width="960" height="600" /></div>
-              <div className="global-art-caption"><small>A NOTE FOR SOMEONE SPECIAL</small><strong>For all the little things that make you, you.</strong><span>Photos · Words · A favourite song</span></div>
+        <div className="global-hero-art global-hero-art-featured" aria-label="A real preview of a Wishly website template">
+          <div className="global-browser-card global-browser-card-featured">
+            <div className="global-browser-top"><span></span><span></span><span></span><b>WISHLY TEMPLATE PREVIEW</b></div>
+            <div className="global-browser-content global-browser-content-featured">
+              <div className="global-photo-frame global-photo-frame-featured">
+                <img
+                  src="/template-shots/a-little-birthday-letter.webp"
+                  alt="The Lavender Birthday Letter, an actual Wishly template preview"
+                  width="960"
+                  height="600"
+                  fetchPriority="high"
+                />
+              </div>
+            </div>
+            <div className="global-hero-template-meta">
+              <div>
+                <span>FROM THE WISHLY DESIGN LIBRARY</span>
+                <strong>The Lavender Birthday Letter</strong>
+                <small>A real template preview · Birthday</small>
+              </div>
+              <Link href="/template/a-little-birthday-letter/" className="global-hero-template-link">View design <ArrowUpRight size={15} /></Link>
             </div>
           </div>
-          <div className="global-art-note"><span>01 / THE IDEA</span><b>Make it feel like them.</b><i>Not just another notification.</i></div>
-          <div className="global-art-flower" aria-hidden="true">✳</div>
         </div>
       </section>
 
-      <section className="global-moments global-wrap" aria-label="Occasions">
-        <div className="global-section-intro global-section-intro-inline">
-          <p className="global-overline">MORE WAYS TO MAKE IT PERSONAL</p>
-          <h2>A growing collection for every kind of moment</h2>
+      <section className="global-moments global-wrap" aria-labelledby="global-occasions-title">
+        <div className="global-occasion-heading">
+          <p className="global-overline">EXPLORE BY OCCASION</p>
+          <h2 id="global-occasions-title">Find an idea for every special moment.</h2>
+          <p>Start with the occasion. Explore designs and inspiration made for the people who matter.</p>
         </div>
-        <div className="global-moment-list">
-          {occasionList.map((occasion) => {
-            const Icon = occasionIcons[occasion.key] || Sparkles;
-            return <Link href={`/templates/${occasion.key}/`} key={occasion.key} className="global-moment-link"><span><Icon size={18} strokeWidth={1.7} /></span>{occasion.label}<ArrowUpRight size={14} /></Link>;
+        <div className="global-occasion-grid">
+          {['birthday', 'proposal', 'anniversary', 'wedding', 'friendship', 'letter'].map((key) => {
+            const occasion = occasionList.find((item) => item.key === key);
+            const template = templatesFor(key)[0];
+            if (!occasion || !template) return null;
+            const label = key === 'letter' ? 'Letters & Thank You' : key === 'proposal' ? 'Love & Proposal' : occasion.label;
+            return (
+              <Link href={`/templates/${key}/`} key={key} className="global-occasion-card">
+                <img src={coverSrc(template.slug)} alt={`${label} website inspiration`} width="960" height="600" loading="lazy" />
+                <span className="global-occasion-shade" />
+                <span className="global-occasion-card-copy"><b>{label}</b><small>{occasion.count} {occasion.count === 1 ? 'design' : 'designs'} to explore</small></span>
+                <span className="global-occasion-arrow"><ArrowUpRight size={17} /></span>
+              </Link>
+            );
           })}
         </div>
-      </section>
-
-      <section className="global-editorial global-wrap">
-        <div className="global-section-intro">
-          <p className="global-overline">A DIFFERENT KIND OF GREETING</p>
-          <h2>Not a card. Not a long chat. A place of your own.</h2>
-          <p>A personal web page lets a message arrive with a little atmosphere. It can open like a letter, reveal a memory or gather event details in one place. The design sets the scene; your words make it matter.</p>
-          <Link href="/how-to-make-website/" className="global-underlined-link">See how the process works <span>↗</span></Link>
-        </div>
-        <div className="global-editorial-cards">
-          <article className="global-editorial-card global-editorial-card-cream"><span className="global-card-number">01</span><div className="global-card-icon">✳</div><h3>Made for one recipient</h3><p>Use a name, a shared memory and the details that would mean something to them.</p></article>
-          <article className="global-editorial-card global-editorial-card-blue"><span className="global-card-number">02</span><div className="global-card-icon">↗</div><h3>Easy to pass along</h3><p>Publish once and share the page by message, email or QR code where supported.</p></article>
-          <article className="global-editorial-card global-editorial-card-peach"><span className="global-card-number">03</span><div className="global-card-icon">♡</div><h3>Yours in the details</h3><p>Choose the mood, add your own photos and make the final message sound like you.</p></article>
-        </div>
+        <div className="global-occasion-more"><Link href="/templates/" className="global-underlined-link">Explore all occasions <span>↗</span></Link></div>
       </section>
 
       <section className="global-template-section">
@@ -106,7 +109,7 @@ export default function Home() {
             <div className="global-section-intro">
               <p className="global-overline">THE DESIGN LIBRARY</p>
               <h2>Start with a look. Make it yours.</h2>
-              <p>Explore pages for different occasions and personalities. Preview a design first, then take the one you like into the Wishly editor.</p>
+              <p>Browse real designs from the Wishly library. Open a preview to see how each page is put together, then choose one to personalise on Wishly.bd.</p>
             </div>
             <Link href="/templates/" className="global-underlined-link">Explore 53+ templates and more <span>↗</span></Link>
           </div>
@@ -114,10 +117,58 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="global-main-product global-wrap" aria-labelledby="global-main-product-title">
+        <div className="global-main-product-copy">
+          <p className="global-overline"><span aria-hidden="true">✦</span> THE MAIN WISHLY WEBSITE</p>
+          <h2 id="global-main-product-title">Discover the idea here. <em>Create it on Wishly.bd.</em></h2>
+          <p>This international website is your place to explore templates, examples and step-by-step guides. The actual Wishly product is <strong>Wishly.bd</strong>—that is where you create an account, open the visual editor, personalise a design, publish your page and manage it later.</p>
+          <div className="global-main-product-points">
+            <span><Check size={15} /> Account and dashboard</span>
+            <span><Check size={15} /> Template editor and customisation</span>
+            <span><Check size={15} /> Publishing and page management</span>
+          </div>
+          <div className="global-hero-actions">
+            <a href={appLink('/')} className="global-button global-button-primary">Visit Wishly.bd <ArrowUpRight size={17} /></a>
+            <a href={appLink('/signup')} className="global-text-action">Try it free <span>↗</span></a>
+          </div>
+          <p className="global-main-product-footnote">Your account and creation workflow always stay on the main Wishly website.</p>
+        </div>
+        <div className="global-main-product-visual">
+          <div className="global-main-product-browser"><div className="global-main-product-browser-bar"><i></i><i></i><i></i><span>wishly.bd / your page</span></div><img src="/template-shots/the-birthday-experience.webp" alt="A preview of a personal birthday website design available through Wishly" width="960" height="600" loading="lazy" /></div>
+          <span className="global-main-product-sticker">MAIN PRODUCT <b>WISHLY.BD</b></span>
+        </div>
+      </section>
+
+      <section className="global-editorial global-wrap">
+        <div className="global-section-intro">
+          <p className="global-overline">A DIFFERENT KIND OF GREETING</p>
+          <h2>A digital gift can be a place, not just a message.</h2>
+          <p>A personal web page lets a message arrive with a little atmosphere. It can open like a letter, reveal a memory or gather event details in one place. The design sets the scene; your words make it matter.</p>
+          <Link href="/how-to-make-website/" className="global-underlined-link">See how the process works <span>↗</span></Link>
+        </div>
+        <div className="global-editorial-cards">
+          <article className="global-editorial-card global-editorial-card-cream">
+            <span className="global-card-number">01</span>
+            <img className="global-editorial-card-image" src="/template-shots/love-letter.webp" alt="A real Wishly love letter template preview for one special recipient" width="960" height="600" loading="lazy" />
+            <div className="global-card-copy"><div className="global-card-icon">✳</div><h3>Made for one recipient</h3><p>Use a name, a shared memory and the details that would mean something to them.</p></div>
+          </article>
+          <article className="global-editorial-card global-editorial-card-blue">
+            <span className="global-card-number">02</span>
+            <img className="global-editorial-card-image" src="/template-shots/blue-sky-wedding-invitation.webp" alt="A digital wedding invitation template preview" width="960" height="600" loading="lazy" />
+            <div className="global-card-copy"><div className="global-card-icon">↗</div><h3>Easy to pass along</h3><p>Publish once and share the page by message, email or QR code where supported.</p></div>
+          </article>
+          <article className="global-editorial-card global-editorial-card-peach">
+            <span className="global-card-number">03</span>
+            <img className="global-editorial-card-image" src="/template-shots/a-note-of-gratitude.webp" alt="A personalised gratitude page template with a message envelope" width="960" height="600" loading="lazy" />
+            <div className="global-card-copy"><div className="global-card-icon">♡</div><h3>Yours in the details</h3><p>Choose the mood, add your own photos and make the final message sound like you.</p></div>
+          </article>
+        </div>
+      </section>
+
       <section className="global-how global-wrap" id="how-it-works">
         <div className="global-how-heading">
           <p className="global-overline">FROM IDEA TO SHARE LINK</p>
-          <h2>Three steps. One thoughtful little website.</h2>
+          <h2>Five steps. One thoughtful little website.</h2>
           <p>You bring the feeling. The template gives it a shape.</p>
         </div>
         <ol className="global-step-list">
@@ -144,16 +195,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="global-story-band global-wrap">
-        <div className="global-story-mark">W.</div>
-        <div><p className="global-overline">MADE IN BANGLADESH. SHARED EVERYWHERE.</p><h2>Some feelings travel better as a link.</h2><p>Wishly is built for the moments people want to make personal: a birthday across time zones, a letter that deserves more room, or an invitation guests can open wherever they are. The public collection is here; accounts and page creation stay in one central place.</p></div>
-        <a href={appLink('/signup')} className="global-button global-button-light">Continue to Wishly <ArrowUpRight size={17} /></a>
-      </section>
-
-      <section className="global-wrap global-faq-section"><Faq faqs={faqs.slice(0, 7)} heading="A few things you might be wondering." lead="A quick guide to the templates, the links and where your page lives." /></section>
-
       <section className="global-final-cta global-wrap">
-        <div className="global-final-cta-inner"><p className="global-overline">WHEN YOU’RE READY</p><h2>Make a page they’ll remember opening.</h2><p>Find a design for the moment, then add the details that make it yours.</p><div className="global-hero-actions"><a href={appLink('/signup')} className="global-button global-button-primary">Start creating <ArrowUpRight size={17} /></a><Link href="/templates/" className="global-text-action">Browse designs <span>↗</span></Link></div></div>
+        <div className="global-final-cta-inner"><p className="global-overline">WHEN YOU’RE READY</p><h2>Make a page they’ll remember opening.</h2><p>Find a design for the moment, then add the details that make it yours.</p><div className="global-hero-actions"><a href={appLink('/signup')} className="global-button global-button-primary">Create on Wishly.bd <ArrowUpRight size={17} /></a><Link href="/templates/" className="global-text-action">Browse designs <span>↗</span></Link></div></div>
         <div className="global-final-doodle" aria-hidden="true">✳</div>
       </section>
 

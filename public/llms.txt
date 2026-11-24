@@ -1,0 +1,26 @@
+# Wishly International
+
+Wishly International is the English-first discovery and editorial website for personal websites, digital gifts, birthday pages, proposals, love letters, anniversaries and online invitations.
+
+- International site: https://wishly.rafahim.com/
+- Main Wishly product website: https://wishly.bd/
+- The main product website handles sign-up, login, the visual editor, dashboard, checkout, publishing and live page management.
+
+## Main discovery pages
+- https://wishly.rafahim.com/templates/
+- https://wishly.rafahim.com/features/
+- https://wishly.rafahim.com/how-to-make-website/
+- https://wishly.rafahim.com/guides/
+- https://wishly.rafahim.com/about/
+- https://wishly.rafahim.com/faq/
+- https://wishly.rafahim.com/sitemap.xml
+
+The website has occasion collections, individual template descriptions and practical editorial guides. Template capabilities vary by design; use each template's own preview and details as the source of truth.
+
+
+## International audience and language
+- The editorial website is currently English-first and is intended for worldwide discovery by English-language searchers.
+- Template pages identify whether an individual design is English or Bengali. Visitors should check the language label and preview before using a design.
+- No country-specific pricing, payment method or feature availability is promised here. Account and product availability are determined by the main Wishly website.
+- Regional English wording such as “personalized/personalised”, “birthday website maker/creator”, “birthday webpage” and “digital love letter” is used naturally where relevant.
+- Country and language research notes are maintained in `docs/international-keyword-research-and-market-map.md` in the source repository; they are editorial planning notes, not a public country landing page.

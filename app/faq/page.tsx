@@ -1,20 +1,56 @@
+import Link from 'next/link';
 import PageShell from '@/components/PageShell';
 import Faq from '@/components/Faq';
 import JsonLd from '@/components/JsonLd';
 import { faqLd, pageMeta } from '@/lib/seo';
 import { faqs } from '@/lib/content';
+import { appLink } from '@/lib/site';
+import { ArrowUpRight, BookOpen, LayoutTemplate, Sparkles } from 'lucide-react';
 
 export const metadata = pageMeta({
-  title: 'Help: Templates, Sharing, Languages and Accounts',
-  description: 'Find answers about personal Wishly pages, template options, editing, international sharing, supported languages and where your account is managed.',
+  title: 'Wishly FAQ: Website Templates, Editing and Sharing',
+  description: 'Find clear answers about Wishly website templates, personalisation, publishing, mobile access, invitations and sharing. Learn what happens on this international site and what you do on the main Wishly.bd website.',
   path: '/faq/',
+  keywords: ['Wishly FAQ', 'personal website maker help', 'birthday website questions', 'digital invitation website help', 'share a personal website'],
 });
 
 export default function Page() {
   return (
-    <PageShell kicker="HELP & ANSWERS" title="Useful details, before you begin." lead="A few practical answers about choosing a design, sharing your page and using the main Wishly app." path="/faq/" name="FAQ" cta={false}>
+    <PageShell kicker="HELP & ANSWERS" title={<>Good to know, <em>before you create.</em></>} lead="Straightforward answers about exploring designs, choosing a template, personalising a page and sharing it. And a clear explanation of when to visit the main Wishly website." path="/faq/" name="Frequently asked questions" cta={false}>
       <JsonLd data={faqLd(faqs)} />
-      <section className="premium-container hp-sec hp-sec-faq"><Faq faqs={faqs} heading="Questions about making and sharing a page." lead="We have kept the answers practical: what you can make, where it lives and what the recipient needs." /></section>
+
+      <section className="faq-page-route global-wrap" aria-label="Where to explore and where to create">
+        <div className="faq-page-route-intro">
+          <p className="global-overline">TWO PLACES, TWO CLEAR ROLES</p>
+          <h2>Explore the idea here. Make it on Wishly.bd.</h2>
+          <p>Use this international site to browse examples and learn. Your account, editor, publishing tools and website dashboard are all on the main Wishly.bd platform.</p>
+        </div>
+        <div className="faq-page-route-cards">
+          <article className="faq-route-card">
+            <span className="faq-route-icon"><BookOpen size={20}/></span>
+            <div><small>YOU ARE HERE</small><h3>Explore and learn</h3><p>Browse guides, occasion collections and template previews.</p></div>
+            <Link href="/guides/" aria-label="Explore Wishly guides"><ArrowUpRight size={18}/></Link>
+          </article>
+          <article className="faq-route-card faq-route-card-main">
+            <span className="faq-route-icon"><Sparkles size={20}/></span>
+            <div><small>MAIN PRODUCT WEBSITE</small><h3>Create on Wishly.bd</h3><p>Sign up, open the editor, personalise your page and publish it.</p></div>
+            <a href={appLink('/signup')} aria-label="Create a website on Wishly.bd"><ArrowUpRight size={18}/></a>
+          </article>
+        </div>
+      </section>
+
+      <section className="faq-page-content global-wrap" aria-labelledby="faq-list-title">
+        <div className="faq-page-content-head">
+          <div><p className="global-overline">THE ANSWERS</p><h2 id="faq-list-title">Frequently asked questions</h2><p>Open a question to read the answer. If you are ready to browse, the links alongside the answers will take you to the right place.</p></div>
+          <span className="faq-count"><b>{faqs.length.toString().padStart(2, '0')}</b><small>helpful answers</small></span>
+        </div>
+        <Faq faqs={faqs} heading="Questions about templates, editing and sharing." lead="From choosing a design to managing a published page, start with the topic you want to understand." />
+      </section>
+
+      <section className="faq-page-resources global-wrap" aria-label="More Wishly resources">
+        <Link href="/templates/" className="faq-resource-card"><span><LayoutTemplate size={19}/></span><div><small>FIND A DESIGN</small><b>Browse templates</b><p>Compare designs by occasion, language and style.</p></div><ArrowUpRight size={18}/></Link>
+        <Link href="/guides/" className="faq-resource-card"><span><BookOpen size={19}/></span><div><small>GET INSPIRED</small><b>Explore guides</b><p>Read practical ideas for birthdays, letters and more.</p></div><ArrowUpRight size={18}/></Link>
+      </section>
     </PageShell>
   );
 }

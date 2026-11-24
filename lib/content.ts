@@ -1,31 +1,39 @@
 // International editorial copy. This content is written for discovery and guidance,
 // rather than mirroring the product homepage on wishly.bd.
 export const steps: [string, string, string][] = [
-  ['1', 'Choose the feeling first', 'Start with the person and the moment. A birthday, a quiet apology and a wedding invitation need different moods, so begin with the occasion that fits.'],
-  ['2', 'Add the details only you know', 'Bring in a few photographs, the words you would actually say and a song or video when it adds something. The small personal details do the important work.'],
-  ['3', 'Send the page, not another paragraph', 'Publish your page and share its single link in a message, email or printed QR code. The recipient opens it in a browser; there is no app to install.'],
+  ['1', 'Decide who the page is for', 'Start with the recipient and the reason you are making the page. A birthday surprise, a wedding invitation and a thank-you note need different information and different tones.'],
+  ['2', 'Choose a design and check its language', 'Browse by occasion, open the preview and confirm that the design’s language, layout and available interactions suit the person who will receive it.'],
+  ['3', 'Add your own words and media', 'Use the visual editor on wishly.bd to personalise supported text and replace sample photographs. Add music or video only where the chosen template provides those options.'],
+  ['4', 'Preview the page as a visitor', 'Check spelling, names, dates, image crops, mobile spacing and every button or reveal. Make sure the page still works when sound is off.'],
+  ['5', 'Publish and share one link', 'Publish from your Wishly account and open the live link once more. Send it by message or email, or use a QR code where available.'],
 ];
 
 export const features: [string, string, string][] = [
-  ['pen', 'Edit in context', 'Personalise supported text and page details in the visual editor, so the finished page sounds like you.'],
-  ['images', 'Make room for memories', 'Add your own photographs and turn a familiar moment into the centre of the experience.'],
-  ['music', 'Set a soundtrack', 'Where a design supports it, add music or a video to give the page its own atmosphere.'],
-  ['mail', 'Say more than “happy birthday”', 'Use a letter, a note or a final reveal to give your message the space it deserves.'],
-  ['phone', 'Designed for a small screen', 'Create and preview from a phone, then share a page that is easy to open on mobile.'],
-  ['link', 'One link to pass along', 'Share the published page directly, or use a QR code when a printed card or invitation makes more sense.'],
+  ['pen', 'Visual editing', 'Select supported text and media in the page preview, then make changes in context. The exact editable elements depend on the template.'],
+  ['template', 'Templates built around an occasion', 'Start with a design for birthdays, proposals, weddings, anniversaries, letters, friendship, invitations and other personal moments rather than a blank canvas.'],
+  ['images', 'Photos, galleries and media', 'Replace supported images, add photographs and use video or audio where the chosen design provides those controls.'],
+  ['theme', 'Design settings for each template', 'Choose from the available colour presets or a custom colour and select a supported font. Design preferences belong to the template you are editing.'],
+  ['phone', 'A mobile-friendly workflow', 'Build and preview from a phone or computer. Check the visitor experience at a small screen size before sharing.'],
+  ['interactive', 'Interactive moments', 'Depending on the design, a page may include a reveal, chapters, a countdown, a game, RSVP or reply controls, music or other small interactions.'],
+  ['history', 'Undo, redo and preview', 'Use the available history controls to review edits, then switch to Preview to test the page without the editing interface.'],
+  ['publish', 'Drafts and shareable links', 'Keep working on a saved draft, publish a public link and update the live version when your next round of edits is ready.'],
+  ['dashboard', 'A creator workspace', 'Return to your websites from the Wishly account area and review the website status, view information and visitor replies available to your account.'],
+  ['clock', 'Date and time options', 'Choose the time display that suits your preference where date and time settings are available. Confirm event details before publishing.'],
 ];
 
 export const faqs: [string, string][] = [
-  ['What is a personal website on Wishly?', 'It is a small, occasion-focused web page you personalise for one person or group. It can bring together a message, photographs and the interactive details supported by the chosen design.'],
-  ['Can someone open my page in another country?', 'Yes. A published Wishly page is opened through a regular web browser, so you can send its link to someone in another country. The recipient does not need to install an app.'],
-  ['Where are accounts and published pages managed?', 'The account area, editor, dashboard, checkout and published-page tools are on wishly.bd. This international site is the public guide and template showcase; its create, login and demo links take you to the main Wishly app.'],
-  ['Do I need to know how to code?', 'No. Choose a template and personalise the parts available in its editor. You do not need to arrange hosting or write HTML or CSS.'],
-  ['Can I start without paying?', 'Wishly is free to start. Some designs may be marked as premium, and any applicable price is shown in the main app before you purchase.'],
-  ['Can I use my own photographs and words?', 'Yes. You can personalise supported text and upload your own photos. Music, video and other interactive elements depend on the options available in the selected template.'],
-  ['Which languages are available?', 'The collection includes English designs and selected Bengali-language designs. Each template card indicates its language.'],
-  ['Can I update a page after sharing it?', 'You can return to your Wishly account on wishly.bd, edit a page and publish the changes. Check the editor for the options available to that page.'],
-  ['Does Wishly make printed invitations?', 'Wishly creates shareable web pages. You can send the link digitally or use a QR code where available; printing and delivery are not part of the website builder.'],
-  ['What if I need a custom design?', 'Use the contact or custom-request options in the main Wishly app to describe the occasion, visual direction and details you need.'],
+  ['What is Wishly?', 'Wishly is a website maker for personal moments. Choose an occasion-based design, personalise the parts the template supports and share the published page through one link.'],
+  ['What is the main Wishly website?', 'The main Wishly product website is wishly.bd. Accounts, the visual editor, dashboard, checkout and published-page tools are managed there. This international website provides English-first template discovery and practical guides for a worldwide audience.'],
+  ['Can I make a birthday website for someone in another country?', 'Yes. The published page opens in a regular browser through its link. Consider the recipient’s local time, language and mobile connection when planning the surprise.'],
+  ['Do I need coding or web-design experience?', 'No. Start with a ready-made template and use the visual editor on wishly.bd. The editing options vary by design, so preview the template before choosing it.'],
+  ['Are all 53 templates available in English?', 'No. The catalogue includes English designs and selected Bengali-language experiences. Each template card identifies its language so you can choose a design the recipient can comfortably read.'],
+  ['Does every template include photos, music and video?', 'No. Supported media and interactive sections vary by template. Check its details and live preview to see which controls are available.'],
+  ['Can I change colours and fonts?', 'The main Wishly Builder includes design settings for supported templates. Available palettes and fonts depend on the editor settings and the template you are using.'],
+  ['Can I preview a page before publishing?', 'Yes. Use the preview mode to check the visitor experience, then publish when the content and interactions look right. Open the live link once more after publishing.'],
+  ['Can I edit my page after sharing it?', 'Return to your Wishly account on wishly.bd, open the relevant website, make supported edits and publish the updated version.'],
+  ['Can I start for free?', 'Wishly is free to start. Some templates may be marked Premium; check the price and purchase terms displayed in the main app before confirming a purchase.'],
+  ['Can guests reply to a digital invitation?', 'Some templates or page types may offer RSVP or reply features. Do not assume every design includes them; check the exact template before sharing.'],
+  ['Does Wishly print or deliver physical cards?', 'Wishly creates digital pages and shareable links. You can use a QR code where available, but physical printing and delivery are not part of the website builder.'],
 ];
 
 type Occasion = { title: string; h1: string; intro: string; tips: [string, string][]; audience: string; closing: string };

@@ -7,7 +7,7 @@ import { appLink } from '@/lib/site';
 import { crumbs } from '@/lib/seo';
 
 /** Shared frame for editorial and informational pages on the international site. */
-export default function PageShell({ kicker, title, lead, path, name, children, cta = true, showCrumbs = true }: { kicker: string; title: string; lead: string; path: string; name: string; children: React.ReactNode; cta?: boolean; showCrumbs?: boolean }) {
+export default function PageShell({ kicker, title, lead, path, name, children, cta = true, showCrumbs = true }: { kicker: string; title: React.ReactNode; lead: string; path: string; name: string; children: React.ReactNode; cta?: boolean; showCrumbs?: boolean }) {
   return (
     <main className="premium-site international-site">
       {showCrumbs && <JsonLd data={crumbs([['Home', '/'], [name, path]])} />}

@@ -418,7 +418,7 @@ a,button,[role=button],label,select,summary{touch-action:manipulation;-webkit-ta
 @media (max-width:479px){.cfm-backdrop{align-items:end;padding:0}.cfm-card{width:100%;border-radius:24px 24px 0 0;padding-bottom:26px}}
 @media (prefers-reduced-motion:reduce){.cfm-backdrop,.cfm-card{animation:none}}
 
-.hp-foot-brand{display:flex;flex-direction:column;align-items:flex-start;gap:9px}.developer-badge{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.035);color:#85889b;font-size:10px;font-weight:700;transition:.2s;backdrop-filter:blur(10px);text-decoration:none}.developer-badge:hover{border-color:rgba(240,75,154,.28);background:rgba(240,75,154,.06);color:#e8e9f1;transform:translateY(-1px)}.developer-badge strong{color:#d7d9e4;font-weight:900}.developer-dot{width:7px;height:7px;border-radius:50%;background:#f04b9a;box-shadow:0 0 0 3px rgba(240,75,154,.1);flex:0 0 auto}.footer-end{display:flex;align-items:center;gap:14px}.footer-end a{font-size:11px;color:#777a8c;text-decoration:none}.footer-end a:hover{color:#fff}
+.hp-foot-brand{display:flex;flex-direction:column;align-items:flex-start;gap:9px}.footer-end{display:flex;align-items:center;gap:14px}.footer-end a{font-size:11px;color:#777a8c;text-decoration:none}.footer-end a:hover{color:#fff}
 
 .home-seo-section,.templates-seo-copy,.category-seo-copy { margin-top: 88px; margin-bottom: 88px; }
 .home-seo-copy-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; margin-top: 30px; }

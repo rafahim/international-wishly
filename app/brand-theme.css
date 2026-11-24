@@ -214,16 +214,16 @@ body{font-family:var(--font-inter),Inter,Arial,sans-serif!important}
   .international-site .global-editorial-card:not(:first-child) .global-editorial-card-image{width:34%;}
   .international-site .global-editorial-card:not(:first-child) .global-card-copy{margin-left:34%;padding-left:10px;}
   .international-site .global-editorial-card h3{font-size:20px;}
-  .international-site .global-editorial-card p{font-size:10px;line-height:1.55;}
+  .international-site .global-editorial-card p{font-size:13px;line-height:1.55;}
   .global-main-product{padding:24px 18px;border-radius:17px;}
   .global-main-product-copy h2{font-size:36px;}
-  .global-main-product-copy>p:not(.global-overline):not(.global-main-product-footnote){font-size:12px;}
+  .global-main-product-copy>p:not(.global-overline):not(.global-main-product-footnote){font-size:13px;}
   .global-main-product-points{grid-template-columns:1fr;gap:9px;margin:19px 0 22px;}
   .global-main-product-visual{width:96%;}
   .global-main-product-sticker{right:10px;max-width:calc(100% - 20px);bottom:9px;padding:9px 11px;font-size:8px;}
   .global-guide-main-site{padding:22px 17px;margin-top:28px;margin-bottom:26px;}
   .global-guide-main-site-copy h2{font-size:30px;}
-  .global-guide-main-site-copy>p:not(.global-overline){font-size:11px;}
+  .global-guide-main-site-copy>p:not(.global-overline){font-size:13px;}
   .global-guide-main-site-plain{margin:13px 0 0;}
   .global-guide-main-site-points{grid-template-columns:1fr;}
   .global-guide-main-site-points>div{grid-template-columns:39px 1fr;}

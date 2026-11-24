@@ -6,6 +6,9 @@ import { guideVisualFor } from '@/lib/guide-visuals';
 
 export const dynamic = 'force-static';
 
+// Update this date whenever page content genuinely changes, so Google gets an honest lastmod.
+const LAST_UPDATED = new Date('2026-11-25T00:00:00Z');
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const fixed: [string, number, 'weekly' | 'monthly'][] = [
     ['/', 1, 'weekly'],
@@ -19,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages = fixed.map(([path, priority, changeFrequency]) => ({
     url: abs(path),
+    lastModified: LAST_UPDATED,
     changeFrequency,
     priority,
     ...(path === '/' ? { images: [abs('/template-shots/a-little-birthday-letter.webp'), abs('/template-shots/the-birthday-experience.webp')] } : {}),
@@ -34,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const categoryPages = occasionList.map((occasion) => ({
     url: abs(`/templates/${occasion.key}/`),
+    lastModified: LAST_UPDATED,
     images: templatesFor(occasion.key).slice(0, 3).map((template) => abs(coverSrc(template.slug))),
     changeFrequency: 'weekly' as const,
     priority: 0.82,
@@ -41,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const templatePages = templates.map((template) => ({
     url: abs(`/template/${template.slug}/`),
+    lastModified: LAST_UPDATED,
     images: [abs(coverSrc(template.slug))],
     changeFrequency: 'monthly' as const,
     priority: 0.62,

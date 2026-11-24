@@ -45,3 +45,12 @@
   .os-chips { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   .os-chips a { min-height: 50px; padding: 0 12px; gap: 9px; font-size: 13px; }
 }
+
+.os-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.os-browse { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.07); font-size: 13.5px; }
+.os-browse > span { color: #8d8b9d; }
+.os-browse a { color: #cfcdda; text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; transition: color .2s ease, border-color .2s ease; }
+.os-browse a:hover { color: #fff; border-color: #f04b9a; }
+.os-browse a:focus-visible { outline: 2px solid #f04b9a; outline-offset: 3px; }
+.os-browse .os-browse-all { margin-left: auto; color: #f29ac0; font-weight: 600; }
+@media (max-width: 560px) { .os-browse { gap: 4px 14px; font-size: 13px; } .os-browse .os-browse-all { margin-left: 0; } }

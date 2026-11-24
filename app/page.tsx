@@ -96,12 +96,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="os-strip" aria-label="Wishly occasions">
+      <section className="os-strip" aria-labelledby="global-occasions-title">
+        <h2 id="global-occasions-title" className="os-sr">Find an idea for every special moment</h2>
         <div className="os-stats global-wrap">
           {stats.map(([big, small]) => <div key={small}><strong>{big}</strong><span>{small}</span></div>)}
         </div>
         <div className="os-feel global-wrap">
-          <h2 className="os-feel-title">START WITH A FEELING</h2>
+          <h3 className="os-feel-title">START WITH A FEELING</h3>
           <ul className="os-chips">
             {feelings.map(([key, label, Icon]) => (
               <li key={key}>
@@ -113,6 +114,11 @@ export default function Home() {
               </li>
             ))}
           </ul>
+          <nav className="os-browse" aria-label="Browse designs by occasion on this site">
+            <span>Browse designs here:</span>
+            {feelings.map(([key, label]) => <Link key={key} href={`/templates/${key}/`}>{label}</Link>)}
+            <Link href="/templates/" className="os-browse-all">All occasions ↗</Link>
+          </nav>
         </div>
       </section>
 

@@ -49,3 +49,11 @@ No source-code change guarantees first-page placement or a specific amount of tr
 - Confirm Google Tag Manager container `GTM-N7X9SNJ3` loads on all routes.
 - Test the container with GTM Preview / Google Tag Assistant after deployment.
 - If GA4 is configured in GTM, do not also enable the same GA4 property through `NEXT_PUBLIC_GA_ID`, or page views may be counted twice.
+
+## AI search (GEO / AEO) checklist
+- [ ] After deploy, open /robots.txt, /llms.txt and /llms-full.txt and confirm they load (HTTP 200).
+- [ ] Submit the sitemap to Google Search Console and Bing Webmaster Tools (ChatGPT, Copilot and others rely on Bing's index).
+- [ ] Validate JSON-LD on /, /wish-website-maker/, /what-is-wishly/ and /faq/ with Google's Rich Results Test.
+- [ ] Keep the answer-first definition ("Wishly is a no-code website builder for personal wishes") consistent everywhere.
+- [ ] Get mentions: Instagram/Facebook bios, wishly.bd footer link, Product Hunt, Reddit/Quora answers, Medium/LinkedIn posts, YouTube tutorials. AI assistants cite what many trusted pages say.
+- [ ] Re-test monthly by asking ChatGPT, Gemini, Claude and Perplexity: "best way to make a birthday website without coding".

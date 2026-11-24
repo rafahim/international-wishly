@@ -112,3 +112,21 @@ Use one primary keyword per page. Add a small number of close variants only wher
 - Google — Meta tags supported by Google: https://developers.google.com/search/docs/crawling-indexing/special-tags
 - Google — Snippet / meta description guidance: https://developers.google.com/search/docs/appearance/snippet
 - Google — Image SEO best practices: https://developers.google.com/search/docs/appearance/google-images/
+
+
+## Observed international search terms and competitors (SERP research, 25 Nov 2026)
+Method: live web searches for birthday websites, proposal sites, digital love letters and group/digital cards. These are phrases and services that appear in results. **No search-volume numbers are claimed**; validate demand in Search Console / Keyword Planner.
+
+### Phrases seen in titles and page copy
+- Birthday: birthday website builder, birthday wishes website, birthday wish website, birthday invitation website, birthday website templates, AI birthday website builder, digital birthday card, interactive digital birthday card, group birthday card online, birthday e-card, birthday invitation with RSVP.
+- Proposal / dating: proposal website maker, marriage proposal website, date proposal website maker, be my valentine website, will you be my girlfriend/boyfriend page, promposal website, interactive proposal with growing YES button, Netflix-themed proposal website.
+- Love / anniversary: digital love letter website, animated digital love letter, openable envelope love letter, personalised website gift for partner, romantic surprise website, relationship website, anniversary website, long-distance gift, time-together counter, QR code letter gift.
+- Generic: personal little website for someone you love, digital gift page, online greeting card, group greeting card, virtual card, no-code / AI website builder for gifts.
+
+### Services and sellers seen in results (for context, not endorsement)
+Group cards: Kudoboard, GroupTogether, Thankbox, Groupcards.io, SendWishOnline, HappiePages, Canva group cards. Personal gift pages: QLovy, Just Meant For You, gift4you, doiloveyu, From Me To You, BeMyVal. General builders and templates: Wix/Wixel, Adobe Express, Canva, Webflow, Framer, Nicepage, Mobirise, Wegic, Replit. Marketplaces and freelancers: Etsy digital love letter templates, Fiverr and Upwork custom-coded romantic or birthday pages.
+
+### Where these terms were applied
+- Occasion pages: “Also known as” lines (lib/category-seo.ts, ALSO_SEARCHED_AS).
+- New page: /wish-website-vs-digital-cards/ (group card vs e-card vs wish website vs freelancer vs AI builder).
+- New guides: group-birthday-card-vs-birthday-website, birthday-invitation-website-with-rsvp-and-countdown, be-my-valentine-website-ideas, date-proposal-website-ideas, interactive-love-letter-website-ideas, qr-code-gift-ideas-for-a-personal-website, ai-website-builder-vs-template-wish-website-maker, digital-love-letter-template-vs-custom-website.

@@ -215,3 +215,20 @@ The primary query is one intent per article. Supporting terms are natural varian
 - Google title-link guidance: https://developers.google.com/search/docs/appearance/title-link — unique, concise page titles that match the visible page.
 - Google canonicalization: https://developers.google.com/search/docs/crawling-indexing/canonicalization — canonical signals are hints and Google may choose another URL.
 - Google SEO Starter Guide: https://developers.google.com/search/docs/fundamentals/seo-starter-guide — useful unique content and duplicate URL handling.
+
+
+## Added: no-code, how-to and seasonal guides (12)
+| Slug | Primary keyword |
+|---|---|
+| how-to-make-a-website-without-coding | how to make a website without coding |
+| no-code-birthday-website-maker-what-to-look-for | no code birthday website maker |
+| proposal-website-without-coding | proposal website without coding |
+| how-to-choose-a-wish-website-template | how to choose a website template |
+| how-to-share-a-surprise-website-link | how to share a surprise website link |
+| digital-gift-privacy-checklist | personal website privacy checklist |
+| make-a-personal-website-from-your-phone | make a website on your phone |
+| mothers-day-website-ideas | mothers day website ideas |
+| fathers-day-website-ideas | fathers day website ideas |
+| eid-greeting-website-ideas | eid greeting website ideas |
+| new-year-wish-website-ideas | new year wish website |
+| proposal-message-examples-for-a-website | proposal message examples |

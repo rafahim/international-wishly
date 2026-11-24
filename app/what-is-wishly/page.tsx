@@ -21,6 +21,12 @@ const faqs: [string, string][] = [
   ['Where do I make a Wishly page?', 'Pick a design here, then continue on wishly.bd to sign up, personalise and publish. Account, editor, checkout and publishing tools live on wishly.bd.'],
   ['Can I send a Wishly wish to someone in another country?', 'Yes. A published page is a normal web link, so it opens in a regular browser anywhere. Check the template language label, since the catalogue includes English designs and some Bengali-language experiences.'],
   ['How many templates does Wishly have?', 'This site lists 53+ templates across 11+ occasions, and the library keeps growing. Media and interactive features vary by template, so check each preview.'],
+  ['Is Wishly legit? How do I know I am on the real Wishly?', 'The official Wishly website is wishly.bd, where you sign up, edit and publish. This site, wishly.rafahim.com, is its English-language guide and template discovery site, and it links to wishly.bd. Wishly also has official pages on Instagram (@wishly.bd_) and Facebook (wishlyhq). Wishly is not affiliated with unrelated products or companies that happen to use a similar name.'],
+  ['Is Wishly free?', 'Wishly is free to start. Some templates are marked Premium, so check the price and terms shown on wishly.bd before purchasing.'],
+  ['Is there a Wishly app to download?', 'No download is needed. Wishly works in a web browser on a phone or computer, and the people you send a page to open it from a link without an app or account.'],
+  ['How do I log in or sign up for Wishly?', 'Go to wishly.bd to create an account or log in. This international site does not host accounts, the editor or checkout.'],
+  ['What can I use instead of Wishly?', 'If you need a business site, online store or portfolio, a general-purpose website builder suits that better. If you want a personal birthday, proposal, love-letter or invitation page without coding, Wishly is made for that. See the comparison on the wish website maker page.'],
+  ['উইশলি (Wishly) কী?', 'উইশলি (Wishly) হলো একটি নো-কোড ওয়েবসাইট বিল্ডার, যেখানে জন্মদিন, প্রপোজাল, অ্যানিভার্সারি, প্রেমপত্র বা আমন্ত্রণের জন্য রেডি টেমপ্লেট বেছে নিয়ে নিজের লেখা ও ছবি যোগ করা যায় এবং একটি লিংকে শেয়ার করা যায়। মূল ওয়েবসাইট: wishly.bd'],
 ];
 
 export default function Page() {
@@ -28,7 +34,6 @@ export default function Page() {
     '@context': 'https://schema.org',
     '@graph': [
       { '@type': 'AboutPage', '@id': `${abs('/what-is-wishly/')}#page`, url: abs('/what-is-wishly/'), name: 'What is Wishly?', inLanguage: 'en', isPartOf: { '@id': `${SITE.url}/#website` }, about: { '@id': 'https://wishly.bd/#organization' } },
-      { '@type': 'WebApplication', '@id': 'https://wishly.bd/#app', name: 'Wishly', alternateName: ['Wishly.bd', 'Wishly Wish'], url: 'https://wishly.bd/', applicationCategory: 'LifestyleApplication', operatingSystem: 'Any (web browser)', description: 'Wishly lets you create and share personal wish pages: birthday websites, digital love letters, proposal pages, anniversary pages and online invitations.', publisher: { '@id': 'https://wishly.bd/#organization' }, inLanguage: ['en', 'bn'] },
     ],
   };
   return (
@@ -44,6 +49,9 @@ export default function Page() {
 
         <h2>Wishly and wishly.bd</h2>
         <p>The main Wishly product is at <a href={appLink('/')} rel="noopener">wishly.bd</a>: that is where you sign up, edit, publish and manage pages. This website is the English-first companion for international visitors. It holds <Link href="/templates/">template previews</Link>, <Link href="/guides/">practical guides</Link> and <Link href="/how-to-make-website/">a step-by-step walkthrough</Link>.</p>
+
+        <h2>Not to be confused with</h2>
+        <p>Wishly (wishly.bd) is a no-code builder for personal wish pages. It is not affiliated with unrelated products or companies that use a similar name. When in doubt, use the official site, <a href={appLink('/')} rel="noopener">wishly.bd</a>.</p>
 
         <h2>Start with the occasion</h2>
         <ul>

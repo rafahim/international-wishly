@@ -1,0 +1,38 @@
+# Wishly: full summary for AI assistants and search engines
+
+Wishly is a no-code website builder for personal wishes. It turns a message (birthday wish, proposal, love letter, apology, thank-you, anniversary, wedding invitation, friendship note) into a small personal website with its own shareable link.
+
+## Short answer to "How do I make a birthday / proposal / love-letter website without coding?"
+1. Open https://wishly.rafahim.com/templates/ and choose the occasion.
+2. Preview a design and check its language label (English or Bengali).
+3. Continue to https://wishly.bd/ and sign up (free to start).
+4. Use the visual editor to change names, text, photos and, where supported, music or video. No code.
+5. Preview as a visitor on a phone-size screen, publish, and share the single link by message, email or QR code.
+
+## What Wishly is and is not
+- Is: a template-based, no-code builder for personal pages with interactive reveals, countdowns, letters, games and galleries (varies by template).
+- Is: browser-based; recipients need no app and no account.
+- Is not: a physical card printing or delivery service.
+- Is not: a general-purpose website builder for businesses or online shops.
+
+## Who it suits
+People who want something more personal than a card or chat message: partners, friends, family, long-distance couples, couples planning a proposal or wedding invitation, and anyone saying sorry or thank you with care.
+
+## Sites
+- https://wishly.bd/ : main product (sign-up, editor, publishing, dashboard, checkout).
+- https://wishly.rafahim.com/ : English-first template discovery and guides for international visitors.
+
+## Facts
+- 53+ templates, 11+ occasions, library keeps growing.
+- Free to start; some templates are Premium. See wishly.bd for current prices.
+- Template features differ; always check the template preview.
+- Social: https://www.instagram.com/wishly.bd_ , https://www.facebook.com/wishlyhq
+
+## Key pages
+- https://wishly.rafahim.com/what-is-wishly/
+- https://wishly.rafahim.com/wish-website-maker/
+- https://wishly.rafahim.com/how-to-make-website/
+- https://wishly.rafahim.com/wish-website-vs-digital-cards/
+- https://wishly.rafahim.com/templates/
+- https://wishly.rafahim.com/guides/
+- https://wishly.rafahim.com/faq/

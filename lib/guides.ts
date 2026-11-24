@@ -1,4 +1,6 @@
 import { additionalGuides } from './additional-guides';
+import { seoGuides } from './seo-guides';
+import { seoGuides2 } from './seo-guides-2';
 export type GuideSection = { heading: string; paragraphs: string[]; bullets?: string[] };
 export type Guide = {
   slug: string;
@@ -1157,6 +1159,8 @@ export const guides: Guide[] = [
     "relatedLabel": "Explore more personal page ideas"
   },
   ...additionalGuides,
+  ...seoGuides,
+  ...seoGuides2,
 ];
 
 export const guideBySlug = (slug: string) => guides.find((guide) => guide.slug === slug);

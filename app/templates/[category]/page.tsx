@@ -6,7 +6,7 @@ import JsonLd from '@/components/JsonLd';
 import { abs, appLink } from '@/lib/site';
 import { crumbs, faqLd, pageMeta } from '@/lib/seo';
 import { OCCASION_COPY } from '@/lib/content';
-import { CATEGORY_SEO } from '@/lib/category-seo';
+import { ALSO_SEARCHED_AS, CATEGORY_SEO } from '@/lib/category-seo';
 import { coverSrc, occasionLabel, occasionList, templates, templatesFor } from '@/lib/templates';
 
 export const dynamicParams = false;
@@ -51,6 +51,7 @@ export default async function Page({ params }: { params: Promise<{ category: str
           <p className="global-overline">{label.toUpperCase()} WEBSITE IDEAS</p>
           <h2>{seo.introHeading}</h2>
           {seo.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          {ALSO_SEARCHED_AS[category] && <p className="global-also-searched"><strong>Also known as:</strong> {ALSO_SEARCHED_AS[category].join(' · ')}.</p>}
         </div>
         <div className="global-category-checklist">
           <h3>{seo.checklistHeading}</h3>

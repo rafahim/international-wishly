@@ -5,10 +5,11 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TemplateCard from '@/components/TemplateCard';
 import HeroShowcase from '@/components/HeroShowcase';
+import Faq from '@/components/Faq';
 import JsonLd from '@/components/JsonLd';
 import { SITE, abs, appLink } from '@/lib/site';
-import { pageMeta } from '@/lib/seo';
-import { features, steps } from '@/lib/content';
+import { pageMeta, faqLd } from '@/lib/seo';
+import { features, steps, faqs } from '@/lib/content';
 import { occasionList, templates } from '@/lib/templates';
 import { guides } from '@/lib/guides';
 import './occasion-strip.css';
@@ -63,13 +64,14 @@ export default function Home() {
   return (
     <main className="premium-site international-site">
       <JsonLd data={ld} />
+      <JsonLd data={faqLd(faqs.slice(0, 6))} />
       <Navbar />
 
       <section className="global-hero global-wrap">
         <div className="global-hero-copy">
           <p className="global-overline"><span className="global-overline-mark">✳</span> A PERSONAL PAGE FOR A MOMENT THAT MATTERS</p>
           <h1>Find the perfect idea. <em>Create something unforgettable.</em></h1>
-          <p className="global-hero-lead">Explore birthday website ideas, romantic page inspiration, anniversary surprises, digital love letters and online invitations. Find a starting point for someone special, compare real Wishly designs and continue to Wishly.bd when you are ready to create.</p>
+          <p className="global-hero-lead">Make a birthday, proposal or love-letter website without coding. Explore anniversary surprises, digital letters and online invitations, find a starting point for someone special, compare real Wishly designs and continue to Wishly.bd when you are ready to create.</p>
           <div className="global-hero-actions">
             <Link href="/guides/" className="global-button global-button-primary">Explore ideas <ArrowUpRight size={17} /></Link>
             <a href={appLink('/signup')} className="global-text-action">Create on Wishly.bd <span>↗</span></a>
@@ -122,6 +124,11 @@ export default function Home() {
             <Link href="/templates/" className="os-browse-all">All occasions ↗</Link>
           </nav>
         </div>
+      </section>
+
+      <section className="global-wrap" aria-labelledby="quick-answer-title" style={{ maxWidth: 860, padding: '40px 0' }}>
+        <h2 id="quick-answer-title">What is Wishly?</h2>
+        <p><strong>Wishly is a no-code website builder for personal wishes.</strong> Choose a template for a birthday, proposal, anniversary, love letter, apology or invitation, personalise it in a visual editor and share the published page as one link that opens in any browser. No coding or design skills are needed, and it is free to start. <Link href="/wish-website-maker/">How a wish website maker works</Link> · <Link href="/what-is-wishly/">What is Wishly?</Link></p>
       </section>
 
       <section className="global-template-section">
@@ -211,6 +218,10 @@ export default function Home() {
         <div className="global-guide-promo-list">
           {guides.slice(0, 4).map((guide) => <article key={guide.slug}><span>{guide.category}</span><h3><Link href={`/guides/${guide.slug}/`}>{guide.title}</Link></h3><Link href={`/guides/${guide.slug}/`} className="global-guide-arrow" aria-label={`Read ${guide.title}`}><ArrowUpRight size={17} /></Link></article>)}
         </div>
+      </section>
+
+      <section className="global-wrap" aria-label="Frequently asked questions">
+        <Faq faqs={faqs.slice(0, 6)} heading="Wishly, answered." lead="Quick answers about making a wish website without coding." />
       </section>
 
       <section className="global-final-cta global-wrap">

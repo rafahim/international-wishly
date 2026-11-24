@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ['/features/', 0.75, 'monthly'],
     ['/how-to-make-website/', 0.8, 'monthly'],
     ['/guides/', 0.9, 'weekly'],
+    ['/wish-website-maker/', 0.9, 'monthly'],
+    ['/wish-website-vs-digital-cards/', 0.8, 'monthly'],
     ['/what-is-wishly/', 0.8, 'monthly'],
     ['/about/', 0.55, 'monthly'],
     ['/faq/', 0.65, 'monthly'],

@@ -1,0 +1,61 @@
+name: Deploy international Wishly site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+  NEXT_PUBLIC_APP_URL: https://wishly.bd
+  NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
+  NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ vars.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the international domain configuration
+        shell: bash
+        run: |
+          if [ -z "$NEXT_PUBLIC_SITE_URL" ]; then
+            echo "Set the GitHub Actions repository variable NEXT_PUBLIC_SITE_URL to the independent international domain before deploying."
+            exit 1
+          fi
+          SITE_HOST="${NEXT_PUBLIC_SITE_URL#https://}"
+          SITE_HOST="${SITE_HOST#http://}"
+          SITE_HOST="${SITE_HOST%%/*}"
+          CNAME_HOST="$(tr -d '[:space:]' < public/CNAME)"
+          if [ "$SITE_HOST" != "$CNAME_HOST" ]; then
+            echo "public/CNAME ($CNAME_HOST) must match NEXT_PUBLIC_SITE_URL ($SITE_HOST)."
+            exit 1
+          fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

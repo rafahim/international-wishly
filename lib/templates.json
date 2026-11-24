@@ -1,0 +1,534 @@
+[
+ {
+  "slug": "the-birthday-experience",
+  "name": "The Birthday Experience",
+  "description": "An immersive 12-scene birthday journey with a cinematic countdown, balloon wishes, candle and cake moments, a bouquet, personal memories, a letter, a gift reveal, a 3D heart universe, a galaxy photo journey, cherry blossoms and an interactive garden.",
+  "category": "birthday",
+  "alsoCategories": [],
+  "emoji": "🎂",
+  "accent": "#e98eb6",
+  "demoHidden": false
+ },
+ {
+  "slug": "master",
+  "name": "Master Template",
+  "description": "The flagship cinematic birthday experience — built as the main editable template for your first website.",
+  "category": "birthday",
+  "alsoCategories": [],
+  "emoji": "🎂",
+  "accent": "#ec4899",
+  "demoHidden": false
+ },
+ {
+  "slug": "prem-potro",
+  "name": "প্রেম পত্র",
+  "description": "একটি মিষ্টি বাংলা প্রেম পত্র — মনের কথা বলে শেষে জিজ্ঞেস করা: তুমি কি আমার হবে?",
+  "category": "proposal",
+  "alsoCategories": [],
+  "emoji": "💌",
+  "accent": "#ff2e63",
+  "demoHidden": false
+ },
+ {
+  "slug": "wedding-proposal",
+  "name": "Wedding Proposal",
+  "description": "The exact Wedding Proposal experience you supplied.",
+  "category": "wedding",
+  "alsoCategories": [],
+  "emoji": "💍",
+  "accent": "#ff2d55",
+  "demoHidden": false
+ },
+ {
+  "slug": "bengoli-sorry",
+  "name": "Bengoli Sorry",
+  "description": "A golden Kintsugi-style apology letter in Bangla about mending what was broken.",
+  "category": "sorry",
+  "alsoCategories": [],
+  "emoji": "🏺",
+  "accent": "#c9a05a",
+  "demoHidden": false
+ },
+ {
+  "slug": "valentine-2026",
+  "name": "Valentine 2026",
+  "description": "A premium Valentine proposal experience with an interactive reveal, story, digital garden, love jar and final letter.",
+  "category": "proposal",
+  "alsoCategories": [],
+  "emoji": "💗",
+  "accent": "#b86b78",
+  "demoHidden": false
+ },
+ {
+  "slug": "sky-lantern",
+  "name": "আকাশের প্রদীপ",
+  "description": "রাতের আকাশে প্রদীপ জ্বেলে মনের কথা বলা — শেষে প্রশ্ন: তুমি কি আমার প্রিয়তমা হবে?",
+  "category": "proposal",
+  "alsoCategories": [],
+  "emoji": "🏮",
+  "accent": "#f59e0b",
+  "demoHidden": false
+ },
+ {
+  "slug": "miss-you-1",
+  "name": "Miss You 1",
+  "description": "The original cherry-blossom Love Letter experience supplied for the Miss You section.",
+  "category": "miss-you",
+  "alsoCategories": [],
+  "emoji": "💌",
+  "accent": "#ff6b9d",
+  "demoHidden": false
+ },
+ {
+  "slug": "prem-kahini",
+  "name": "প্রেম কাহিনী",
+  "description": "খাম খুলে পড়া একটা বাংলা প্রেমের চিঠি — শেষে প্রশ্ন: তুমি কি আমার প্রিয়তমা হবে?",
+  "category": "letter",
+  "alsoCategories": [],
+  "emoji": "📜",
+  "accent": "#b74a6d",
+  "demoHidden": false
+ },
+ {
+  "slug": "premium-sorry",
+  "name": "Premium Sorry",
+  "description": "A cinematic, story-driven apology experience with memories, a heartfelt letter and a final forgiveness question.",
+  "category": "sorry",
+  "alsoCategories": [],
+  "emoji": "🥺",
+  "accent": "#5b8def",
+  "demoHidden": false
+ },
+ {
+  "slug": "chat-message",
+  "name": "তোমার জন্য একটা মেসেজ",
+  "description": "ফোনের চ্যাটে একটার পর একটা মেসেজ আসে, শেষে প্রশ্ন — তুমি কি আমার প্রিয়তমা হবে?",
+  "category": "proposal",
+  "alsoCategories": [],
+  "emoji": "💬",
+  "accent": "#ec4899",
+  "demoHidden": false
+ },
+ {
+  "slug": "love-letter",
+  "name": "Love Letter",
+  "description": "A sealed envelope opens into a handwritten-style love letter with reasons, chapters and a promise.",
+  "category": "letter",
+  "alsoCategories": [],
+  "emoji": "💌",
+  "accent": "#c98a8a",
+  "demoHidden": false
+ },
+ {
+  "slug": "midnight-love",
+  "name": "Midnight Love",
+  "description": "A midnight-gold love letter sealed behind a golden medallion.",
+  "category": "letter",
+  "alsoCategories": [],
+  "emoji": "🌙",
+  "accent": "#c9a961",
+  "demoHidden": false
+ },
+ {
+  "slug": "sorry",
+  "name": "Sorry",
+  "description": "A quiet rainy-window apology letter that says what words couldn't.",
+  "category": "letter",
+  "alsoCategories": [],
+  "emoji": "🌧️",
+  "accent": "#6b7a8f",
+  "demoHidden": false
+ },
+ {
+  "slug": "sorry-letter-2",
+  "name": "Sorry Letter 2",
+  "description": "A gentle apology letter that blooms open from a wilted flower.",
+  "category": "letter",
+  "alsoCategories": [],
+  "emoji": "🌸",
+  "accent": "#a5615f",
+  "demoHidden": false
+ },
+ {
+  "slug": "hate-you-letter",
+  "name": "Hate You Letter",
+  "description": "A dark ember-lit letter that says the angry words out loud, then lets go.",
+  "category": "letter",
+  "alsoCategories": [],
+  "emoji": "🔥",
+  "accent": "#e06c3f",
+  "demoHidden": false
+ },
+ {
+  "slug": "miss-you-letter",
+  "name": "Miss You Letter",
+  "description": "A moonlit midnight letter of longing, with a miss-list, time-apart counter and memory timeline.",
+  "category": "letter",
+  "alsoCategories": [],
+  "emoji": "🌙",
+  "accent": "#e0b464",
+  "demoHidden": false
+ },
+ {
+  "slug": "normal-letter",
+  "name": "Normal Letter",
+  "description": "A calm, no-occasion paper letter in an envelope with a wax seal, short notes and a gentle closing.",
+  "category": "letter",
+  "alsoCategories": [],
+  "emoji": "✉️",
+  "accent": "#2c3a52",
+  "demoHidden": false
+ },
+ {
+  "slug": "arcade-propose",
+  "name": "Arcade Propose",
+  "description": "A retro arcade game that ends with the big question: press YES to win, and the NO button runs away.",
+  "category": "proposal",
+  "alsoCategories": [],
+  "emoji": "🎮",
+  "accent": "#ff10f0",
+  "demoHidden": false
+ },
+ {
+  "slug": "best-friend-forever",
+  "name": "Best Friend Forever",
+  "description": "A heartfelt friendship page: why you're special, a funny friendship contract to sign, and a big BFF celebration.",
+  "category": "best-friend",
+  "alsoCategories": [],
+  "emoji": "🤝",
+  "accent": "#ff7043",
+  "demoHidden": false
+ },
+ {
+  "slug": "best-friend-arcade",
+  "name": "Best Friend Arcade",
+  "description": "A 2-player retro arcade for your best friend: pick a hero, see your bond stats, catch memories and beat the final boss.",
+  "category": "best-friend",
+  "alsoCategories": [],
+  "emoji": "👾",
+  "accent": "#39ff14",
+  "demoHidden": false
+ },
+ {
+  "slug": "best-friend-letter",
+  "name": "Best Friend Letter",
+  "description": "A warm handwritten letter to your best friend: open the envelope, read it typed out line by line, and finish with a P.S.",
+  "category": "letter",
+  "alsoCategories": [],
+  "emoji": "💌",
+  "accent": "#a83450",
+  "demoHidden": false
+ },
+ {
+  "slug": "tumi-ki-amar-bondhu-hobe",
+  "name": "তুমি কি আমার বন্ধু হবে",
+  "description": "ক্রাফট পেপারে আঁকা একটা বন্ধুত্বের আমন্ত্রণ — কারণগুলো পড়ে শেষে প্রশ্ন: তুই কি আমার বন্ধু হবি? (না বললে বোতাম পালায়!)",
+  "category": "friendship",
+  "alsoCategories": [],
+  "emoji": "🤝",
+  "accent": "#d94830",
+  "demoHidden": false
+ },
+ {
+  "slug": "arcade-friendship",
+  "name": "Arcade Friendship",
+  "description": "A neon terminal friend request: scan log, friendship stats, and one big question — YES wins, NO runs away.",
+  "category": "friendship",
+  "alsoCategories": [],
+  "emoji": "🕹️",
+  "accent": "#00f0ff",
+  "demoHidden": false
+ },
+ {
+  "slug": "a-coffee-with-friend",
+  "name": "A Coffee with Friend",
+  "description": "A cozy cafe-menu friend request: read the friendship menu, answer the coffee question, and get your friendship receipt — NO runs away.",
+  "category": "friendship",
+  "alsoCategories": [],
+  "emoji": "☕",
+  "accent": "#c45a1a",
+  "demoHidden": false
+ },
+ {
+  "slug": "be-my-friend",
+  "name": "Be My Friend",
+  "description": "A warm handwritten letter that asks one simple question: will you be my friend?",
+  "category": "letter",
+  "alsoCategories": [],
+  "emoji": "🌸",
+  "accent": "#d94a6e",
+  "demoHidden": false
+ },
+ {
+  "slug": "live-bodcast-with-bestu",
+  "name": "Live Bodcast With Bestu",
+  "description": "A glamorous live-broadcast awards night where your best friend is the winner.",
+  "category": "best-friend",
+  "alsoCategories": [],
+  "emoji": "🏆",
+  "accent": "#c9a961",
+  "demoHidden": false
+ },
+ {
+  "slug": "sorry-bengoli-version",
+  "name": "Sorry bengoli version",
+  "description": "An eight-chapter golden Bangla apology story that ends with a heartfelt question.",
+  "category": "sorry",
+  "alsoCategories": [],
+  "emoji": "💌",
+  "accent": "#c9a05a",
+  "demoHidden": false
+ },
+ {
+  "slug": "bati-ghor",
+  "name": "বাতিঘর",
+  "description": "ঝড়, সমুদ্র আর বাতিঘরের আলোয় তৈরি একটি গভীর বাংলা Miss You experience — দূরে থাকা প্রিয় মানুষটির জন্য।",
+  "category": "miss-you",
+  "alsoCategories": [],
+  "emoji": "🏮",
+  "accent": "#d4a05a",
+  "demoHidden": false
+ },
+ {
+  "slug": "mone-pore",
+  "name": "তোমাকে মনে পড়ে",
+  "description": "দূরে থাকা প্রিয় মানুষটিকে মিস করার অনুভূতি দিয়ে তৈরি একটি premium বাংলা Miss You experience — স্মৃতি, অপেক্ষা আর মনের কথার জন্য।",
+  "category": "miss-you",
+  "alsoCategories": [],
+  "emoji": "💭",
+  "accent": "#a78bfa",
+  "demoHidden": false
+ },
+ {
+  "slug": "lumen-sorry",
+  "name": "তোমার কাছে ক্ষমা",
+  "description": "একটি premium Bangla editorial apology magazine — স্মৃতি, অনুতাপ আর ক্ষমা চাওয়ার কথাগুলোকে magazine-style experience-এ সাজানো।",
+  "category": "sorry",
+  "alsoCategories": [],
+  "emoji": "💌",
+  "accent": "#b8623f",
+  "demoHidden": false
+ },
+ {
+  "slug": "the-abyss-deep-sea",
+  "name": "THE ABYSS — A Deep Sea Dive",
+  "description": "A cinematic deep-sea apology and longing experience that descends into an honest letter.",
+  "category": "sorry",
+  "alsoCategories": [],
+  "emoji": "🌊",
+  "accent": "#67e8f9",
+  "demoHidden": false
+ },
+ {
+  "slug": "birthday-for-friend",
+  "name": "Birthday for Friend",
+  "description": "A cheerful, editable birthday surprise for a special friend, with a cake moment, kind notes and a heartfelt letter.",
+  "category": "birthday",
+  "alsoCategories": [],
+  "emoji": "🌞",
+  "accent": "#ef7e78",
+  "demoHidden": false
+ },
+ {
+  "slug": "our-love-map",
+  "name": "Our Love Map",
+  "description": "An antique parchment anniversary journey with an interactive memory map, relationship counter, love notes, surprise coupons, and a heartfelt letter.",
+  "category": "anniversary",
+  "alsoCategories": [],
+  "emoji": "🗺️",
+  "accent": "#d4a419",
+  "demoHidden": false
+ },
+ {
+  "slug": "a-little-forever",
+  "name": "A Little Forever",
+  "description": "A dreamy interactive anniversary story with a heartfelt letter, memory chapters, keepsakes, a love question and a promise for tomorrow.",
+  "category": "anniversary",
+  "alsoCategories": [],
+  "emoji": "💞",
+  "accent": "#e98eac",
+  "demoHidden": false
+ },
+ {
+  "slug": "the-little-us-club",
+  "name": "The Little Us Club",
+  "description": "A playful, editorial anniversary adventure with an interactive love letter, shared memory cards, promises and a final surprise.",
+  "category": "anniversary",
+  "alsoCategories": [],
+  "emoji": "✳",
+  "accent": "#3158d9",
+  "demoHidden": false
+ },
+ {
+  "slug": "amader-chotto-mohabishwo",
+  "name": "আমাদের ছোট্ট মহাবিশ্ব",
+  "description": "একটি সিনেমাটিক বাংলা বিবাহবার্ষিকীর যাত্রা—তারার বার্তা, মনের কথা, ছোট্ট প্রতিশ্রুতি ও ভালোবাসার চমক নিয়ে।",
+  "category": "anniversary",
+  "alsoCategories": [],
+  "emoji": "🌙",
+  "accent": "#f5cd7b",
+  "demoHidden": false
+ },
+ {
+  "slug": "a-little-birthday-magic",
+  "name": "A Little Birthday Magic",
+  "description": "A pastel birthday journey with a personal note, three interactive gifts, a personalized wish, candle-blowing moment and joyful finale.",
+  "category": "birthday",
+  "alsoCategories": [],
+  "emoji": "🎂",
+  "accent": "#7662d8",
+  "demoHidden": false
+ },
+ {
+  "slug": "the-birthday-times",
+  "name": "The Birthday Times",
+  "description": "A playful newspaper-style birthday edition with an interactive mood forecast, expandable birthday notes, personal photos and a scratch-to-reveal secret.",
+  "category": "birthday",
+  "alsoCategories": [],
+  "emoji": "📰",
+  "accent": "#c63a2b",
+  "demoHidden": false
+ },
+ {
+  "slug": "jonmodiner-chotto-bagan",
+  "name": "জন্মদিনের ছোট্ট বাগান",
+  "description": "ফুলের বাগান ঘুরে জন্মদিনের শুভেচ্ছা, পাপড়ির বার্তা, নিজের bouquet আর শেষের উদযাপনসহ একটি বাংলা জন্মদিনের অভিজ্ঞতা।",
+  "category": "birthday",
+  "alsoCategories": [],
+  "emoji": "🌷",
+  "accent": "#5b9c77",
+  "demoHidden": false
+ },
+ {
+  "slug": "ever-after-cinematic",
+  "name": "Ever After — A Cinematic Wedding Story",
+  "description": "A cinematic wedding story with golden stardust, interactive love constellations, personal memories, a soundtrack, and a magical proposal ending.",
+  "category": "wedding",
+  "alsoCategories": [],
+  "emoji": "💍",
+  "accent": "#ecc982",
+  "demoHidden": false
+ },
+ {
+  "slug": "shubho-porinoy-sat-pak",
+  "name": "শুভ পরিণয় — সাত পাকের গল্প",
+  "description": "একটি আবেগঘন বাংলা বিয়ের গল্প, সাতটি প্রদীপ, সাত বচন, ব্যক্তিগত স্মৃতি, গান এবং শুভ পরিণয়ের সমাপ্তি।",
+  "category": "wedding",
+  "alsoCategories": [],
+  "emoji": "💐",
+  "accent": "#b3122a",
+  "demoHidden": false
+ },
+ {
+  "slug": "a-little-birthday-letter",
+  "name": "The Lavender Birthday Letter",
+  "description": "A soft lavender birthday letter with an opening envelope, a heartfelt note, and a tiny secret.",
+  "category": "letter",
+  "alsoCategories": [
+   "birthday"
+  ],
+  "emoji": "💌",
+  "accent": "#9278b0",
+  "demoHidden": false
+ },
+ {
+  "slug": "birthday-letter-just-for-you",
+  "name": "Lavender Birthday for You",
+  "description": "A graceful lavender birthday website with a heartfelt letter, thoughtful wishes, an interactive birthday cake, and a hidden little secret.",
+  "category": "birthday",
+  "alsoCategories": [],
+  "emoji": "🌸",
+  "accent": "#9879ad",
+  "demoHidden": false
+ },
+ {
+  "slug": "a-note-of-gratitude",
+  "name": "A Note of Gratitude",
+  "description": "A cinematic thank-you letter with a sealed envelope reveal, floating stardust, and a heartfelt final note.",
+  "category": "thank-you",
+  "alsoCategories": [],
+  "emoji": "✦",
+  "accent": "#e9c994",
+  "demoHidden": false
+ },
+ {
+  "slug": "a-thousand-little-thanks",
+  "name": "A Thousand Little Thanks",
+  "description": "A cinematic thank-you experience with floating lanterns, heartfelt appreciation cards, a scroll-lit note, and a joyful confetti finale.",
+  "category": "thank-you",
+  "alsoCategories": [],
+  "emoji": "✨",
+  "accent": "#D99761",
+  "demoHidden": false
+ },
+ {
+  "slug": "blue-sky-wedding-invitation",
+  "name": "Blue Sky Wedding Invitation",
+  "description": "A sky-blue wedding invitation that opens from a glowing wax seal, revealing the couple's names, event details, venue map and a live countdown.",
+  "category": "invitation",
+  "alsoCategories": [],
+  "emoji": "💌",
+  "accent": "#2e7ab8",
+  "demoHidden": false
+ },
+ {
+  "slug": "shubho-bibaho",
+  "name": "Shubho Bibaho",
+  "description": "A royal Bengali wedding invitation with a sealed maroon-and-gold cover, editable couple names, event details, a venue map and a live countdown.",
+  "category": "invitation",
+  "alsoCategories": [],
+  "emoji": "💌",
+  "accent": "#6b1f1a",
+  "demoHidden": false
+ },
+ {
+  "slug": "velvet-royale-wedding-invitation",
+  "name": "Velvet Royale Wedding Invitation",
+  "description": "A cinematic wine-and-gold wedding invitation with a glowing medallion reveal, elegant ivory card, venue details and a live countdown.",
+  "category": "invitation",
+  "alsoCategories": [],
+  "emoji": "💌",
+  "accent": "#8f3041",
+  "demoHidden": false
+ },
+ {
+  "slug": "shonar-upohar-birthday-invitation",
+  "name": "Shonar Upohar",
+  "description": "A Bengali birthday invitation with a floating 3D gift box, a golden seal reveal, editable age and recipient details, event information and a live countdown.",
+  "category": "invitation",
+  "alsoCategories": [],
+  "emoji": "🎁",
+  "accent": "#d4af37",
+  "demoHidden": false
+ },
+ {
+  "slug": "midnight-vinyl-birthday-invitation",
+  "name": "Midnight Vinyl Birthday Invitation",
+  "description": "A cinematic vinyl-record birthday invitation with a spinning record reveal, elegant celebration card, editable age and event details, and a live countdown.",
+  "category": "invitation",
+  "alsoCategories": [],
+  "emoji": "🎵",
+  "accent": "#c9a45c",
+  "demoHidden": false
+ },
+ {
+  "slug": "neon-nexus-vip-invitation",
+  "name": "Neon Nexus | VIP Invitation",
+  "description": "A futuristic VIP celebration invitation with a holographic pass reveal, a luxury event website, an editable countdown, an ambience gallery and guest RSVP.",
+  "category": "invitation",
+  "alsoCategories": [],
+  "emoji": "💠",
+  "accent": "#00F0FF",
+  "demoHidden": false
+ },
+ {
+  "slug": "birthday-cinema-memory-puzzle",
+  "name": "A Birthday to Remember – The Memory Puzzle",
+  "description": "A cinematic birthday journey with a ribbon reveal, heartfelt letter, realistic cake ritual, one-photo sliding puzzle, memory gallery and a final surprise.",
+  "category": "birthday",
+  "alsoCategories": [],
+  "emoji": "🎂",
+  "accent": "#c56b83",
+  "demoHidden": false
+ }
+]

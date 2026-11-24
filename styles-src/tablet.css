@@ -1,0 +1,53 @@
+/* Tablet-only refinements (641px–900px, e.g. iPad portrait).
+   Phones (<=640px) and desktop (>=901px) are untouched: every rule below is
+   scoped to this range, so no existing layout or behaviour changes outside it.
+   Prefixed with `html body` so it wins over route-level CSS regardless of load order. */
+@media (min-width: 641px) and (max-width: 900px) {
+  /* Home: single wide column of cards looked stretched -> use the width */
+  html body .hp-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  html body .hp-feat  { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* Dashboard: phone-style swipe strip with tiny 240px cards -> real 3-up grid */
+  html body .wd-stats {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;
+    margin: 18px 0 26px; padding: 0; overflow: visible; scroll-snap-type: none;
+  }
+  html body .wd-stats > div { flex: none; max-width: none; }
+
+  /* Dashboard bottom tab bar: don't stretch edge-to-edge across a tablet */
+  html body .wd-tabbar {
+    left: 50%; right: auto; transform: translateX(-50%);
+    width: min(560px, calc(100% - 36px));
+  }
+
+  /* Dashboard page padding a bit roomier than phone */
+  html body .wd-main { padding-left: 28px; padding-right: 28px; }
+  html body .wd-mobilebar { margin-left: -28px; margin-right: -28px; padding-left: 28px; padding-right: 28px; }
+}
+
+/* Builder preview: fixed 760px stage can overflow 641–759px screens */
+@media (min-width: 641px) and (max-width: 800px) {
+  html body .builder-preview-canvas.device-tablet .builder-canvas-stage {
+    width: min(760px, 100%) !important; min-width: 0 !important; max-width: 100% !important;
+  }
+}
+
+/* Hero collapses to one column at <=900px but only half of the centering was applied
+   between 701px and 900px (buttons + heading stayed left while the paragraph was centered). */
+@media (min-width: 641px) and (max-width: 900px) {
+  html body .premium-site .hero h1 { margin-left: auto; margin-right: auto; }
+  html body .premium-site .hero-actions { justify-content: center; }
+}
+
+/* Desktop layout on narrower screens (901px-1250px: small laptop windows, or a phone/tablet
+   using "Desktop site"). The hero art column is only ~450-570px wide here, but the back card
+   is shifted 185px right, so it was clipped at the screen edge. Scale + pull it in.
+   (Float animation uses the separate `translate` property, so overriding `transform` is safe.) */
+@media (min-width: 901px) and (max-width: 1100px) {
+  html body .premium-site .hero-art { transform: scale(.8); min-height: 520px; }
+  html body .premium-site .hero-card-back { width: 250px; transform: translate(120px, -150px) rotate(-8deg); }
+}
+@media (min-width: 1101px) and (max-width: 1250px) {
+  html body .premium-site .hero-art { transform: scale(.92); }
+  html body .premium-site .hero-card-back { transform: translate(150px, -160px) rotate(-8deg); }
+}

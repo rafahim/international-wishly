@@ -1,0 +1,51 @@
+/* Responsive & readability fixes (loaded last, so these win).
+   - Body copy was 10–11px on FAQ / Features / How-to pages, hard to read on phone and PC.
+   - FAQ list was a narrow left column on wide screens.
+   - Container was capped at 1180px, leaving big empty margins on large monitors. */
+
+/* Large monitors: use a little more of the screen */
+@media (min-width: 1500px) {
+  html body .premium-container { width: min(1320px, calc(100% - 96px)); }
+}
+
+/* Never let a grid/flex child force the page wider than the screen */
+html body .premium-site :is(.hp-steps, .hp-feat, .feature-detail-grid, .capability-grid, .howto-hub-essential-grid, .library-grid) > * { min-width: 0; }
+html body .premium-site :is(h1, h2, h3, p, li, a) { overflow-wrap: break-word; }
+
+/* ---------- FAQ ---------- */
+html body .faq-list { max-width: none; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+@media (min-width: 1000px) {
+  html body .faq-list { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 16px; }
+}
+html body .faq-list article { padding: 22px 24px; }
+html body .faq-list article > div { align-items: flex-start; }
+html body .faq-list h2 { font-size: 16px; line-height: 1.45; }
+html body .faq-list p { font-size: 14px; line-height: 1.7; margin: 10px 0 0 40px; color: #9a9cab; }
+@media (max-width: 640px) {
+  html body .faq-list article { padding: 18px; }
+  html body .faq-list p { margin-left: 0; }
+}
+html body .simple-heading > p:last-child { font-size: 16px; }
+
+/* ---------- Features ---------- */
+html body .capability-card h2 { font-size: 18px; }
+html body .capability-card p { font-size: 14px; line-height: 1.65; }
+html body .feature-detail-card p { font-size: 14px; line-height: 1.7; }
+html body .feature-detail-card li { font-size: 13.5px; line-height: 1.65; }
+html body .feature-text-link { font-size: 13px; }
+html body .section-kicker, html body .eyebrow { font-size: 11px; }
+
+/* ---------- How-to ---------- */
+html body .howto-hub-step p { font-size: 13.5px; line-height: 1.65; }
+html body .howto-hub-essential-grid article p { font-size: 13px; line-height: 1.6; }
+html body .howto-hub-checklist > div { font-size: 13px; }
+html body .hw-caption { font-size: 12.5px; }
+
+/* ---------- Shared small text ---------- */
+html body .cta-panel p:last-child { font-size: 14px; }
+html body .hp-stat span { font-size: 13px; }
+
+/* Phones: keep headings from touching the screen edge */
+@media (max-width: 400px) {
+  html body .inner-hero h1, html body .simple-panel h1, html body .simple-heading h1 { font-size: clamp(38px, 13vw, 52px); }
+}

@@ -1,0 +1,49 @@
+.sf{position:relative;margin-top:56px;border-top:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(7,7,11,.6));overflow:hidden;content-visibility:visible}
+.sf::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:linear-gradient(90deg,transparent,rgba(240,75,154,.65),rgba(139,108,255,.65),transparent)}
+.sf-glow{position:absolute;inset:auto 0 -140px 0;height:260px;background:radial-gradient(600px 220px at 15% 100%,rgba(240,75,154,.14),transparent 70%),radial-gradient(600px 220px at 90% 100%,rgba(139,108,255,.14),transparent 70%);pointer-events:none}
+.sf-inner{position:relative;padding:46px 0 22px}
+.sf-top{display:grid;grid-template-columns:1.5fr .7fr .7fr 1.2fr;gap:34px 40px}
+.sf-brand{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.sf-logo{display:inline-flex;align-items:center;gap:11px;color:#fff;text-decoration:none}
+.sf-logo b{display:block;font-size:19px;letter-spacing:-.02em}
+.sf-logo small{display:block;font-size:11px;color:#8d8fa2;margin-top:2px}
+.sf-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#f04b9a,#8b6cff);color:#fff;font-size:17px;box-shadow:0 8px 24px rgba(240,75,154,.28)}
+.sf-tag{margin:0;max-width:300px;font-size:13px;line-height:1.65;color:#8d8fa2}
+.sf-col{display:flex;flex-direction:column;align-items:flex-start;gap:11px}
+.sf-col h3,.sf-cta h3{margin:0 0 4px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#d7d9e4}
+.sf-col a{position:relative;font-size:13.5px;color:#8d8fa2;text-decoration:none;transition:color .18s,transform .18s}
+.sf-col a:hover{color:#fff;transform:translateX(3px)}
+.sf-cta{padding:20px;border:1px solid rgba(255,255,255,.09);border-radius:20px;background:linear-gradient(145deg,rgba(240,75,154,.1),rgba(139,108,255,.08));backdrop-filter:blur(14px)}
+.sf-cta h3{text-transform:none;letter-spacing:-.01em;font-size:16px;color:#fff;margin-bottom:6px}
+.sf-cta p{margin:0 0 14px;font-size:13px;color:#a2a5b8;line-height:1.5}
+.sf-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:linear-gradient(135deg,#f04b9a,#8b6cff);color:#fff;font-size:13px;font-weight:800;text-decoration:none;box-shadow:0 10px 26px rgba(240,75,154,.25);transition:transform .2s,box-shadow .2s}
+.sf-btn:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(240,75,154,.38)}
+.sf-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 20px;margin-top:38px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07);font-size:12.5px;color:#6f7180}
+.sf-copy a{color:#f6a6cc;font-weight:800;text-decoration:none;border-bottom:1px dashed rgba(246,166,204,.45);transition:color .15s,border-color .15s}
+.sf-copy a:hover{color:#fff;border-bottom-color:#fff}
+.sf-made i{font-style:normal;color:#f04b9a;display:inline-block;animation:sf-beat 1.8s ease-in-out infinite}
+@keyframes sf-beat{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+@media(max-width:900px){.sf-top{grid-template-columns:1fr 1fr}.sf-brand,.sf-cta{grid-column:1/-1}}
+@media(max-width:560px){.sf{margin-top:40px}.sf-inner{padding-top:36px}.sf-top{gap:26px 18px}.sf-bottom{flex-direction:column;text-align:center}}
+@media(prefers-reduced-motion:reduce){.sf-made i{animation:none}.sf-col a,.sf-btn{transition:none}}
+
+.sf-donate-link{color:#f9a8d4!important;font-weight:700}
+.sf-donate-link:hover{color:#fff!important}
+
+/* Instagram badge */
+.sf-badges{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
+.sf-ig{display:inline-flex;align-items:center;gap:8px;padding:4px 12px 4px 4px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.035);color:#85889b;font-size:10px;font-weight:700;text-decoration:none;backdrop-filter:blur(10px);transition:border-color .2s,background .2s,color .2s,transform .2s}
+.sf-ig-icon{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;color:#fff;background:linear-gradient(135deg,#feda75 0%,#fa7e1e 28%,#d62976 62%,#962fbf 85%,#4f5bd5 100%);flex:0 0 auto}
+.sf-ig-text b{color:#d7d9e4;font-weight:900}
+.sf-ig:hover{border-color:rgba(214,41,118,.4);background:rgba(214,41,118,.08);color:#e8e9f1;transform:translateY(-1px)}
+.sf-ig:focus-visible{outline:2px solid #d62976;outline-offset:2px}
+@media(max-width:560px){.sf-badges{gap:8px}.sf-ig,.developer-badge{font-size:11px}.sf-ig{padding-right:13px}}
+@media(prefers-reduced-motion:reduce){.sf-ig{transition:none}}
+
+/* Wishly Guide link line */
+.sf-links{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 0;margin-top:16px;padding:14px 0 2px;border-top:1px solid rgba(255,255,255,.07);font-size:11px}
+.sf-links a{position:relative;padding:0 11px;color:#8d8fa2;text-decoration:none;transition:color .15s}
+.sf-links a+a::before{content:"";position:absolute;left:-1px;top:50%;width:3px;height:3px;margin-top:-1.5px;border-radius:50%;background:rgba(255,255,255,.22)}
+.sf-links a:hover{color:#fff}
+@media(max-width:560px){.sf-links{gap:6px 0;font-size:10px}.sf-links a{padding:0 8px}}
+@media(prefers-reduced-motion:reduce){.sf-links a{transition:none}}

@@ -16,6 +16,7 @@ import './editorial-art.css';
 
 export const metadata: Metadata = pageMeta({
   title: SITE.title,
+  absoluteTitle: true,
   description: SITE.description,
   path: '/',
   keywords: ['personal website maker', 'digital gift website', 'make a website for someone you love', 'birthday website designs', 'online invitation page'],
@@ -133,7 +134,7 @@ export default function Home() {
             </div>
             <Link href="/templates/" className="global-underlined-link">Explore 53+ templates and more <span>↗</span></Link>
           </div>
-          <div className="tc-grid global-template-grid">{showcase.map((template, index) => <TemplateCard key={template.slug} template={template} priority={index < 3} />)}</div>
+          <div className="tc-grid global-template-grid">{showcase.map((template) => <TemplateCard key={template.slug} template={template} priority={false} />)}</div>
         </div>
       </section>
 
@@ -151,7 +152,7 @@ export default function Home() {
             <a href={appLink('/')} className="global-button global-button-primary">Visit Wishly.bd <ArrowUpRight size={17} /></a>
             <a href={appLink('/signup')} className="global-text-action">Try it free <span>↗</span></a>
           </div>
-          <p className="global-main-product-footnote">Your account and creation workflow always stay on the main Wishly website.</p>
+          <p className="global-main-product-footnote">Your account and creation workflow always stay on the main Wishly website. New to the name? <Link href="/what-is-wishly/">Read what Wishly is</Link>.</p>
         </div>
         <div className="global-main-product-visual">
           <div className="global-main-product-browser"><div className="global-main-product-browser-bar"><i></i><i></i><i></i><span>wishly.bd / your page</span></div><img src="/template-shots/the-birthday-experience.webp" alt="A preview of a personal birthday website design available through Wishly" width="960" height="600" loading="lazy" /></div>

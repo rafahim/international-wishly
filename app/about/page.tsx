@@ -94,7 +94,7 @@ export default function AboutPage() {
 
       <section className="global-wrap global-about-showcase">
         <div className="global-heading-row"><div className="global-section-intro"><p className="global-overline">A FEW STARTING POINTS</p><h2>See what a personal page can look like.</h2><p>Open a design preview to understand its mood before you choose a template.</p></div><Link className="global-underlined-link" href="/templates/">Explore all templates <ArrowUpRight size={15} /></Link></div>
-        <div className="tc-grid global-template-grid">{featured.map((template, index) => <TemplateCard key={template.slug} template={template} priority={index < 2} />)}</div>
+        <div className="tc-grid global-template-grid">{featured.map((template) => <TemplateCard key={template.slug} template={template} priority={false} />)}</div>
       </section>
 
       <section className="global-wrap global-about-cta">

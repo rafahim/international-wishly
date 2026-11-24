@@ -3,6 +3,8 @@ import { SITE, abs } from './site';
 
 type PageMetaInput = {
   title: string;
+  /** Use for pages that should show this exact title without the ' | Wishly' suffix (brand-led titles). */
+  absoluteTitle?: boolean;
   description: string;
   path: string;
   image?: string;
@@ -20,7 +22,7 @@ function fitMetaDescription(value: string, max = 160): string {
   return `${shortened.slice(0, boundary > 110 ? boundary : max - 1).replace(/[.,;:!?\s]+$/, '')}…`;
 }
 
-export function pageMeta({ title, description, path, image, keywords, ogType = 'website', publishedTime, modifiedTime }: PageMetaInput): Metadata {
+export function pageMeta({ title, absoluteTitle, description, path, image, keywords, ogType = 'website', publishedTime, modifiedTime }: PageMetaInput): Metadata {
   const url = abs(path);
   const metaDescription = fitMetaDescription(description);
   // Keyword lists are maintained in source/docs for editorial planning; Google does not use meta-keywords as a ranking signal.
@@ -31,9 +33,9 @@ export function pageMeta({ title, description, path, image, keywords, ogType = '
     ? { type: 'article' as const, siteName: SITE.name, title, description: metaDescription, url, locale: 'en_US', publishedTime, modifiedTime, images: [{ url: img, width: 960, height: 600, alt: title }] }
     : { type: 'website' as const, siteName: SITE.name, title, description: metaDescription, url, locale: 'en_US', images: [{ url: img, width: 960, height: 600, alt: title }] };
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description: metaDescription,
-    alternates: { canonical: url },
+    alternates: { canonical: url, languages: { en: url, 'x-default': url } },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
     openGraph,
     twitter: { card: 'summary_large_image', title, description: metaDescription, images: [img] },

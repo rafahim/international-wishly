@@ -31,8 +31,9 @@ export const metadata: Metadata = {
   category: 'lifestyle',
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
   formatDetection: { telephone: false, email: false, address: false },
-  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } : undefined,
-  openGraph: { type: 'website', siteName: SITE.name, title: SITE.title, description: SITE.description, url: SITE.url, locale: 'en_US', images: [{ url: SITE.ogImage, width: 960, height: 600, alt: 'Wishly personal website and digital gift design inspiration' }] },
+  verification: (process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION) ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION, other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ? { 'msvalidate.01': process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } : undefined } : undefined,
+  keywords: ['Wishly', 'Wishly wish', 'Wishly website', 'Wishly.bd', 'birthday wish website', 'personal website maker', 'digital gift website'],
+  openGraph: { type: 'website', siteName: SITE.name, title: SITE.title, description: SITE.description, url: SITE.url, locale: 'en_US', alternateLocale: ['en_GB', 'en_CA', 'en_AU', 'en_IN'], images: [{ url: SITE.ogImage, width: 960, height: 600, alt: 'Wishly personal website and digital gift design inspiration' }] },
   twitter: { card: 'summary_large_image', title: SITE.title, description: SITE.description, images: [SITE.ogImage] },
 };
 
@@ -41,8 +42,8 @@ export const viewport: Viewport = { width: 'device-width', initialScale: 1, them
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Organization', '@id': 'https://wishly.bd/#organization', name: 'Wishly', url: 'https://wishly.bd/', logo: { '@type': 'ImageObject', url: `${SITE.url}/icon-512.webp` }, sameAs: [...SITE.social, 'https://wishly.bd/'], knowsLanguage: ['en', 'bn'], knowsAbout: ['personal website ideas', 'birthday website templates', 'digital love letters', 'proposal pages', 'anniversary websites', 'online invitations'], description: 'Wishly is a personal website maker for birthdays, proposals, anniversaries, digital letters and invitations. Its main product, account and publishing tools are hosted at wishly.bd.' },
-    { '@type': 'WebSite', '@id': `${SITE.url}/#website`, url: SITE.url, name: 'Wishly International', alternateName: 'Wishly', description: SITE.description, inLanguage: 'en', publisher: { '@id': 'https://wishly.bd/#organization' }, audience: { '@type': 'Audience', audienceType: 'People looking for personal website ideas and digital gift inspiration worldwide' } },
+    { '@type': 'Organization', '@id': 'https://wishly.bd/#organization', name: 'Wishly', alternateName: ['Wishly BD', 'Wishly.bd', 'Wishly Wish'], url: 'https://wishly.bd/', logo: { '@type': 'ImageObject', url: `${SITE.url}/icon-512.webp` }, sameAs: [...SITE.social, 'https://wishly.bd/'], knowsLanguage: ['en', 'bn'], knowsAbout: ['personal website ideas', 'birthday website templates', 'digital love letters', 'proposal pages', 'anniversary websites', 'online invitations'], description: 'Wishly is a personal website maker for birthdays, proposals, anniversaries, digital letters and invitations. Its main product, account and publishing tools are hosted at wishly.bd.' },
+    { '@type': 'WebSite', '@id': `${SITE.url}/#website`, url: SITE.url, name: 'Wishly International', alternateName: ['Wishly', 'Wishly Wish', 'Wishly.bd'], description: SITE.description, inLanguage: 'en', publisher: { '@id': 'https://wishly.bd/#organization' }, audience: { '@type': 'Audience', audienceType: 'People looking for personal website ideas and digital gift inspiration worldwide' } },
   ],
 };
 
@@ -51,19 +52,29 @@ const GA = process.env.NEXT_PUBLIC_GA_ID;
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${bnSans.variable}`} style={{ backgroundColor: '#07070b', colorScheme: 'dark' }}>
+      <head>
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      </head>
       <body>
-        {/* Google Tag Manager: initialize the shared dataLayer before loading the container. */}
-        <Script id="gtm-init" strategy="beforeInteractive">{`
+        {/* Google Tag Manager: loaded after first user interaction (or idle fallback) so it never competes with LCP / main-thread work. */}
+        <Script id="gtm-lazy" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
-          window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+          (function(){
+            var loaded=false;
+            function load(){
+              if(loaded) return; loaded=true;
+              ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){window.removeEventListener(e,load);});
+              window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+              var s=document.createElement('script'); s.async=true;
+              s.src='https://www.googletagmanager.com/gtm.js?id=GTM-N7X9SNJ3';
+              document.head.appendChild(s);
+            }
+            ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){window.addEventListener(e,load,{once:true,passive:true});});
+            if('requestIdleCallback' in window) requestIdleCallback(function(){setTimeout(load,3500);}); else setTimeout(load,5000);
+          })();
         `}</Script>
-        <Script
-          id="gtm-loader"
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-N7X9SNJ3"
-          strategy="afterInteractive"
-        />
         <JsonLd data={structuredData} />
         {children}
         {GA && (

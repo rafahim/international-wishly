@@ -13,6 +13,7 @@ const explore = [
   ['Insights', '/insights', 'app'],
 ] as const;
 const company = [
+  ['What is Wishly?', '/what-is-wishly', 'local'],
   ['About', '/about', 'local'],
   ['Contact', '/contact', 'app'],
   ['Privacy Policy', '/privacy-policy', 'app'],

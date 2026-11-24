@@ -110,7 +110,7 @@ export default function TemplateBrowser({
           <div className="tc-grid">
             {templates.map((t, i) => (
               <div key={t.slug} style={visible.has(t.slug) ? { display: 'contents' } : { display: 'none' }}>
-                <TemplateCard template={t} priority={i < 6} />
+                <TemplateCard template={t} priority={i < 3} />
               </div>
             ))}
           </div>

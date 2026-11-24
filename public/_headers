@@ -1,0 +1,16 @@
+# Honoured by Cloudflare Pages / Netlify. (GitHub Pages ignores this file.)
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/template-shots/*
+  Cache-Control: public, max-age=2592000
+/card-art/*
+  Cache-Control: public, max-age=2592000
+/guide-images/*
+  Cache-Control: public, max-age=2592000
+/*.webp
+  Cache-Control: public, max-age=2592000
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

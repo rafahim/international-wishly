@@ -366,3 +366,13 @@
   .international-site .global-template-grid .tc-card-actions .premium-button-ghost:not(.tc-info-button) { grid-column: 1; }
   .international-site .global-template-grid .tc-card-actions .tc-info-button { display: none; }
 }
+
+/* Performance: skip rendering work for below-the-fold sections until they approach the viewport. */
+.global-template-section,
+.global-main-product,
+.global-editorial,
+.global-final-cta { content-visibility: auto; contain-intrinsic-size: auto 640px; }
+.os-strip { content-visibility: auto; contain-intrinsic-size: auto 420px; }
+@media (prefers-reduced-motion: reduce) {
+  .global-hero *, .global-hero *::before, .global-hero *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; }
+}

@@ -7,9 +7,9 @@ import { faqLd, pageMeta } from '@/lib/seo';
 import { SITE, abs, appLink } from '@/lib/site';
 
 export const metadata = pageMeta({
-  title: 'What Is Wishly? Send a Wish as a Personal Website',
+  title: 'What Is Wishly? A Wish Website Builder Explained',
   absoluteTitle: true,
-  description: 'Wishly is a personal website maker for sending a wish online: birthday pages, love letters, proposals and invitations. Learn what Wishly is, how Wishly wish pages work and where to start.',
+  description: 'Wishly is a website builder for sending a wish online: birthday pages, love letters, proposals and invitations. Learn what Wishly is, how Wishly wish pages work and where to start.',
   path: '/what-is-wishly/',
   keywords: ['Wishly', 'what is Wishly', 'Wishly wish', 'Wishly website', 'Wishly.bd', 'Wishly app', 'wish website maker'],
 });

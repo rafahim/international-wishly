@@ -9,10 +9,11 @@ export const SITE = {
   host: new URL(publicUrl).host,
   appUrl: cleanUrl(process.env.NEXT_PUBLIC_APP_URL || 'https://wishly.bd'),
   utmSource: 'international-site',
-  title: 'Wishly – Birthday Wish & Personal Website Maker',
+  title: 'Wishly Website Builder: Wish Page Templates & Ideas',
   shortTitle: 'Personal Website Maker for Digital Gifts',
-  description: 'Wishly helps you send a wish as a personal website: birthday pages, digital love letters, proposals and online invitations. Browse real Wishly templates and guides, then create on Wishly.bd.',
-  ogImage: '/template-shots/the-birthday-experience.webp',
+  description: 'Explore Wishly website builder templates and guides for birthday wishes, love letters, proposals and invitations. Compare designs from anywhere, then build your page on Wishly.bd.',
+  ogImage: '/og-wishly-international.jpg',
+  ogImageSize: { width: 1200, height: 630 },
   social: ['https://www.instagram.com/wishly.bd_', 'https://www.facebook.com/wishlyhq'],
 } as const;
 

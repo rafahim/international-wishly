@@ -29,9 +29,10 @@ export function pageMeta({ title, absoluteTitle, description, path, image, keywo
   void keywords;
   const selectedImage = image || SITE.ogImage;
   const img = /^https?:\/\//i.test(selectedImage) ? selectedImage : `${SITE.url}${selectedImage}`;
+  const size = selectedImage === SITE.ogImage ? SITE.ogImageSize : { width: 960, height: 600 };
   const openGraph = ogType === 'article'
-    ? { type: 'article' as const, siteName: SITE.name, title, description: metaDescription, url, locale: 'en_US', publishedTime, modifiedTime, images: [{ url: img, width: 960, height: 600, alt: title }] }
-    : { type: 'website' as const, siteName: SITE.name, title, description: metaDescription, url, locale: 'en_US', images: [{ url: img, width: 960, height: 600, alt: title }] };
+    ? { type: 'article' as const, siteName: SITE.name, title, description: metaDescription, url, locale: 'en_US', publishedTime, modifiedTime, images: [{ url: img, width: size.width, height: size.height, alt: title }] }
+    : { type: 'website' as const, siteName: SITE.name, title, description: metaDescription, url, locale: 'en_US', images: [{ url: img, width: size.width, height: size.height, alt: title }] };
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description: metaDescription,

@@ -19,7 +19,7 @@ export const metadata: Metadata = pageMeta({
   absoluteTitle: true,
   description: SITE.description,
   path: '/',
-  keywords: ['personal website maker', 'digital gift website', 'make a website for someone you love', 'birthday website designs', 'online invitation page'],
+  keywords: ['website builder for wishes', 'personal website maker', 'digital gift website', 'make a website for someone you love', 'birthday website designs', 'online invitation page'],
 });
 
 const featureIcons: Record<string, LucideIcon> = { pen: PenLine, images: Images, music: Music2, mail: Mail, phone: Smartphone, link: ArrowUpRight };

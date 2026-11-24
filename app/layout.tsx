@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
   formatDetection: { telephone: false, email: false, address: false },
   verification: (process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION) ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION, other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ? { 'msvalidate.01': process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } : undefined } : undefined,
-  keywords: ['Wishly', 'Wishly wish', 'Wishly website', 'Wishly.bd', 'birthday wish website', 'personal website maker', 'digital gift website'],
-  openGraph: { type: 'website', siteName: SITE.name, title: SITE.title, description: SITE.description, url: SITE.url, locale: 'en_US', alternateLocale: ['en_GB', 'en_CA', 'en_AU', 'en_IN'], images: [{ url: SITE.ogImage, width: 960, height: 600, alt: 'Wishly personal website and digital gift design inspiration' }] },
+  keywords: ['Wishly', 'Wishly wish', 'Wishly website builder', 'Wishly website', 'Wishly.bd', 'wish website builder', 'birthday wish website', 'personal website maker', 'digital gift website'],
+  openGraph: { type: 'website', siteName: SITE.name, title: SITE.title, description: SITE.description, url: SITE.url, locale: 'en_US', alternateLocale: ['en_GB', 'en_CA', 'en_AU', 'en_IN'], images: [{ url: SITE.ogImage, width: SITE.ogImageSize.width, height: SITE.ogImageSize.height, alt: 'Wishly International: website builder templates, ideas and guides for birthdays, proposals, love letters and invitations' }] },
   twitter: { card: 'summary_large_image', title: SITE.title, description: SITE.description, images: [SITE.ogImage] },
 };
 

@@ -22,6 +22,37 @@ export type Guide = {
 
 export const guides: Guide[] = [
   {
+    slug: 'wishly-international-guide-website',
+    primaryKeyword: 'Wishly international guide website',
+    supportingKeywords: ['wishly.rafahim.com', 'Wishly.bd main website', 'what is Wishly international', 'Wishly guides and templates', 'Wishly worldwide'],
+    relatedGuides: ['how-to-make-a-birthday-website', 'birthday-website-ideas', 'digital-love-letter', 'online-proposal-website'],
+    faqs: [
+      ['Is wishly.rafahim.com the official Wishly website?', 'It is the international guide and template-discovery website for Wishly. The main Wishly product website is wishly.bd, where accounts, the editor, publishing and checkout live.'],
+      ['Do I create my page on wishly.rafahim.com?', 'No. Browse designs and read guides on wishly.rafahim.com, then continue to wishly.bd to sign up, personalise a template and publish your page.'],
+      ['Will my existing Wishly pages or account change?', 'No. Your account, pages and links stay on wishly.bd. This international website only adds guides, template previews and occasion collections in English.'],
+      ['Which language is the international site in?', 'English first. Some templates in the catalogue are Bengali-language experiences, and each template card shows its language label so you can choose the right one for the recipient.'],
+    ],
+    publishedAt: '2026-11-25', updatedAt: '2026-11-25',
+    category: 'ANNOUNCEMENT',
+    readTime: '4 MIN READ',
+    title: 'Wishly is now international: wishly.rafahim.com is the guide website, wishly.bd is the main website',
+    seoTitle: 'Wishly International Guide Website and Wishly.bd',
+    description: 'wishly.rafahim.com is now the international Wishly guide and template website, while wishly.bd stays the main Wishly website for accounts, the editor and publishing.',
+    intro: 'Wishly now has two websites with two clear jobs. wishly.bd is the main Wishly website, where you create an account, personalise a template and publish your page. wishly.rafahim.com is the new international guide website, written in English for people anywhere who want ideas, template previews and practical advice before they start.',
+    sections: [
+      { heading: 'The short version', paragraphs: ['If you want to make a page, go to wishly.bd. If you want to explore, compare and get inspired first, use wishly.rafahim.com.'], bullets: ['wishly.bd: main product website. Sign-up, login, visual editor, dashboard, checkout, publishing and page management.', 'wishly.rafahim.com: international guide website. English-first guides, occasion collections, template previews and answers to common questions.'] },
+      { heading: 'Why Wishly needed an international guide website', paragraphs: ['People who send a wish online are not all in one country. Someone planning a birthday surprise for a friend overseas, a proposal page for a partner in another time zone or an invitation for guests in several countries searches in English and wants clear answers before signing up for anything.', 'The main website is built for people who are ready to create. The guide website is built for the step before that: choosing an occasion, understanding what a personal page can include and picking a design that suits the recipient.'] },
+      { heading: 'What you will find on wishly.rafahim.com', bullets: ['Practical guides for birthdays, proposals, weddings, anniversaries, apologies, thank-you notes and letters.', 'Occasion collections that group templates by moment, so you can start from a feeling rather than a catalogue.', 'Template pages with previews, descriptions and a language label for every design.', 'A step-by-step walkthrough of how a personal page is made, and an FAQ for first-time visitors.', 'A plain-language page explaining what Wishly is, for anyone who has only heard the name.'], paragraphs: ['Every page links onward to wishly.bd when you are ready to create, so there is never a dead end.'] },
+      { heading: 'What stays on wishly.bd', paragraphs: ['Nothing about your account or your pages moves. Wishly.bd remains the place for everything that needs you to be signed in or to pay: creating an account, opening the visual editor, personalising text and photos, adding music or video where a template supports it, publishing a link and managing the pages you have already made.'], bullets: ['Account, login and dashboard', 'Visual editor and template personalisation', 'Publishing, sharing links and page management', 'Checkout and payments'] },
+      { heading: 'How to use the two websites together', paragraphs: ['A simple flow works well for most people.'], bullets: ['Start on wishly.rafahim.com with a guide for your occasion, such as birthday website ideas or how to write a digital love letter.', 'Open an occasion collection and preview two or three designs. Check the language label so the recipient can read it comfortably.', 'Choose a template and continue to wishly.bd with its “Use template” button.', 'Personalise it in the editor, preview it on a phone, publish and share the link.'] },
+      { heading: 'A note on languages and regions', paragraphs: ['The guide website is English-first so that it is useful worldwide. The template library includes English designs and some Bengali-language experiences. We do not promise region-specific pricing, payment methods or feature availability here; those details are decided on the main website and may differ by template.'] },
+      { heading: 'Where to start today', paragraphs: ['Read the overview on the “What is Wishly?” page if you are new to the name, browse the guides if you want ideas, or go straight to the template library if you already know the occasion. When you have found a design you like, wishly.bd is one click away.'] },
+    ],
+    conclusion: 'Think of wishly.rafahim.com as the place to explore and wishly.bd as the place to create. Together they take you from a first idea to a published page you can share with one link, wherever the recipient lives.',
+    relatedPath: '/what-is-wishly/',
+    relatedLabel: 'Read what Wishly is',
+  },
+  {
     slug: 'birthday-website-ideas',
     primaryKeyword: 'birthday website ideas',
     supportingKeywords: ['birthday website inspiration', 'personal online birthday surprise', 'birthday page design ideas'],

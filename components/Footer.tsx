@@ -86,6 +86,10 @@ export default function Footer() {
           </nav>
 
           <div className="sf-cta">
+            <span className="sf-cta-orb" aria-hidden="true" />
+            <div className="sf-cta-emojis" aria-hidden="true">
+              <span>🎂</span><span>💍</span><span>🎁</span>
+            </div>
             <h3>Ready to surprise someone?</h3>
             <p>Pick a template and finish in minutes.</p>
             <a className="sf-btn" href={appLink('/signup')}>Start creating <span>→</span></a>

@@ -45,3 +45,22 @@
 .sf-ig:focus-visible{outline:2px solid #d62976;outline-offset:2px}
 @media(max-width:560px){.sf-badges{gap:8px}.sf-ig{font-size:11px}.sf-ig{padding-right:13px}}
 @media(prefers-reduced-motion:reduce){.sf-ig{transition:none}}
+
+/* Bottom meta: copyright left, "Made with ♥" right on desktop */
+@media(min-width:561px){.sf-bottom-meta .sf-made{margin-inline-start:auto;text-align:right}}
+
+/* CTA panel */
+.sf-cta{position:relative;overflow:hidden;align-self:start;display:flex;flex-direction:column;align-items:flex-start;padding:24px 24px 26px;border:1px solid transparent;border-radius:22px;background:linear-gradient(145deg,rgba(32,20,40,.92),rgba(18,14,30,.92)) padding-box,linear-gradient(135deg,rgba(240,75,154,.65),rgba(139,108,255,.35) 55%,rgba(139,108,255,.55)) border-box;box-shadow:0 18px 50px rgba(139,108,255,.14),inset 0 1px 0 rgba(255,255,255,.06)}
+.sf-cta-orb{position:absolute;right:-50px;top:-50px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(240,75,154,.38),rgba(139,108,255,.14) 55%,transparent 72%);filter:blur(6px);pointer-events:none}
+.sf-cta>*{position:relative}
+.sf-cta .sf-cta-orb{position:absolute}
+.sf-cta-emojis{display:flex;margin-bottom:14px}
+.sf-cta-emojis span{display:grid;place-items:center;width:34px;height:34px;margin-inline-end:-8px;border-radius:50%;font-size:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px)}
+.sf-cta h3{font-size:19px;line-height:1.25;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.sf-cta p{margin-bottom:20px;font-size:13.5px;color:#b3b6c9}
+.sf-cta .sf-btn{padding:12px 20px;font-size:13.5px;box-shadow:0 12px 30px rgba(240,75,154,.35)}
+.sf-cta .sf-btn span{display:inline-block;transition:transform .2s}
+.sf-cta .sf-btn:hover span{transform:translateX(4px)}
+@media(max-width:900px){.sf-cta{align-self:stretch}}
+.international-site .sf-cta h3{color:#fff!important}
+.international-site .sf-cta p{color:#b3b6c9!important}

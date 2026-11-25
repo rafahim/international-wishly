@@ -70,3 +70,9 @@
 .sf .sf-bottom .sf-bottom-meta{display:flex;width:100%;justify-content:space-between;align-items:center}
 @media(min-width:561px){.sf .sf-bottom .sf-bottom-meta .sf-made{margin-inline-start:auto;text-align:right;white-space:nowrap}}
 @media(max-width:560px){.sf .sf-bottom .sf-bottom-meta{flex-direction:column;justify-content:center;text-align:center}}
+
+/* Bottom meta row: copyright left, "Made with ♥" right, divider lines above and below */
+.sf .sf-bottom{margin-top:30px;padding-top:0;border-top:1px solid rgba(255,255,255,.07)}
+.sf .sf-bottom .sf-bottom-meta{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.sf .sf-bottom .sf-bottom-links{margin-top:14px}
+.sf .sf-bottom .sf-copy,.sf .sf-bottom .sf-made{font-size:13px;color:#7b7d8e}

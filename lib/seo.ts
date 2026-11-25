@@ -12,6 +12,8 @@ type PageMetaInput = {
   ogType?: 'website' | 'article';
   publishedTime?: string;
   modifiedTime?: string;
+  locale?: string;
+  alternates?: { languages: Record<string, string> };
 };
 
 function fitMetaDescription(value: string, max = 160): string {
@@ -22,7 +24,7 @@ function fitMetaDescription(value: string, max = 160): string {
   return `${shortened.slice(0, boundary > 110 ? boundary : max - 1).replace(/[.,;:!?\s]+$/, '')}…`;
 }
 
-export function pageMeta({ title, absoluteTitle, description, path, image, keywords, ogType = 'website', publishedTime, modifiedTime }: PageMetaInput): Metadata {
+export function pageMeta({ title, absoluteTitle, description, path, image, keywords, ogType = 'website', publishedTime, modifiedTime, locale = 'en_US', alternates }: PageMetaInput): Metadata {
   const url = abs(path);
   const metaDescription = fitMetaDescription(description);
   // Keyword lists are maintained in source/docs for editorial planning; Google does not use meta-keywords as a ranking signal.
@@ -31,12 +33,12 @@ export function pageMeta({ title, absoluteTitle, description, path, image, keywo
   const img = /^https?:\/\//i.test(selectedImage) ? selectedImage : `${SITE.url}${selectedImage}`;
   const size = selectedImage === SITE.ogImage ? SITE.ogImageSize : { width: 960, height: 600 };
   const openGraph = ogType === 'article'
-    ? { type: 'article' as const, siteName: SITE.name, title, description: metaDescription, url, locale: 'en_US', publishedTime, modifiedTime, images: [{ url: img, width: size.width, height: size.height, alt: title }] }
-    : { type: 'website' as const, siteName: SITE.name, title, description: metaDescription, url, locale: 'en_US', images: [{ url: img, width: size.width, height: size.height, alt: title }] };
+    ? { type: 'article' as const, siteName: SITE.name, title, description: metaDescription, url, locale, publishedTime, modifiedTime, images: [{ url: img, width: size.width, height: size.height, alt: title }] }
+    : { type: 'website' as const, siteName: SITE.name, title, description: metaDescription, url, locale, images: [{ url: img, width: size.width, height: size.height, alt: title }] };
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description: metaDescription,
-    alternates: { canonical: url, languages: { en: url, 'x-default': url } },
+    alternates: { canonical: url, ...(alternates ? { languages: alternates.languages } : {}) },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
     openGraph,
     twitter: { card: 'summary_large_image', title, description: metaDescription, images: [img] },

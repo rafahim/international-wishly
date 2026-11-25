@@ -279,7 +279,7 @@ export const seoGuides: Guide[] = [
     "readTime": "4 MIN READ",
     "title": "How to Choose a Wish Website Template (Checklist)",
     "seoTitle": "How to Choose a Wish Website Template",
-    "description": "Not sure which template to pick? Use this checklist: occasion, recipient, language, mobile layout, features and how much you want to write.",
+    "description": "Not sure which template to pick? Use this checklist for occasion, recipient, language, mobile layout, supported features and how much you want to write.",
     "intro": "Choosing a template is the most important decision when you make a personal page. A good choice makes writing easier; a poor choice makes every change a struggle. Use these five checks before you commit.",
     "sections": [
       {
@@ -396,8 +396,8 @@ export const seoGuides: Guide[] = [
       }
     ],
     "conclusion": "Good delivery is part of the gift. Pick the right channel, add a kind note and test the link before you send it.",
-    "relatedPath": "/guides/",
-    "relatedLabel": "More guides"
+    "relatedPath": "/insights/",
+    "relatedLabel": "More insights"
   },
   {
     "slug": "digital-gift-privacy-checklist",
@@ -467,8 +467,8 @@ export const seoGuides: Guide[] = [
       }
     ],
     "conclusion": "Privacy takes minutes to check and prevents regret. Share what is meaningful, not what is risky.",
-    "relatedPath": "/guides/",
-    "relatedLabel": "More guides"
+    "relatedPath": "/insights/",
+    "relatedLabel": "More insights"
   },
   {
     "slug": "make-a-personal-website-from-your-phone",
@@ -646,7 +646,7 @@ export const seoGuides: Guide[] = [
     "readTime": "4 MIN READ",
     "title": "Father’s Day Website Ideas for a Thoughtful Digital Gift",
     "seoTitle": "Father’s Day Website Ideas",
-    "description": "Father’s Day website ideas: a short letter, shared memories, a thank-you list and tips for making the page easy for dad to open and enjoy.",
+    "description": "Father’s Day website ideas include a short letter, shared memories and a thank-you list. Learn how to make the page easy for your dad to open and enjoy.",
     "intro": "Fathers are often hard to shop for, and a personal page can say what a gift cannot. Choose a calm layout, add a few details and keep the message direct.",
     "sections": [
       {
@@ -717,7 +717,7 @@ export const seoGuides: Guide[] = [
     "readTime": "4 MIN READ",
     "title": "Eid Greeting Website Ideas: A Personal Digital Eid Wish",
     "seoTitle": "Eid Greeting Website Ideas",
-    "description": "Eid greeting website ideas: write a warm wish, add family photos and memories, and share one link with relatives and friends near and far.",
+    "description": "Eid greeting website ideas: write a warm wish, add family photos and memories, and share one link with relatives and friends near and far this festive season.",
     "intro": "Eid is about family, friends and generosity. A personal page can carry a message to people who are far away. Keep it warm, respectful and easy to open.",
     "sections": [
       {
@@ -788,7 +788,7 @@ export const seoGuides: Guide[] = [
     "readTime": "4 MIN READ",
     "title": "New Year Wish Website Ideas for Friends and Family",
     "seoTitle": "New Year Wish Website Ideas",
-    "description": "New Year wish website ideas: thank people for the past year, share a hope for the next and send one link that works across time zones.",
+    "description": "New Year wish website ideas: thank people for the past year, share a hope for the next and send one personal link across different time zones.",
     "intro": "A New Year message is easy to lose among hundreds of identical greetings. A small personal page can stand out because it feels like it was made for one person.",
     "sections": [
       {

@@ -63,7 +63,7 @@ export default function Page() {
           <li><strong>A last-minute hello:</strong> e-card.</li>
           <li><strong>A very specific idea:</strong> freelancer-coded page or AI builder, with time to test it.</li>
         </ul>
-        <p>See also: <Link href="/wish-website-maker/">no-code wish website maker</Link>, <Link href="/what-is-wishly/">what is Wishly?</Link> and <Link href="/guides/birthday-website-vs-digital-birthday-card/">birthday website vs digital birthday card</Link>.</p>
+        <p>See also: <Link href="/wish-website-maker/">no-code wish website maker</Link>, <Link href="/what-is-wishly/">what is Wishly?</Link> and <Link href="/insights/birthday-website-vs-digital-birthday-card/">birthday website vs digital birthday card</Link>.</p>
         <p><a className="global-underlined-link" href={appLink('/signup')} rel="noopener">Start free on Wishly.bd <ArrowUpRight size={15} aria-hidden="true" /></a></p>
       </article>
       <section className="global-wrap">

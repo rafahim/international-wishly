@@ -7,11 +7,35 @@ import { appLink } from '@/lib/site';
 import { crumbs } from '@/lib/seo';
 
 /** Shared frame for editorial and informational pages on the international site. */
-export default function PageShell({ kicker, title, lead, path, name, children, cta = true, showCrumbs = true, className = '', aside }: { kicker: string; title: React.ReactNode; lead: string; path: string; name: string; children: React.ReactNode; cta?: boolean; showCrumbs?: boolean; className?: string; aside?: React.ReactNode }) {
-  return (
-    <main className={`premium-site international-site ${className}`.trim()}>
-      {showCrumbs && <JsonLd data={crumbs([['Home', '/'], [name, path]])} />}
-      <Navbar />
+export default function PageShell({
+  kicker,
+  title,
+  lead,
+  path,
+  name,
+  children,
+  cta = true,
+  showCrumbs = true,
+  className = '',
+  aside,
+  contentLang,
+  contentDir = 'ltr',
+}: {
+  kicker: string;
+  title: React.ReactNode;
+  lead: string;
+  path: string;
+  name: string;
+  children: React.ReactNode;
+  cta?: boolean;
+  showCrumbs?: boolean;
+  className?: string;
+  aside?: React.ReactNode;
+  contentLang?: string;
+  contentDir?: 'ltr' | 'rtl';
+}) {
+  const pageContent = (
+    <>
       <section className="global-page-hero global-wrap">
         <p className="global-overline">{kicker}</p>
         <h1>{title}</h1>
@@ -24,6 +48,16 @@ export default function PageShell({ kicker, title, lead, path, name, children, c
         <a href={appLink('/signup')} className="global-button global-button-primary">Start creating <ArrowUpRight size={17} /></a>
         <p><Link className="global-underlined-link" href="/templates/">Browse the designs first <span>↗</span></Link></p>
       </section>}
+    </>
+  );
+
+  return (
+    <main className={`premium-site international-site ${className}`.trim()}>
+      {showCrumbs && <JsonLd data={crumbs([['Home', '/'], [name, path]])} />}
+      <Navbar />
+      {contentLang
+        ? <div className="page-language-content" lang={contentLang} dir={contentDir}>{pageContent}</div>
+        : pageContent}
       <Footer />
     </main>
   );

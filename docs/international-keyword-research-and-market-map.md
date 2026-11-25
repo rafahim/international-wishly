@@ -87,7 +87,7 @@ Use one primary keyword per page. Add a small number of close variants only wher
 - `/templates/letter/`: digital love letter website and online letter pages.
 - `/templates/anniversary/`: anniversary website ideas and relationship memory pages.
 - `/templates/wedding/` and `/templates/invitation/`: digital wedding and event invitation inspiration.
-- `/guides/` and individual guides: informational questions, message planning and step-by-step help.
+- `/insights/` and individual insights: informational questions, message planning and step-by-step help.
 - `/template/[slug]/`: the exact named design, its occasion, language and preview.
 - `wishly.bd`: account, editor, signup, login and publishing intent.
 
@@ -98,7 +98,7 @@ Use one primary keyword per page. Add a small number of close variants only wher
 - The HTML document language is `en` because all editorial page content is English.
 - Each indexable route has a self-referencing canonical.
 - `robots.txt` allows public crawling and points to `sitemap.xml`.
-- Sitemap includes core pages, occasion collections, template detail pages, guides and image URLs.
+- Sitemap includes core pages, occasion collections, template detail pages, Insights articles and image URLs.
 - `WebSite`, `Organization`, `CollectionPage`, `BlogPosting`, `AboutPage`, `HowTo`, `BreadcrumbList` and FAQ structured data are used only where relevant to visible page content.
 - No country-specific `hreflang` is emitted yet because no separate translated/regional URL variants currently exist.
 - Google Search does not use the `meta keywords` tag as a ranking signal. Keyword research is reflected in visible page titles, headings, copy, image alt text and internal links; the mapping is retained in project documentation for editors.
@@ -129,4 +129,4 @@ Group cards: Kudoboard, GroupTogether, Thankbox, Groupcards.io, SendWishOnline, 
 ### Where these terms were applied
 - Occasion pages: “Also known as” lines (lib/category-seo.ts, ALSO_SEARCHED_AS).
 - New page: /wish-website-vs-digital-cards/ (group card vs e-card vs wish website vs freelancer vs AI builder).
-- New guides: group-birthday-card-vs-birthday-website, birthday-invitation-website-with-rsvp-and-countdown, be-my-valentine-website-ideas, date-proposal-website-ideas, interactive-love-letter-website-ideas, qr-code-gift-ideas-for-a-personal-website, ai-website-builder-vs-template-wish-website-maker, digital-love-letter-template-vs-custom-website.
+- New Insights articles: group-birthday-card-vs-birthday-website, birthday-invitation-website-with-rsvp-and-countdown, be-my-valentine-website-ideas, date-proposal-website-ideas, interactive-love-letter-website-ideas, qr-code-gift-ideas-for-a-personal-website, ai-website-builder-vs-template-wish-website-maker, digital-love-letter-template-vs-custom-website.

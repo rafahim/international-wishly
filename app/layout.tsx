@@ -18,6 +18,7 @@ import './hero-showcase.css';
 import './main-site-responsive.css';
 import { bnSans, inter } from './fonts';
 import JsonLd from '@/components/JsonLd';
+import AppOutboundTracking from '@/components/AppOutboundTracking';
 import { SITE } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -32,8 +33,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
   formatDetection: { telephone: false, email: false, address: false },
   verification: (process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION) ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION, other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ? { 'msvalidate.01': process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } : undefined } : undefined,
-  keywords: ['Wishly', 'Wishly wish', 'Wishly website builder', 'Wishly website', 'Wishly.bd', 'wish website builder', 'no code website builder', 'birthday website without coding', 'proposal website maker', 'birthday wish website', 'personal website maker', 'digital gift website'],
-  openGraph: { type: 'website', siteName: SITE.name, title: SITE.title, description: SITE.description, url: SITE.url, locale: 'en_US', alternateLocale: ['en_GB', 'en_CA', 'en_AU', 'en_IN'], images: [{ url: SITE.ogImage, width: SITE.ogImageSize.width, height: SITE.ogImageSize.height, alt: 'Wishly International: website builder templates, ideas and guides for birthdays, proposals, love letters and invitations' }] },
+  openGraph: { type: 'website', siteName: SITE.name, title: SITE.title, description: SITE.description, url: SITE.url, locale: 'en_US', alternateLocale: ['en_GB', 'en_CA', 'en_AU', 'en_IN'], images: [{ url: SITE.ogImage, width: SITE.ogImageSize.width, height: SITE.ogImageSize.height, alt: 'Wishly International: website builder templates, insights and ideas for birthdays, proposals, love letters and invitations' }] },
   twitter: { card: 'summary_large_image', title: SITE.title, description: SITE.description, images: [SITE.ogImage] },
 };
 
@@ -42,13 +42,14 @@ export const viewport: Viewport = { width: 'device-width', initialScale: 1, them
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Organization', '@id': 'https://wishly.bd/#organization', name: 'Wishly', alternateName: ['Wishly BD', 'Wishly.bd', 'Wishly Wish', 'Wishly website builder', 'উইশলি'], disambiguatingDescription: 'Wishly (wishly.bd) is a no-code website builder for personal wish pages such as birthday, proposal, anniversary and love-letter websites.', url: 'https://wishly.bd/', logo: { '@type': 'ImageObject', url: `${SITE.url}/icon-512.webp` }, sameAs: [...SITE.social, 'https://wishly.bd/'], knowsLanguage: ['en', 'bn'], knowsAbout: ['personal website ideas', 'birthday website templates', 'digital love letters', 'proposal pages', 'anniversary websites', 'online invitations'], description: 'Wishly is a personal website maker for birthdays, proposals, anniversaries, digital letters and invitations. Its main product, account and publishing tools are hosted at wishly.bd.' },
-    { '@type': 'WebApplication', '@id': 'https://wishly.bd/#app', name: 'Wishly', alternateName: ['Wishly.bd', 'Wishly Wish', 'উইশলি'], url: 'https://wishly.bd/', applicationCategory: 'DesignApplication', applicationSubCategory: 'No-code website builder for personal wishes', operatingSystem: 'Any (web browser)', isAccessibleForFree: true, featureList: ['No-code visual editor', 'Birthday, proposal, anniversary, letter and invitation templates', 'Photos, music and video where the template supports them', 'One shareable link', 'Mobile-friendly'], publisher: { '@id': 'https://wishly.bd/#organization' }, inLanguage: ['en', 'bn'] },
-    { '@type': 'WebSite', '@id': `${SITE.url}/#website`, url: SITE.url, name: 'Wishly International', alternateName: ['Wishly', 'Wishly Wish', 'Wishly.bd'], description: SITE.description, inLanguage: 'en', publisher: { '@id': 'https://wishly.bd/#organization' }, audience: { '@type': 'Audience', audienceType: 'People looking for personal website ideas and digital gift inspiration worldwide' } },
+    { '@type': 'Organization', '@id': `${SITE.url}/#organization`, name: 'Wishly International', alternateName: ['Wishly', 'Wishly.bd', 'উইশলি'], url: SITE.url, logo: { '@type': 'ImageObject', url: `${SITE.url}/icon-512.webp` }, sameAs: [...SITE.social, 'https://wishly.bd/'], knowsLanguage: ['en', 'bn'], knowsAbout: ['personal website ideas', 'birthday website templates', 'digital love letters', 'proposal pages', 'anniversary websites', 'online invitations'], description: 'Wishly International publishes English-first template previews and practical insights for personal wish websites. The Wishly product itself (accounts, editor, publishing) is hosted at wishly.bd.', brand: { '@type': 'Brand', name: 'Wishly', url: 'https://wishly.bd/' } },
+    { '@type': 'WebApplication', '@id': 'https://wishly.bd/#app', name: 'Wishly', alternateName: ['Wishly.bd', 'Wishly Wish', 'উইশলি'], url: 'https://wishly.bd/', applicationCategory: 'DesignApplication', applicationSubCategory: 'No-code website builder for personal wishes', operatingSystem: 'Any (web browser)', isAccessibleForFree: true, featureList: ['No-code visual editor', 'Birthday, proposal, anniversary, letter and invitation templates', 'Photos, music and video where the template supports them', 'One shareable link', 'Mobile-friendly'], publisher: { '@id': `${SITE.url}/#organization` }, inLanguage: ['en', 'bn'] },
+    { '@type': 'WebSite', '@id': `${SITE.url}/#website`, url: SITE.url, name: 'Wishly International', alternateName: ['Wishly', 'Wishly Wish', 'Wishly.bd'], description: SITE.description, inLanguage: 'en', publisher: { '@id': `${SITE.url}/#organization` }, audience: { '@type': 'Audience', audienceType: 'People looking for personal website ideas and digital gift inspiration worldwide' } },
   ],
 };
 
 const GA = process.env.NEXT_PUBLIC_GA_ID;
+const LINKED_DOMAINS = [SITE.host, new URL(SITE.appUrl).host];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script id="gtm-lazy" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
+          gtag('set', 'linker', { domains: ${JSON.stringify(LINKED_DOMAINS)} });
           gtag('js', new Date());
           (function(){
             var loaded=false;
@@ -77,11 +79,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           })();
         `}</Script>
         <JsonLd data={structuredData} />
+        <AppOutboundTracking />
         {children}
         {GA && (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA}`} strategy="afterInteractive" />
-            <Script id="ga-init" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA}');`}</Script>
+            <Script id="ga-init" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('set','linker',{domains:${JSON.stringify(LINKED_DOMAINS)}});gtag('js',new Date());gtag('config','${GA}');`}</Script>
           </>
         )}
       </body>

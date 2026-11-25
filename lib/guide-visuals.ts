@@ -146,7 +146,7 @@ function pick(bank: GuideVisual[], slug: string): GuideVisual {
 /** Provides a topic-matched cover for every published editorial guide. */
 export function guideVisualFor(guide: Pick<Guide, 'slug' | 'category' | 'title'>): GuideVisual {
   const slug = guide.slug.toLowerCase();
-  if (slug === 'wishly-international-guide-website') return { src: '/og-wishly-international.jpg', alt: 'Wishly International: website builder templates, ideas and guides on wishly.rafahim.com, with the main Wishly website at wishly.bd' };
+  if (slug === 'wishly-international-guide-website' || slug === 'international-wishes-around-the-world') return { src: '/og-wishly-international.jpg', alt: 'Wishly International: personal wish website ideas and thoughtful greetings for people around the world' };
   if (slug === 'how-to-write-birthday-website-message' || slug === 'birthday-website-message-examples') return pexels.letterWriting;
   if (slug === 'birthday-website-without-photos') return generated('romantic-letter-flatlay', 'A keepsake envelope and photograph illustrating a birthday message without photos');
   if (slug === 'birthday-photo-collage-website' || slug === 'birthday-memory-timeline-website') return local('birthday-cinema-memory-puzzle', 'A photo-led birthday website template for sharing memories');

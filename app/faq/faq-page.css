@@ -1,0 +1,77 @@
+/* FAQ page: ambient hero, polished route panel, searchable numbered accordion. */
+
+/* Hero */
+.international-site.faq-page .global-page-hero { position: relative; padding-top: 84px; padding-bottom: 54px; border-bottom: 0; text-align: center; isolation: isolate; }
+.international-site.faq-page .global-page-hero::before {
+  content: ""; position: absolute; z-index: -1; left: 50%; top: 0; width: min(920px, 100%); height: 360px; transform: translateX(-50%);
+  background: radial-gradient(ellipse at 30% 40%, rgba(240,75,154,.20), transparent 60%), radial-gradient(ellipse at 72% 45%, rgba(139,108,255,.20), transparent 60%);
+  filter: blur(28px); pointer-events: none;
+}
+.international-site.faq-page .global-overline { display: inline-flex; align-items: center; gap: 9px; padding: 7px 14px; border: 1px solid rgba(240,75,154,.28); border-radius: 999px; background: rgba(240,75,154,.08); color: #f6a8cb; font-size: 11px; letter-spacing: .16em; }
+.international-site.faq-page .global-page-hero h1 { margin: 20px auto 18px; max-width: 760px; }
+.international-site.faq-page .global-page-hero h1 em { font-style: normal; background: linear-gradient(90deg, #ff86bc, #aa8cff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.international-site.faq-page .global-page-hero > p:last-child { margin-inline: auto; max-width: 640px; font-size: 15.5px; line-height: 1.8; }
+
+/* Route panel */
+.international-site.faq-page .faq-page-route { position: relative; overflow: hidden; margin-top: 8px; border-radius: 24px; border-color: rgba(255,255,255,.1); background: radial-gradient(circle at 100% 0%, rgba(139,108,255,.16), transparent 45%), radial-gradient(circle at 0% 100%, rgba(240,75,154,.13), transparent 45%), #0e0f15; box-shadow: 0 30px 80px -40px rgba(0,0,0,.8); }
+.international-site.faq-page .faq-page-route-intro > p:last-child { font-size: 14px; }
+.international-site.faq-page .faq-route-card { padding: 17px 18px; border-radius: 17px; transition: transform .25s ease, border-color .25s ease, background-color .25s ease; }
+.international-site.faq-page .faq-route-card:hover { transform: translateY(-2px); border-color: rgba(242,154,192,.34); }
+.international-site.faq-page .faq-route-card p { font-size: 13.5px; }
+
+/* Accordion layout */
+.international-site.faq-page .faq-page-content { padding-top: 52px; padding-bottom: 34px; }
+.fx-wrap { display: grid; grid-template-columns: minmax(0, 330px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+.fx-side { position: sticky; top: 100px; padding: 28px; border: 1px solid rgba(255,255,255,.1); border-radius: 22px; background: linear-gradient(160deg, rgba(240,75,154,.08), rgba(139,108,255,.06)), #0e0f15; }
+.international-site.faq-page .fx-side .global-overline { padding: 0; border: 0; background: none; }
+.fx-side h2 { margin: 12px 0 10px; color: #fff; font: 500 clamp(28px, 3vw, 36px)/1.06 var(--g-serif); letter-spacing: -.04em; }
+.fx-side-lead { margin: 0 0 20px; color: #b4b6c2; font-size: 14px; line-height: 1.7; }
+.fx-search { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 14px; border: 1px solid rgba(255,255,255,.13); border-radius: 14px; background: rgba(7,7,12,.65); color: #a9a7b8; transition: border-color .2s ease, box-shadow .2s ease; }
+.fx-search:focus-within { border-color: rgba(240,75,154,.55); box-shadow: 0 0 0 4px rgba(240,75,154,.12); }
+.fx-search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: #f7f7fb; font: inherit; font-size: 14px; }
+.fx-search input::placeholder { color: #8d8b9d; }
+.fx-search input::-webkit-search-cancel-button { display: none; }
+.fx-search button { display: grid; place-items: center; width: 26px; height: 26px; border: 0; border-radius: 50%; background: rgba(255,255,255,.08); color: #d5d4df; cursor: pointer; }
+.fx-search button:hover { background: rgba(240,75,154,.25); color: #fff; }
+.fx-meta { margin: 14px 2px 0; color: #9a9bb0; font-size: 12.5px; }
+.fx-meta b { color: #f29ac0; font: 500 20px/1 var(--g-serif); margin-right: 4px; }
+
+.fx-list { display: grid; gap: 12px; min-width: 0; }
+.fx-item { position: relative; border: 1px solid rgba(255,255,255,.09); border-radius: 18px; background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.01)), #0e0f15; transition: border-color .25s ease, background .25s ease, box-shadow .25s ease; }
+.fx-item:hover { border-color: rgba(242,154,192,.3); }
+.fx-item.open { border-color: rgba(240,75,154,.38); background: linear-gradient(120deg, rgba(240,75,154,.09), rgba(139,108,255,.07)), #101018; box-shadow: 0 24px 60px -34px rgba(240,75,154,.5); }
+.fx-q { all: unset; box-sizing: border-box; display: flex; align-items: center; gap: 16px; width: 100%; padding: 18px 20px; border-radius: 18px; cursor: pointer; }
+.fx-q:focus-visible { outline: 2px solid #f04b9a; outline-offset: 2px; }
+.fx-num { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: rgba(240,75,154,.1); color: #f29ac0; font: 500 15px/1 var(--g-serif); letter-spacing: .02em; transition: background .25s ease, color .25s ease; }
+.fx-item.open .fx-num { background: linear-gradient(135deg, #f04b9a, #8b6cff); color: #fff; }
+.fx-qt { flex: 1; min-width: 0; color: #f4f0f7; font: 500 17px/1.35 var(--g-serif); letter-spacing: -.015em; text-wrap: balance; }
+.fx-tog { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; color: #f29ac0; transition: transform .3s ease, background .25s ease, color .25s ease, border-color .25s ease; }
+.fx-item.open .fx-tog { transform: rotate(135deg); background: #f04b9a; border-color: transparent; color: #fff; }
+.fx-a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s cubic-bezier(.2,.8,.2,1); }
+.fx-item.open .fx-a { grid-template-rows: 1fr; }
+.fx-a > div { min-height: 0; overflow: hidden; }
+.fx-a p { margin: 0; padding: 0 24px 24px 76px; max-width: 68ch; color: #b9b7c6; font-size: 14.5px; line-height: 1.8; }
+.fx-empty { padding: 34px; border: 1px dashed rgba(255,255,255,.16); border-radius: 18px; text-align: center; color: #b4b6c2; }
+.fx-empty b { color: #fff; font: 500 20px/1.2 var(--g-serif); }
+.fx-empty p { margin: 8px 0 0; font-size: 14px; }
+
+/* Resources */
+.international-site.faq-page .faq-page-resources { padding-bottom: 72px; }
+.international-site.faq-page .faq-resource-card { padding: 22px 24px; border-radius: 20px; transition: transform .25s ease, border-color .25s ease; }
+.international-site.faq-page .faq-resource-card p { font-size: 13.5px; }
+
+@media (max-width: 960px) {
+  .fx-wrap { grid-template-columns: 1fr; gap: 20px; }
+  .fx-side { position: static; padding: 22px; }
+}
+@media (max-width: 560px) {
+  .international-site.faq-page .global-page-hero { padding-top: 56px; padding-bottom: 36px; }
+  .fx-q { gap: 11px; padding: 14px 13px; }
+  .fx-num { width: 34px; height: 34px; border-radius: 10px; font-size: 13px; }
+  .fx-qt { font-size: 15.5px; }
+  .fx-tog { width: 28px; height: 28px; }
+  .fx-a p { padding: 0 16px 20px 16px; font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fx-item, .fx-a, .fx-tog, .international-site.faq-page .faq-route-card { transition: none; }
+}

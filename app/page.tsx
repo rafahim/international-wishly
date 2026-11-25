@@ -5,11 +5,10 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TemplateCard from '@/components/TemplateCard';
 import HeroShowcase from '@/components/HeroShowcase';
-import Faq from '@/components/Faq';
 import JsonLd from '@/components/JsonLd';
 import { SITE, abs, appLink } from '@/lib/site';
-import { pageMeta, faqLd } from '@/lib/seo';
-import { features, steps, faqs } from '@/lib/content';
+import { pageMeta } from '@/lib/seo';
+import { features, steps } from '@/lib/content';
 import { occasionList, templates } from '@/lib/templates';
 import { guides } from '@/lib/guides';
 import './occasion-strip.css';
@@ -25,7 +24,7 @@ export const metadata: Metadata = pageMeta({
 
 const featureIcons: Record<string, LucideIcon> = { pen: PenLine, images: Images, music: Music2, mail: Mail, phone: Smartphone, link: ArrowUpRight };
 
-// Occasion chips open the matching occasion page on the main Wishly website (wishly.bd).
+// Occasion cards stay on this international site and open its local occasion collection.
 const feelings: [string, string, LucideIcon][] = [
   ['birthday', 'Birthday', Cake],
   ['proposal', 'Proposal', Gem],
@@ -64,7 +63,6 @@ export default function Home() {
   return (
     <main className="premium-site international-site">
       <JsonLd data={ld} />
-      <JsonLd data={faqLd(faqs.slice(0, 6))} />
       <Navbar />
 
       <section className="global-hero global-wrap">
@@ -73,7 +71,7 @@ export default function Home() {
           <h1>Find the perfect idea. <em>Create something unforgettable.</em></h1>
           <p className="global-hero-lead">Make a birthday, proposal or love-letter website without coding. Explore anniversary surprises, digital letters and online invitations, find a starting point for someone special, compare real Wishly designs and continue to Wishly.bd when you are ready to create.</p>
           <div className="global-hero-actions">
-            <Link href="/guides/" className="global-button global-button-primary">Explore ideas <ArrowUpRight size={17} /></Link>
+            <Link href="/insights/" className="global-button global-button-primary">Explore ideas <ArrowUpRight size={17} /></Link>
             <a href={appLink('/signup')} className="global-text-action">Create on Wishly.bd <span>↗</span></a>
           </div>
           <div className="global-trust-line"><span><Check size={14} /> No coding</span><span><Check size={14} /> Opens in a browser</span><span><Check size={14} /> One shareable link</span></div>
@@ -110,19 +108,14 @@ export default function Home() {
           <ul className="os-chips">
             {feelings.map(([key, label, Icon]) => (
               <li key={key}>
-                <a href={appLink(`/templates/${key}`)}>
-                  <Icon size={19} strokeWidth={1.6} aria-hidden="true" />
+                <Link href={`/templates/${key}/`}>
+                  <Icon size={17} strokeWidth={1.6} aria-hidden="true" />
                   <span>{label}</span>
-                  <ArrowUpRight size={13} aria-hidden="true" />
-                </a>
+                  <ArrowUpRight size={12} aria-hidden="true" />
+                </Link>
               </li>
             ))}
           </ul>
-          <nav className="os-browse" aria-label="Browse designs by occasion on this site">
-            <span>Browse designs here:</span>
-            {feelings.map(([key, label]) => <Link key={key} href={`/templates/${key}/`}>{label}</Link>)}
-            <Link href="/templates/" className="os-browse-all">All occasions ↗</Link>
-          </nav>
         </div>
       </section>
 
@@ -149,7 +142,7 @@ export default function Home() {
         <div className="global-main-product-copy">
           <p className="global-overline"><span aria-hidden="true">✦</span> THE MAIN WISHLY WEBSITE</p>
           <h2 id="global-main-product-title">Discover the idea here. <em>Create it on Wishly.bd.</em></h2>
-          <p>This international website is your place to explore templates, examples and step-by-step guides. The actual Wishly product is <strong>Wishly.bd</strong>—that is where you create an account, open the visual editor, personalise a design, publish your page and manage it later.</p>
+          <p>This international website is your place to explore templates, examples and step-by-step insights and articles. The actual Wishly product is <strong>Wishly.bd</strong>—that is where you create an account, open the visual editor, personalise a design, publish your page and manage it later.</p>
           <div className="global-main-product-points">
             <span><Check size={15} /> Account and dashboard</span>
             <span><Check size={15} /> Template editor and customisation</span>
@@ -213,15 +206,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="global-wrap global-guide-promo">
-        <div className="global-guide-promo-head"><p className="global-overline">NOT SURE WHERE TO BEGIN?</p><h2>A few ideas to get your words moving.</h2><Link className="global-underlined-link" href="/guides/">All ideas & guides <span>↗</span></Link></div>
-        <div className="global-guide-promo-list">
-          {guides.slice(0, 4).map((guide) => <article key={guide.slug}><span>{guide.category}</span><h3><Link href={`/guides/${guide.slug}/`}>{guide.title}</Link></h3><Link href={`/guides/${guide.slug}/`} className="global-guide-arrow" aria-label={`Read ${guide.title}`}><ArrowUpRight size={17} /></Link></article>)}
-        </div>
+      <section className="global-wrap" style={{ padding: '12px 0 36px', maxWidth: 860 }} aria-labelledby="country-guides-promo-title">
+        <p className="global-overline">LOCAL CONTEXT FOR A THOUGHTFUL WISH</p>
+        <h2 id="country-guides-promo-title">Explore wish ideas by country</h2>
+        <p>Learn about local occasions, greeting customs and respectful ways to share wishes. <Link href="/countries/">Browse all 195 countries</Link>.</p>
       </section>
 
-      <section className="global-wrap" aria-label="Frequently asked questions">
-        <Faq faqs={faqs.slice(0, 6)} heading="Wishly, answered." lead="Quick answers about making a wish website without coding." />
+      <section className="global-wrap global-guide-promo">
+        <div className="global-guide-promo-head"><p className="global-overline">NOT SURE WHERE TO BEGIN?</p><h2>A few ideas to get your words moving.</h2><Link className="global-underlined-link" href="/insights/">All insights <span>↗</span></Link></div>
+        <div className="global-guide-promo-list">
+          {guides.slice(0, 4).map((guide) => <article key={guide.slug}><span>{guide.category}</span><h3><Link href={`/insights/${guide.slug}/`}>{guide.title}</Link></h3><Link href={`/insights/${guide.slug}/`} className="global-guide-arrow" aria-label={`Read ${guide.title}`}><ArrowUpRight size={17} /></Link></article>)}
+        </div>
       </section>
 
       <section className="global-final-cta global-wrap">

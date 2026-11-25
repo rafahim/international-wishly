@@ -98,8 +98,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Website for Uncle: Personal Ideas and Message Tips",
     "seoTitle": "Birthday Website for Uncle: Personal Ideas and Message Tips",
-    "description": "Create a birthday website for uncle with family memories, a favourite photograph and a message that sounds natural.",
-    "intro": "Create a birthday website for uncle with family memories, a favourite photograph and a message that sounds natural. These ideas help make the page personal without forcing a sentimental tone.",
+    "description": "Create a birthday website for your uncle with family memories, a favourite photograph and a message that sounds natural, warm and personal today.",
+    "intro": "Create a birthday website for your uncle with family memories, a favourite photograph and a message that sounds natural, warm and personal today. These ideas help make the page personal without forcing a sentimental tone.",
     "sections": [
       {
         "heading": "Pick a detail that sounds like him",
@@ -160,8 +160,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Website for Your Wife: Romantic Ideas That Feel Real",
     "seoTitle": "Birthday Website for Your Wife: Romantic Ideas That Feel Real",
-    "description": "Plan a birthday website for your wife around shared memories, thoughtful words and a visual style she enjoys.",
-    "intro": "Plan a birthday website for your wife around shared memories, thoughtful words and a visual style she enjoys. A few personal details can make a digital surprise feel more meaningful than a generic greeting.",
+    "description": "Plan a birthday website for your wife around shared memories, thoughtful words and a visual style she enjoys. Explore ideas for a personal surprise.",
+    "intro": "Plan a birthday website for your wife around shared memories, thoughtful words and a visual style she enjoys. Explore ideas for a personal surprise. A few personal details can make a digital surprise feel more meaningful than a generic greeting.",
     "sections": [
       {
         "heading": "Make the opening about your shared life",
@@ -222,8 +222,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Website for Your Husband: A Personal Surprise Guide",
     "seoTitle": "Birthday Website for Your Husband: A Personal Surprise Guide",
-    "description": "A birthday website for your husband can celebrate your history while keeping the message warm, funny or understated.",
-    "intro": "A birthday website for your husband can celebrate your history while keeping the message warm, funny or understated. Use these ideas to shape a page around what makes your relationship yours.",
+    "description": "A birthday website for your husband can celebrate your history with warm words, a favourite photo and a style that feels funny, romantic or understated.",
+    "intro": "A birthday website for your husband can celebrate your history with warm words, a favourite photo and a style that feels funny, romantic or understated. Use these ideas to shape a page around what makes your relationship yours.",
     "sections": [
       {
         "heading": "Use a shared reference as the first line",
@@ -346,8 +346,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Website for Your Brother: Make a Page He Will Remember",
     "seoTitle": "Birthday Website for Your Brother: Make a Page He Will Remember",
-    "description": "A birthday website for your brother can turn a shared joke, old photo or family memory into a simple online surprise.",
-    "intro": "A birthday website for your brother can turn a shared joke, old photo or family memory into a simple online surprise. Pick a tone that fits the way you get along.",
+    "description": "A birthday website for your brother can turn a shared joke, old photo or family memory into a simple online surprise he will enjoy opening today.",
+    "intro": "A birthday website for your brother can turn a shared joke, old photo or family memory into a simple online surprise he will enjoy opening today. Pick a tone that fits the way you get along.",
     "sections": [
       {
         "heading": "Start with the shared joke",
@@ -408,8 +408,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Website for Your Daughter: Ideas for a Meaningful Surprise",
     "seoTitle": "Birthday Website for Your Daughter: Ideas for a Meaningful Surprise",
-    "description": "Create a birthday website for your daughter with photos, encouragement and memories from different stages of her life.",
-    "intro": "Create a birthday website for your daughter with photos, encouragement and memories from different stages of her life. Keep the message supportive and centred on who she is becoming.",
+    "description": "Create a birthday website for your daughter with photos, encouragement and memories from different stages of her life, shaped into a loving message.",
+    "intro": "Create a birthday website for your daughter with photos, encouragement and memories from different stages of her life, shaped into a loving message. Keep the message supportive and centred on who she is becoming.",
     "sections": [
       {
         "heading": "Celebrate the person she is now",
@@ -470,8 +470,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Website for Your Son: Photo and Message Ideas",
     "seoTitle": "Birthday Website for Your Son: Photo and Message Ideas",
-    "description": "A birthday website for your son can bring together family photographs, a proud message and a few memories.",
-    "intro": "A birthday website for your son can bring together family photographs, a proud message and a few memories. These ideas help make it age-appropriate and personal.",
+    "description": "A birthday website for your son can bring together family photographs, a proud message and a few memories. Find ideas for a personal page to share.",
+    "intro": "A birthday website for your son can bring together family photographs, a proud message and a few memories. Find ideas for a personal page to share. These ideas help make it age-appropriate and personal.",
     "sections": [
       {
         "heading": "Choose a message for his stage of life",
@@ -532,8 +532,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Website for Grandma: Family Memories and Gentle Ideas",
     "seoTitle": "Birthday Website for Grandma: Family Memories and Gentle Ideas",
-    "description": "A birthday website for grandma can collect family photographs, short messages and stories that matter across generations.",
-    "intro": "A birthday website for grandma can collect family photographs, short messages and stories that matter across generations. Keep the page clear, warm and easy to open.",
+    "description": "A birthday website for grandma can collect family photographs, short messages and stories across generations. Explore ways to make it warm and easy to share.",
+    "intro": "A birthday website for grandma can collect family photographs, short messages and stories across generations. Explore ways to make it warm and easy to share. Keep the page clear, warm and easy to open.",
     "sections": [
       {
         "heading": "Gather contributions from the family",
@@ -780,8 +780,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Funny Birthday Website for Your Best Friend: Ideas That Land",
     "seoTitle": "Funny Birthday Website for Your Best Friend: Ideas That Land",
-    "description": "Make a funny birthday website for your best friend with shared jokes, harmless callbacks and one sincere message.",
-    "intro": "Make a funny birthday website for your best friend with shared jokes, harmless callbacks and one sincere message. The best humour feels recognisable, not embarrassing.",
+    "description": "Make a funny birthday website for your best friend with shared jokes, harmless callbacks and one sincere message. Find ideas that feel personal, not forced.",
+    "intro": "Make a funny birthday website for your best friend with shared jokes, harmless callbacks and one sincere message. Find ideas that feel personal, not forced. The best humour feels recognisable, not embarrassing.",
     "sections": [
       {
         "heading": "Use a joke you both enjoy",
@@ -842,8 +842,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Heartfelt Birthday Website for a Best Friend: What to Include",
     "seoTitle": "Heartfelt Birthday Website for a Best Friend: What to Include",
-    "description": "A heartfelt birthday website for a best friend can bring together shared memories, gratitude and hopes for the year ahead.",
-    "intro": "A heartfelt birthday website for a best friend can bring together shared memories, gratitude and hopes for the year ahead. Use honest details instead of trying to sound poetic.",
+    "description": "A heartfelt birthday website for a best friend can bring together shared memories, gratitude and hopes for the year ahead in a page made just for them.",
+    "intro": "A heartfelt birthday website for a best friend can bring together shared memories, gratitude and hopes for the year ahead in a page made just for them. Use honest details instead of trying to sound poetic.",
     "sections": [
       {
         "heading": "Start with why the friendship matters",
@@ -1090,8 +1090,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "40th Birthday Website Ideas: A Personal Celebration Page",
     "seoTitle": "40th Birthday Website Ideas: A Personal Celebration Page",
-    "description": "Mark a 40th birthday with a page that reflects the person's relationships, interests and experiences.",
-    "intro": "Mark a 40th birthday with a page that reflects the person's relationships, interests and experiences. A thoughtful collection of stories can feel more personal than a generic milestone theme.",
+    "description": "Mark a 40th birthday with a page that reflects the person’s relationships, interests and experiences. Explore photo, story and message ideas for the milestone.",
+    "intro": "Mark a 40th birthday with a page that reflects the person’s relationships, interests and experiences. Explore photo, story and message ideas for the milestone. A thoughtful collection of stories can feel more personal than a generic milestone theme.",
     "sections": [
       {
         "heading": "Let different chapters sit together",
@@ -1152,8 +1152,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "50th Birthday Website Ideas: Family Stories and Meaningful Wishes",
     "seoTitle": "50th Birthday Website Ideas: Family Stories and Meaningful Wishes",
-    "description": "A 50th birthday website can bring generations together through family notes, stories and favourite photographs.",
-    "intro": "A 50th birthday website can bring generations together through family notes, stories and favourite photographs. Keep the page easy to explore and centred on the person being celebrated.",
+    "description": "A 50th birthday website can bring generations together through family notes, stories and favourite photographs. Find thoughtful ways to celebrate the milestone.",
+    "intro": "A 50th birthday website can bring generations together through family notes, stories and favourite photographs. Find thoughtful ways to celebrate the milestone. Keep the page easy to explore and centred on the person being celebrated.",
     "sections": [
       {
         "heading": "Collect stories from different generations",
@@ -1214,7 +1214,7 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Website Without Photos: Personal Ideas That Still Work",
     "seoTitle": "Birthday Website Without Photos: Personal Ideas That Still Work",
-    "description": "You can make a personal birthday website without photographs. Explore practical examples and simple steps to create a page worth sharing.",
+    "description": "You can make a personal birthday website without photographs. Explore practical examples, message ideas and simple steps to create a page worth sharing.",
     "intro": "You can make a personal birthday website without photographs. Use written memories, a short playlist reference, illustrated details or messages from friends to create a page with its own character.",
     "sections": [
       {
@@ -1276,7 +1276,7 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Surprise Without a Gift: Create a Personal Online Moment",
     "seoTitle": "Birthday Surprise Without a Gift: Create a Personal Online Moment",
-    "description": "A birthday surprise does not have to involve buying something. Explore practical examples and simple steps to create a page worth sharing.",
+    "description": "A birthday surprise does not have to involve buying something. Explore digital ideas, meaningful messages and ways to help someone feel remembered.",
     "intro": "A birthday surprise does not have to involve buying something. A personal page with a thoughtful message, memories and a plan to spend time together can be meaningful on its own.",
     "sections": [
       {
@@ -1338,8 +1338,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Photo Collage Website: How to Arrange the Memories",
     "seoTitle": "Birthday Photo Collage Website: How to Arrange the Memories",
-    "description": "A birthday photo collage website can make shared memories feel like a story rather than a pile of images.",
-    "intro": "A birthday photo collage website can make shared memories feel like a story rather than a pile of images. Choose a clear sequence, use captions sparingly and keep the page easy to browse.",
+    "description": "A birthday photo collage website can make shared memories feel like a story rather than a pile of images. Find ideas for choosing and arranging photos.",
+    "intro": "A birthday photo collage website can make shared memories feel like a story rather than a pile of images. Find ideas for choosing and arranging photos. Choose a clear sequence, use captions sparingly and keep the page easy to browse.",
     "sections": [
       {
         "heading": "Edit the photo collection first",
@@ -1400,8 +1400,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Memory Timeline Website: Build a Story in Moments",
     "seoTitle": "Birthday Memory Timeline Website: Build a Story in Moments",
-    "description": "A birthday memory timeline website can connect a handful of photographs and stories across the years.",
-    "intro": "A birthday memory timeline website can connect a handful of photographs and stories across the years. Use meaningful milestones rather than trying to document every event.",
+    "description": "A birthday memory timeline website can connect a handful of photographs and stories across the years. Learn how to create a personal, easy-to-follow sequence.",
+    "intro": "A birthday memory timeline website can connect a handful of photographs and stories across the years. Learn how to create a personal, easy-to-follow sequence. Use meaningful milestones rather than trying to document every event.",
     "sections": [
       {
         "heading": "Choose the moments that changed something",
@@ -1462,8 +1462,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Countdown Website Ideas: Build Anticipation Thoughtfully",
     "seoTitle": "Birthday Countdown Website Ideas: Build Anticipation Thoughtfully",
-    "description": "A birthday countdown page can build anticipation with a short series of memories, notes or daily prompts.",
-    "intro": "A birthday countdown page can build anticipation with a short series of memories, notes or daily prompts. Keep the countdown simple and confirm the date and time zone before sharing it.",
+    "description": "A birthday countdown page can build anticipation with memories, notes or daily prompts. Explore ways to keep each update thoughtful, simple and easy to open.",
+    "intro": "A birthday countdown page can build anticipation with memories, notes or daily prompts. Explore ways to keep each update thoughtful, simple and easy to open. Keep the countdown simple and confirm the date and time zone before sharing it.",
     "sections": [
       {
         "heading": "Decide what the countdown is for",
@@ -1896,8 +1896,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Birthday Website for a Long-Distance Partner: Ideas That Feel Close",
     "seoTitle": "Birthday Website for a Long-Distance Partner: Ideas That Feel Close",
-    "description": "A birthday website for a long-distance partner can connect photographs, shared routines and a message across the distance.",
-    "intro": "A birthday website for a long-distance partner can connect photographs, shared routines and a message across the distance. Make the page personal while planning around the recipient's local day.",
+    "description": "A birthday website for a long-distance partner can connect photos, shared routines and a personal message. Explore ideas to make the distance feel smaller.",
+    "intro": "A birthday website for a long-distance partner can connect photos, shared routines and a personal message. Explore ideas to make the distance feel smaller. Make the page personal while planning around the recipient's local day.",
     "sections": [
       {
         "heading": "Bring familiar routines into the page",
@@ -1958,8 +1958,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Digital Anniversary Gift Ideas: Personal Pages and Shared Memories",
     "seoTitle": "Digital Anniversary Gift Ideas: Personal Pages and Shared Memories",
-    "description": "Explore digital anniversary gift ideas that focus on shared memories, meaningful words and time together.",
-    "intro": "Explore digital anniversary gift ideas that focus on shared memories, meaningful words and time together. A personal webpage can be a keepsake when it tells a story that belongs to the two of you.",
+    "description": "Explore digital anniversary gift ideas focused on shared memories, meaningful words and time together. Find thoughtful ways to create something personal online.",
+    "intro": "Explore digital anniversary gift ideas focused on shared memories, meaningful words and time together. Find thoughtful ways to create something personal online. A personal webpage can be a keepsake when it tells a story that belongs to the two of you.",
     "sections": [
       {
         "heading": "Choose a central theme",
@@ -2082,8 +2082,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "10th Anniversary Website Ideas: Celebrate a Decade Together",
     "seoTitle": "10th Anniversary Website Ideas: Celebrate a Decade Together",
-    "description": "A 10th anniversary website can celebrate a decade of shared choices, ordinary days and major memories.",
-    "intro": "A 10th anniversary website can celebrate a decade of shared choices, ordinary days and major memories. Use a few chapters rather than trying to document every year in equal detail.",
+    "description": "A 10th anniversary website can celebrate a decade of shared choices, ordinary days and major memories. Explore ideas for a personal milestone page.",
+    "intro": "A 10th anniversary website can celebrate a decade of shared choices, ordinary days and major memories. Explore ideas for a personal milestone page. Use a few chapters rather than trying to document every year in equal detail.",
     "sections": [
       {
         "heading": "Select a memory from each chapter",
@@ -2392,8 +2392,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Wedding Invitation Website Wording: Examples and Essential Details",
     "seoTitle": "Wedding Invitation Website Wording: Examples and Essential Details",
-    "description": "Write clear wedding invitation website wording with the couple's names, date, venue and response instructions.",
-    "intro": "Write clear wedding invitation website wording with the couple's names, date, venue and response instructions. Keep the welcome warm while making practical details easy for guests to find.",
+    "description": "Write clear wedding invitation website wording with the couple’s names, date, venue and response instructions. Find examples that keep details easy to follow.",
+    "intro": "Write clear wedding invitation website wording with the couple’s names, date, venue and response instructions. Find examples that keep details easy to follow. Keep the welcome warm while making practical details easy for guests to find.",
     "sections": [
       {
         "heading": "Lead with the invitation",
@@ -2826,8 +2826,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Teacher Appreciation Website Ideas for a Class or Former Student",
     "seoTitle": "Teacher Appreciation Website Ideas for a Class or Former Student",
-    "description": "Teacher appreciation website ideas can help a class or former student recognise a teacher's influence.",
-    "intro": "Teacher appreciation website ideas can help a class or former student recognise a teacher's influence. Gather thoughtful notes while keeping student privacy and school expectations in mind.",
+    "description": "Teacher appreciation website ideas can help a class or former student recognise a teacher’s influence with a thoughtful message, photos and shared memories.",
+    "intro": "Teacher appreciation website ideas can help a class or former student recognise a teacher’s influence with a thoughtful message, photos and shared memories. Gather thoughtful notes while keeping student privacy and school expectations in mind.",
     "sections": [
       {
         "heading": "Invite concrete memories",
@@ -3012,8 +3012,8 @@ export const additionalGuides: Guide[] = [
     "readTime": "3 MIN READ",
     "title": "Welcome Home Surprise Website: A Personal Page for Their Return",
     "seoTitle": "Welcome Home Surprise Website: A Personal Page for Their Return",
-    "description": "A welcome home surprise website can greet someone returning from travel, study or a long period away.",
-    "intro": "A welcome home surprise website can greet someone returning from travel, study or a long period away. Keep the message warm and make any plans clear without overwhelming them on arrival.",
+    "description": "A welcome home surprise website can greet someone returning from travel, study or a long time away. Find ways to bring messages and memories into one page.",
+    "intro": "A welcome home surprise website can greet someone returning from travel, study or a long time away. Find ways to bring messages and memories into one page. Keep the message warm and make any plans clear without overwhelming them on arrival.",
     "sections": [
       {
         "heading": "Think about what they will need after returning",

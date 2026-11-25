@@ -432,8 +432,8 @@ export const seoGuides2: Guide[] = [
       }
     ],
     "conclusion": "A QR code makes a physical gift lead into a personal page. Keep the note short and test the code before the moment.",
-    "relatedPath": "/guides/",
-    "relatedLabel": "More guides"
+    "relatedPath": "/insights/",
+    "relatedLabel": "More insights"
   },
   {
     "slug": "ai-website-builder-vs-template-wish-website-maker",

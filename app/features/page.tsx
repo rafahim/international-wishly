@@ -53,7 +53,7 @@ function Visual({ id }: { id: string }) {
   );
   if (id === 'images') return (
     <div className="ft-vis ft-vis-shots" aria-hidden="true">
-      {['the-birthday-experience', 'midnight-love', 'a-note-of-gratitude'].map((s, i) => <img key={s} src={shot(s)} alt="" width={480} height={300} loading="lazy" decoding="async" style={{ ['--i' as string]: i }} />)}
+      {[['the-birthday-experience', 'The Birthday Experience template preview'], ['midnight-love', 'Midnight Love letter template preview'], ['a-note-of-gratitude', 'A Note of Gratitude thank-you template preview']].map(([s, alt], i) => <img key={s} src={shot(s)} alt={alt} width={480} height={300} loading="lazy" decoding="async" style={{ ['--i' as string]: i }} />)}
     </div>
   );
   if (id === 'theme') return (
@@ -103,7 +103,7 @@ export default function Page() {
               <span className="ft-pill ft-pill-go">Publish</span>
             </div>
             <div className="ft-window-body">
-              <img src="/template-shots/sm/the-birthday-experience-720.webp" alt="" width={720} height={450} decoding="async" fetchPriority="high" />
+              <img src="/template-shots/sm/the-birthday-experience-720.webp" alt="The Birthday Experience template shown in the Wishly editor" width={720} height={450} decoding="async" fetchPriority="high" />
               <div className="ft-selection"><i className="ft-h h-tl" /><i className="ft-h h-tr" /><i className="ft-h h-bl" /><i className="ft-h h-br" /><span>Heading</span></div>
             </div>
           </div>

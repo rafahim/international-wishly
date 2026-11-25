@@ -20,7 +20,7 @@ People who want something more personal than a card or chat message: partners, f
 
 ## Sites
 - https://wishly.bd/ : main product (sign-up, editor, publishing, dashboard, checkout).
-- https://wishly.rafahim.com/ : English-first template discovery and guides for international visitors.
+- https://wishly.rafahim.com/ : English-first template discovery and insights for international visitors.
 
 ## Facts
 - 53+ templates, 11+ occasions, library keeps growing.
@@ -34,5 +34,231 @@ People who want something more personal than a card or chat message: partners, f
 - https://wishly.rafahim.com/how-to-make-website/
 - https://wishly.rafahim.com/wish-website-vs-digital-cards/
 - https://wishly.rafahim.com/templates/
-- https://wishly.rafahim.com/guides/
+- https://wishly.rafahim.com/insights/ : 99 editorial Insights articles, including the international country-by-country article.
 - https://wishly.rafahim.com/faq/
+
+## Countries directory and published country guides
+
+The country directory at https://wishly.rafahim.com/countries/ lists all 195 countries in regional groups. Every country links to its own root-level static English page at `/{country-slug}/`. All 195 English country pages are crawlable and use a self-referencing canonical. All 195 English country pages have long-form country-specific guide content, are indexable on request and are listed in the XML sitemap. They use self-referencing canonical URLs. Unreviewed translations remain noindex until a native speaker approves them. A “Guide ready” label identifies a completed long-form guide.
+
+### Selected country-guide examples
+- Bangladesh — https://wishly.rafahim.com/bangladesh/ : occasion context for Pohela Boishakh, Eid al-Fitr, Eid al-Adha, Durga Puja and Victory Day; guidance on inclusive and respectful greetings.
+- India — https://wishly.rafahim.com/india/ : occasion context for Diwali, Holi and Eid al-Fitr; greeting and sharing guidance that accounts for regional, linguistic and religious diversity.
+- Nepal — https://wishly.rafahim.com/nepal/ : occasion context for Dashain, Tihar and Haritalika Teej; greeting guidance covering tika, lights, family gatherings and variation between households.
+- United Arab Emirates — https://wishly.rafahim.com/united-arab-emirates/ : occasion context for Ramadan, Eid al-Fitr, Eid al-Adha and UAE National Day; lunar-calendar and respectful-sharing guidance.
+- Malaysia — https://wishly.rafahim.com/malaysia/ : occasion context for Hari Raya Aidilfitri, Chinese New Year, Deepavali and Merdeka Day; open-house and culturally inclusive greeting guidance.
+- Pakistan — https://wishly.rafahim.com/pakistan/ : occasion context for Ramadan, Eid al-Fitr, Eid al-Adha, Pakistan Day and Independence Day; guidance on respectful greetings, regional languages and personal messaging.
+- Japan — https://wishly.rafahim.com/japan/ : Shogatsu, Children’s Day, Obon, Respect for the Aged Day and Shichi-Go-San; Japanese greeting etiquette and LINE use for New Year messages.
+- Singapore — https://wishly.rafahim.com/singapore/ : Chinese New Year, Hari Raya Aidilfitri, Deepavali, National Day and Christmas; inclusive naming and messaging guidance.
+- Philippines — https://wishly.rafahim.com/philippines/ : Christmas, New Year, Holy Week, Independence Day and local fiestas; Filipino respect customs and Messenger sharing guidance.
+- Sri Lanka — https://wishly.rafahim.com/sri-lanka/ : Sinhala and Tamil New Year, Vesak, Poson, Thai Pongal and Deepavali; multilingual greeting and respectful-sharing guidance.
+
+Wishly templates are available in English and Bengali. Country-guide translations appear in these discovery files only after native-speaker review; unreviewed translation previews are noindex and are not included here.
+
+
+## English country page directory
+
+All 195 root-level English country detail URLs are crawlable. All 195 full English country guides are indexable on request and included in the XML sitemap; the list below is the complete English country directory.
+
+- Afghanistan (Asia) — https://wishly.rafahim.com/afghanistan/
+- Albania (Europe) — https://wishly.rafahim.com/albania/
+- Algeria (Africa) — https://wishly.rafahim.com/algeria/
+- Andorra (Europe) — https://wishly.rafahim.com/andorra/
+- Angola (Africa) — https://wishly.rafahim.com/angola/
+- Antigua and Barbuda (North America) — https://wishly.rafahim.com/antigua-and-barbuda/
+- Argentina (South America) — https://wishly.rafahim.com/argentina/
+- Armenia (Asia) — https://wishly.rafahim.com/armenia/
+- Australia (Oceania) — https://wishly.rafahim.com/australia/
+- Austria (Europe) — https://wishly.rafahim.com/austria/
+- Azerbaijan (Asia) — https://wishly.rafahim.com/azerbaijan/
+- Bahamas (North America) — https://wishly.rafahim.com/bahamas/
+- Bahrain (Middle East) — https://wishly.rafahim.com/bahrain/
+- Bangladesh (Asia) — https://wishly.rafahim.com/bangladesh/
+- Barbados (North America) — https://wishly.rafahim.com/barbados/
+- Belarus (Europe) — https://wishly.rafahim.com/belarus/
+- Belgium (Europe) — https://wishly.rafahim.com/belgium/
+- Belize (North America) — https://wishly.rafahim.com/belize/
+- Benin (Africa) — https://wishly.rafahim.com/benin/
+- Bhutan (Asia) — https://wishly.rafahim.com/bhutan/
+- Bolivia (South America) — https://wishly.rafahim.com/bolivia/
+- Bosnia and Herzegovina (Europe) — https://wishly.rafahim.com/bosnia-and-herzegovina/
+- Botswana (Africa) — https://wishly.rafahim.com/botswana/
+- Brazil (South America) — https://wishly.rafahim.com/brazil/
+- Brunei (Asia) — https://wishly.rafahim.com/brunei/
+- Bulgaria (Europe) — https://wishly.rafahim.com/bulgaria/
+- Burkina Faso (Africa) — https://wishly.rafahim.com/burkina-faso/
+- Burundi (Africa) — https://wishly.rafahim.com/burundi/
+- Cabo Verde (Africa) — https://wishly.rafahim.com/cabo-verde/
+- Cambodia (Asia) — https://wishly.rafahim.com/cambodia/
+- Cameroon (Africa) — https://wishly.rafahim.com/cameroon/
+- Canada (North America) — https://wishly.rafahim.com/canada/
+- Central African Republic (Africa) — https://wishly.rafahim.com/central-african-republic/
+- Chad (Africa) — https://wishly.rafahim.com/chad/
+- Chile (South America) — https://wishly.rafahim.com/chile/
+- China (Asia) — https://wishly.rafahim.com/china/
+- Colombia (South America) — https://wishly.rafahim.com/colombia/
+- Comoros (Africa) — https://wishly.rafahim.com/comoros/
+- Costa Rica (North America) — https://wishly.rafahim.com/costa-rica/
+- Côte d’Ivoire (Africa) — https://wishly.rafahim.com/cote-divoire/
+- Croatia (Europe) — https://wishly.rafahim.com/croatia/
+- Cuba (North America) — https://wishly.rafahim.com/cuba/
+- Cyprus (Middle East) — https://wishly.rafahim.com/cyprus/
+- Czechia (Europe) — https://wishly.rafahim.com/czechia/
+- Democratic Republic of the Congo (Africa) — https://wishly.rafahim.com/democratic-republic-of-the-congo/
+- Denmark (Europe) — https://wishly.rafahim.com/denmark/
+- Djibouti (Africa) — https://wishly.rafahim.com/djibouti/
+- Dominica (North America) — https://wishly.rafahim.com/dominica/
+- Dominican Republic (North America) — https://wishly.rafahim.com/dominican-republic/
+- Ecuador (South America) — https://wishly.rafahim.com/ecuador/
+- Egypt (Middle East) — https://wishly.rafahim.com/egypt/
+- El Salvador (North America) — https://wishly.rafahim.com/el-salvador/
+- Equatorial Guinea (Africa) — https://wishly.rafahim.com/equatorial-guinea/
+- Eritrea (Africa) — https://wishly.rafahim.com/eritrea/
+- Estonia (Europe) — https://wishly.rafahim.com/estonia/
+- Eswatini (Africa) — https://wishly.rafahim.com/eswatini/
+- Ethiopia (Africa) — https://wishly.rafahim.com/ethiopia/
+- Fiji (Oceania) — https://wishly.rafahim.com/fiji/
+- Finland (Europe) — https://wishly.rafahim.com/finland/
+- France (Europe) — https://wishly.rafahim.com/france/
+- Gabon (Africa) — https://wishly.rafahim.com/gabon/
+- The Gambia (Africa) — https://wishly.rafahim.com/gambia/
+- Georgia (Asia) — https://wishly.rafahim.com/georgia/
+- Germany (Europe) — https://wishly.rafahim.com/germany/
+- Ghana (Africa) — https://wishly.rafahim.com/ghana/
+- Greece (Europe) — https://wishly.rafahim.com/greece/
+- Grenada (North America) — https://wishly.rafahim.com/grenada/
+- Guatemala (North America) — https://wishly.rafahim.com/guatemala/
+- Guinea (Africa) — https://wishly.rafahim.com/guinea/
+- Guinea-Bissau (Africa) — https://wishly.rafahim.com/guinea-bissau/
+- Guyana (South America) — https://wishly.rafahim.com/guyana/
+- Haiti (North America) — https://wishly.rafahim.com/haiti/
+- Honduras (North America) — https://wishly.rafahim.com/honduras/
+- Hungary (Europe) — https://wishly.rafahim.com/hungary/
+- Iceland (Europe) — https://wishly.rafahim.com/iceland/
+- India (Asia) — https://wishly.rafahim.com/india/
+- Indonesia (Asia) — https://wishly.rafahim.com/indonesia/
+- Iran (Middle East) — https://wishly.rafahim.com/iran/
+- Iraq (Middle East) — https://wishly.rafahim.com/iraq/
+- Ireland (Europe) — https://wishly.rafahim.com/ireland/
+- Israel (Middle East) — https://wishly.rafahim.com/israel/
+- Italy (Europe) — https://wishly.rafahim.com/italy/
+- Jamaica (North America) — https://wishly.rafahim.com/jamaica/
+- Japan (Asia) — https://wishly.rafahim.com/japan/
+- Jordan (Middle East) — https://wishly.rafahim.com/jordan/
+- Kazakhstan (Asia) — https://wishly.rafahim.com/kazakhstan/
+- Kenya (Africa) — https://wishly.rafahim.com/kenya/
+- Kiribati (Oceania) — https://wishly.rafahim.com/kiribati/
+- Kuwait (Middle East) — https://wishly.rafahim.com/kuwait/
+- Kyrgyzstan (Asia) — https://wishly.rafahim.com/kyrgyzstan/
+- Laos (Asia) — https://wishly.rafahim.com/laos/
+- Latvia (Europe) — https://wishly.rafahim.com/latvia/
+- Lebanon (Middle East) — https://wishly.rafahim.com/lebanon/
+- Lesotho (Africa) — https://wishly.rafahim.com/lesotho/
+- Liberia (Africa) — https://wishly.rafahim.com/liberia/
+- Libya (Africa) — https://wishly.rafahim.com/libya/
+- Liechtenstein (Europe) — https://wishly.rafahim.com/liechtenstein/
+- Lithuania (Europe) — https://wishly.rafahim.com/lithuania/
+- Luxembourg (Europe) — https://wishly.rafahim.com/luxembourg/
+- Madagascar (Africa) — https://wishly.rafahim.com/madagascar/
+- Malawi (Africa) — https://wishly.rafahim.com/malawi/
+- Malaysia (Asia) — https://wishly.rafahim.com/malaysia/
+- Maldives (Asia) — https://wishly.rafahim.com/maldives/
+- Mali (Africa) — https://wishly.rafahim.com/mali/
+- Malta (Europe) — https://wishly.rafahim.com/malta/
+- Marshall Islands (Oceania) — https://wishly.rafahim.com/marshall-islands/
+- Mauritania (Africa) — https://wishly.rafahim.com/mauritania/
+- Mauritius (Africa) — https://wishly.rafahim.com/mauritius/
+- Mexico (North America) — https://wishly.rafahim.com/mexico/
+- Micronesia (Oceania) — https://wishly.rafahim.com/micronesia/
+- Moldova (Europe) — https://wishly.rafahim.com/moldova/
+- Monaco (Europe) — https://wishly.rafahim.com/monaco/
+- Mongolia (Asia) — https://wishly.rafahim.com/mongolia/
+- Montenegro (Europe) — https://wishly.rafahim.com/montenegro/
+- Morocco (Africa) — https://wishly.rafahim.com/morocco/
+- Mozambique (Africa) — https://wishly.rafahim.com/mozambique/
+- Myanmar (Asia) — https://wishly.rafahim.com/myanmar/
+- Namibia (Africa) — https://wishly.rafahim.com/namibia/
+- Nauru (Oceania) — https://wishly.rafahim.com/nauru/
+- Nepal (Asia) — https://wishly.rafahim.com/nepal/
+- Netherlands (Europe) — https://wishly.rafahim.com/netherlands/
+- New Zealand (Oceania) — https://wishly.rafahim.com/new-zealand/
+- Nicaragua (North America) — https://wishly.rafahim.com/nicaragua/
+- Niger (Africa) — https://wishly.rafahim.com/niger/
+- Nigeria (Africa) — https://wishly.rafahim.com/nigeria/
+- North Korea (Asia) — https://wishly.rafahim.com/north-korea/
+- North Macedonia (Europe) — https://wishly.rafahim.com/north-macedonia/
+- Norway (Europe) — https://wishly.rafahim.com/norway/
+- Oman (Middle East) — https://wishly.rafahim.com/oman/
+- Pakistan (Asia) — https://wishly.rafahim.com/pakistan/
+- Palau (Oceania) — https://wishly.rafahim.com/palau/
+- Palestine (Middle East) — https://wishly.rafahim.com/palestine/
+- Panama (North America) — https://wishly.rafahim.com/panama/
+- Papua New Guinea (Oceania) — https://wishly.rafahim.com/papua-new-guinea/
+- Paraguay (South America) — https://wishly.rafahim.com/paraguay/
+- Peru (South America) — https://wishly.rafahim.com/peru/
+- Philippines (Asia) — https://wishly.rafahim.com/philippines/
+- Poland (Europe) — https://wishly.rafahim.com/poland/
+- Portugal (Europe) — https://wishly.rafahim.com/portugal/
+- Qatar (Middle East) — https://wishly.rafahim.com/qatar/
+- Republic of the Congo (Africa) — https://wishly.rafahim.com/republic-of-the-congo/
+- Romania (Europe) — https://wishly.rafahim.com/romania/
+- Russia (Europe) — https://wishly.rafahim.com/russia/
+- Rwanda (Africa) — https://wishly.rafahim.com/rwanda/
+- Saint Kitts and Nevis (North America) — https://wishly.rafahim.com/saint-kitts-and-nevis/
+- Saint Lucia (North America) — https://wishly.rafahim.com/saint-lucia/
+- Saint Vincent and the Grenadines (North America) — https://wishly.rafahim.com/saint-vincent-and-the-grenadines/
+- Samoa (Oceania) — https://wishly.rafahim.com/samoa/
+- San Marino (Europe) — https://wishly.rafahim.com/san-marino/
+- Sao Tome and Principe (Africa) — https://wishly.rafahim.com/sao-tome-and-principe/
+- Saudi Arabia (Middle East) — https://wishly.rafahim.com/saudi-arabia/
+- Senegal (Africa) — https://wishly.rafahim.com/senegal/
+- Serbia (Europe) — https://wishly.rafahim.com/serbia/
+- Seychelles (Africa) — https://wishly.rafahim.com/seychelles/
+- Sierra Leone (Africa) — https://wishly.rafahim.com/sierra-leone/
+- Singapore (Asia) — https://wishly.rafahim.com/singapore/
+- Slovakia (Europe) — https://wishly.rafahim.com/slovakia/
+- Slovenia (Europe) — https://wishly.rafahim.com/slovenia/
+- Solomon Islands (Oceania) — https://wishly.rafahim.com/solomon-islands/
+- Somalia (Africa) — https://wishly.rafahim.com/somalia/
+- South Africa (Africa) — https://wishly.rafahim.com/south-africa/
+- South Korea (Asia) — https://wishly.rafahim.com/south-korea/
+- South Sudan (Africa) — https://wishly.rafahim.com/south-sudan/
+- Spain (Europe) — https://wishly.rafahim.com/spain/
+- Sri Lanka (Asia) — https://wishly.rafahim.com/sri-lanka/
+- Sudan (Africa) — https://wishly.rafahim.com/sudan/
+- Suriname (South America) — https://wishly.rafahim.com/suriname/
+- Sweden (Europe) — https://wishly.rafahim.com/sweden/
+- Switzerland (Europe) — https://wishly.rafahim.com/switzerland/
+- Syria (Middle East) — https://wishly.rafahim.com/syria/
+- Tajikistan (Asia) — https://wishly.rafahim.com/tajikistan/
+- Tanzania (Africa) — https://wishly.rafahim.com/tanzania/
+- Thailand (Asia) — https://wishly.rafahim.com/thailand/
+- Timor-Leste (Asia) — https://wishly.rafahim.com/timor-leste/
+- Togo (Africa) — https://wishly.rafahim.com/togo/
+- Tonga (Oceania) — https://wishly.rafahim.com/tonga/
+- Trinidad and Tobago (North America) — https://wishly.rafahim.com/trinidad-and-tobago/
+- Tunisia (Africa) — https://wishly.rafahim.com/tunisia/
+- Türkiye (Middle East) — https://wishly.rafahim.com/turkiye/
+- Turkmenistan (Asia) — https://wishly.rafahim.com/turkmenistan/
+- Tuvalu (Oceania) — https://wishly.rafahim.com/tuvalu/
+- Uganda (Africa) — https://wishly.rafahim.com/uganda/
+- Ukraine (Europe) — https://wishly.rafahim.com/ukraine/
+- United Arab Emirates (Middle East) — https://wishly.rafahim.com/united-arab-emirates/
+- United Kingdom (Europe) — https://wishly.rafahim.com/united-kingdom/
+- United States (North America) — https://wishly.rafahim.com/united-states/
+- Uruguay (South America) — https://wishly.rafahim.com/uruguay/
+- Uzbekistan (Asia) — https://wishly.rafahim.com/uzbekistan/
+- Vanuatu (Oceania) — https://wishly.rafahim.com/vanuatu/
+- Vatican City (Europe) — https://wishly.rafahim.com/vatican-city/
+- Venezuela (South America) — https://wishly.rafahim.com/venezuela/
+- Vietnam (Asia) — https://wishly.rafahim.com/vietnam/
+- Yemen (Middle East) — https://wishly.rafahim.com/yemen/
+- Zambia (Africa) — https://wishly.rafahim.com/zambia/
+- Zimbabwe (Africa) — https://wishly.rafahim.com/zimbabwe/
+
+
+## Featured international insight
+
+International Wishes Around the World: A Country-by-Country Guide
+https://wishly.rafahim.com/insights/international-wishes-around-the-world/
+A practical overview of how occasion, language, time zones and local customs shape thoughtful greetings across countries, with links to the full country directory.

@@ -132,7 +132,7 @@ export default function Navbar() {
                   </div>
                   <div className="wp-rows">
                     <a href={appLink('/contact')} className="wp-row" onClick={close}><Mail size={18} aria-hidden="true" /><b>Contact</b><ChevronRight className="wp-go" size={16} aria-hidden="true" /></a>
-                    <a href={appLink('/insights')} className="wp-row" onClick={close}><BookOpen size={18} aria-hidden="true" /><b>Insights</b><ChevronRight className="wp-go" size={16} aria-hidden="true" /></a>
+                    <Link href="/insights/" className="wp-row" onClick={close}><BookOpen size={18} aria-hidden="true" /><b>Insights</b><ChevronRight className="wp-go" size={16} aria-hidden="true" /></Link>
                     <a href={appLink('/donate')} className="wp-row" onClick={close}><Heart size={18} aria-hidden="true" /><b>Donate</b><ChevronRight className="wp-go" size={16} aria-hidden="true" /></a>
                   </div>
                 </div>

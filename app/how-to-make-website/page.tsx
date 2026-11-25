@@ -2,7 +2,7 @@ import Link from 'next/link';
 import PageShell from '@/components/PageShell';
 import JsonLd from '@/components/JsonLd';
 import { pageMeta, faqLd } from '@/lib/seo';
-import { abs } from '@/lib/site';
+import { abs, appLink } from '@/lib/site';
 import { steps } from '@/lib/content';
 
 const checklist = [
@@ -46,8 +46,8 @@ export default function Page() {
         <ol className="hp-steps">{steps.map(([number, title, description]) => <li key={number} id={`step-${number}`}><span className="n">{number.padStart(2, '0')}</span><h2>{title}</h2><p>{description}</p></li>)}</ol>
       </section>
       <section className="global-wrap global-howto-aftercare">
-        <div className="global-section-intro"><p className="global-overline">THE FINAL CHECK</p><h2>Test the real link before you send it.</h2><p>Open the published URL in a fresh browser tab or on another device. Confirm that the content is readable, media loads and the page does not rely on sound or an interaction to explain its purpose. For international recipients, include a time zone when the page contains an event time.</p><p>Accounts, the visual editor, dashboard and publishing tools are available on the main Wishly website at <a href="https://wishly.bd/">wishly.bd</a>. This international site is for discovering designs and reading practical guides.</p></div>
-        <div className="global-howto-links"><Link href="/templates/">Browse personal website templates ↗</Link><Link href="/guides/">Read more ideas and guides ↗</Link><Link href="/faq/">See all common questions ↗</Link></div>
+        <div className="global-section-intro"><p className="global-overline">THE FINAL CHECK</p><h2>Test the real link before you send it.</h2><p>Open the published URL in a fresh browser tab or on another device. Confirm that the content is readable, media loads and the page does not rely on sound or an interaction to explain its purpose. For international recipients, include a time zone when the page contains an event time.</p><p>Accounts, the visual editor, dashboard and publishing tools are available on the main Wishly website at <a href={appLink('/')}>wishly.bd</a>. This international site is for discovering designs and reading practical insights.</p></div>
+        <div className="global-howto-links"><Link href="/templates/">Browse personal website templates ↗</Link><Link href="/insights/">Read more insights and ideas ↗</Link><Link href="/faq/">See all common questions ↗</Link></div>
       </section>
       <section className="global-wrap global-category-faq"><div className="global-section-intro"><p className="global-overline">QUICK ANSWERS</p><h2>Making and sharing a personal website</h2></div><div className="global-guide-faq-list">{howFaqs.map(([q, a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></section>
     </PageShell>

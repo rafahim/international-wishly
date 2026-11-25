@@ -23,7 +23,7 @@ export const features: [string, string, string][] = [
 
 export const faqs: [string, string][] = [
   ['What is Wishly?', 'Wishly is a website maker for personal moments. Choose an occasion-based design, personalise the parts the template supports and share the published page through one link.'],
-  ['What is the main Wishly website?', 'The main Wishly product website is wishly.bd. Accounts, the visual editor, dashboard, checkout and published-page tools are managed there. This international website provides English-first template discovery and practical guides for a worldwide audience.'],
+  ['What is the main Wishly website?', 'The main Wishly product website is wishly.bd. Accounts, the visual editor, dashboard, checkout and published-page tools are managed there. This international website provides English-first template discovery and practical insights for a worldwide audience.'],
   ['Can I make a birthday website for someone in another country?', 'Yes. The published page opens in a regular browser through its link. Consider the recipient’s local time, language and mobile connection when planning the surprise.'],
   ['Do I need coding or web-design experience?', 'No. Start with a ready-made template and use the visual editor on wishly.bd. The editing options vary by design, so preview the template before choosing it.'],
   ['Are all 53 templates available in English?', 'No. The catalogue includes English designs and selected Bengali-language experiences. Each template card identifies its language so you can choose a design the recipient can comfortably read.'],

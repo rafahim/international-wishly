@@ -17,15 +17,22 @@ export const SITE = {
   social: ['https://www.instagram.com/wishly.bd_', 'https://www.facebook.com/wishlyhq'],
 } as const;
 
+/** Optional named author/reviewer. Set NEXT_PUBLIC_AUTHOR_NAME (and optionally NEXT_PUBLIC_AUTHOR_URL) to show a real person on guides. */
+export const AUTHOR = {
+  name: process.env.NEXT_PUBLIC_AUTHOR_NAME || '',
+  url: process.env.NEXT_PUBLIC_AUTHOR_URL || '',
+};
+
 export const abs = (path = '/') => `${SITE.url}${path === '/' ? '/' : path.endsWith('/') ? path : `${path}/`}`;
 
 /** Product actions leave the international discovery site and open the main Wishly service. */
 export function appLink(path = '/', params: Record<string, string> = {}) {
   const url = new URL(path, `${SITE.appUrl}/`);
   for (const [key, value] of Object.entries(params)) url.searchParams.set(key, value);
-  url.searchParams.set('utm_source', SITE.utmSource);
-  url.searchParams.set('utm_medium', 'referral');
-  url.searchParams.set('utm_campaign', 'international_launch');
+  // No utm_* parameters on purpose: they would make GA4 on wishly.bd record an
+  // "international-site / referral" source. `via` is NOT a GA4 attribution
+  // parameter; wishly.bd uses it (and then removes it) to add a home-page Back step.
+  if (path.replace(/^\/+|\/+$/g, '')) url.searchParams.set('via', 'intl');
   return url.toString();
 }
 

@@ -1,20 +1,40 @@
 import Link from 'next/link';
 import './site-footer.css';
 import { appLink } from '@/lib/site';
+import { countryBySlug } from '@/lib/countries';
 
 // The column layout, brand lockup, CTA panel and footer meta mirror Wishly.bd.
 // Only URLs that exist on this international site stay local; missing product
 // and company destinations continue to the main Wishly application.
 const explore = [
   ['Templates', '/templates', 'local'],
+  ['Countries', '/countries', 'local'],
   ['Features', '/features', 'local'],
   ['Custom template', '/custom-template', 'app'],
   ['FAQ', '/faq', 'local'],
-  ['Insights', '/insights', 'app'],
+  ['Insights', '/insights', 'local'],
 ] as const;
+const featuredCountrySlugs = [
+  'bangladesh', 'india', 'pakistan', 'nepal', 'sri-lanka',
+  'united-arab-emirates', 'malaysia', 'singapore', 'japan', 'philippines',
+] as const;
+
+const compactResourceLinks = [
+  ['Wish Website Maker', '/wish-website-maker/'],
+  ['Compare Options', '/wish-website-vs-digital-cards/'],
+  ['What is Wishly?', '/what-is-wishly/'],
+  ['How to make a website', '/how-to-make-website/'],
+  ['All templates', '/templates/'],
+  ['All insights', '/insights/'],
+  ['Features', '/features/'],
+  ['FAQ', '/faq/'],
+  ['LLMs.txt', '/llms.txt'],
+] as const;
+const featuredCountries = featuredCountrySlugs
+  .map((slug) => countryBySlug[slug])
+  .filter((country): country is NonNullable<typeof country> => Boolean(country));
+
 const company = [
-  ['Wish Website Maker', '/wish-website-maker', 'local'],
-  ['Compare Options', '/wish-website-vs-digital-cards', 'local'],
   ['What is Wishly?', '/what-is-wishly', 'local'],
   ['About', '/about', 'local'],
   ['Contact', '/contact', 'app'],
@@ -73,10 +93,22 @@ export default function Footer() {
         </div>
 
         <div className="sf-bottom">
-          <span className="sf-copy">© {year} <a href={appLink('/')} aria-label="Visit the main Wishly website" title="Visit wishly.bd">Wishly</a>. All rights reserved.</span>
-          <span className="sf-made">Made with <i aria-hidden="true">♥</i> for the moments that matter</span>
+          <div className="sf-bottom-meta">
+            <span className="sf-copy">© {year} <a href={appLink('/')} aria-label="Visit the main Wishly website" title="Visit wishly.bd">Wishly</a>. All rights reserved.</span>
+            <span className="sf-made">Made with <i aria-hidden="true">♥</i> for the moments that matter</span>
+          </div>
+          <nav className="sf-bottom-links" aria-label="Popular countries and Wishly resources">
+            <Link href="/countries/">Countries</Link>
+            {featuredCountries.map((country) => (
+              <Link href={`/${country.slug}/`} key={`footer-country-${country.slug}`}>
+                {country.name}
+              </Link>
+            ))}
+            {compactResourceLinks.map(([label, href]) => (
+              <Link href={href} key={href}>{label}</Link>
+            ))}
+          </nav>
         </div>
-
       </div>
     </footer>
   );

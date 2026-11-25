@@ -8,6 +8,7 @@ import JsonLd from '@/components/JsonLd';
 import { abs, demoLink, startTemplateLink } from '@/lib/site';
 import { crumbs, pageMeta, templateTitle, faqLd } from '@/lib/seo';
 import { OCCASION_COPY } from '@/lib/content';
+import { TEMPLATE_DETAILS } from '@/lib/template-details';
 import { COVER_SIZES, bySlug, coverSet, coverSrc, occasionLabel, templates, templatesFor } from '@/lib/templates';
 
 export const dynamicParams = false;
@@ -22,7 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const label = occasionLabel(t.category);
   const phrase = `${t.name} ${label.toLowerCase()} website template`;
   const languageNote = t.language === 'Bengali' ? 'This design uses Bengali.' : 'This design uses English.';
-  const rawDescription = `${t.description} ${languageNote} Preview the ${label.toLowerCase()} design and check its editing options before creating your page.`;
+  const detail = TEMPLATE_DETAILS[slug];
+  const rawDescription = detail ? `${t.description} Best for: ${detail.bestFor}` : `${t.description} ${languageNote} Preview the ${label.toLowerCase()} design and check its editing options before creating your page.`;
   const description = rawDescription.length <= 158 ? rawDescription : `${rawDescription.slice(0, 155).replace(/\s+\S*$/, '')}…`;
   return pageMeta({
     title: templateTitle(t.name, label),
@@ -46,18 +48,19 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   if (!t) notFound();
   const label = occasionLabel(t.category);
   const copy = OCCASION_COPY[t.category];
+  const detail = TEMPLATE_DETAILS[t.slug];
   const related = templatesFor(t.category).filter((x) => x.slug !== t.slug).slice(0, 3);
   const detailFaqs: [string, string][] = [
-    [`Who is the ${t.name} template designed for?`, `This design is listed in the ${label.toLowerCase()} collection. It may suit ${copy?.audience || 'someone you want to celebrate or contact'}; choose it when the tone and structure match the recipient and purpose. ${t.description}`],
+    [`Who is the ${t.name} template designed for?`, `${detail?.bestFor || `This design is listed in the ${label.toLowerCase()} collection and may suit ${copy?.audience || 'someone you want to celebrate or contact'}.`} ${t.description}`],
     [`What language is the ${t.name} template in?`, `The template is labelled ${t.language}. Check the live preview before choosing it, especially when the recipient prefers a particular language.`],
-    [`Can I edit every part of this template?`, 'No two templates have exactly the same controls. The Wishly editor lets you change the fields and media supported by the selected design. Review the preview and template details before relying on a specific feature.'],
+    [`What should I prepare before editing ${t.name}?`, detail?.prepare || 'Gather the names, photos and message you want to use, then check the live preview to see which fields this design supports.'],
   ];
   const ld = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     url: abs(`/template/${t.slug}/`),
     name: `${t.name}: ${label} website template`,
-    description: t.description,
+    description: detail ? `${t.description} ${detail.bestFor}` : t.description,
     image: `${abs('/')}`.replace(/\/$/, '') + coverSrc(t.slug),
     inLanguage: 'en',
     isPartOf: { '@id': `${abs('/')}#website` },
@@ -78,8 +81,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <span>Template preview</span>
           </div>
           <p className="td-desc">{t.description}</p>
-          <p className="td-intro">This {label.toLowerCase()} website template is part of Wishly’s international design catalogue. Check the preview, language label and supported sections to see whether it suits the person or event you have in mind.</p>
-          {copy && <p className="td-intro">A {label.toLowerCase()} page for {copy.audience}. {copy.tips[0][1]}</p>}
+          {detail ? <><p className="td-intro"><strong>Best for:</strong> {detail.bestFor}</p><p className="td-intro"><strong>The feel:</strong> {detail.feel}</p></> : <p className="td-intro">Check the preview, language label and supported sections to see whether this {label.toLowerCase()} design suits the person or event you have in mind.</p>}
           <div className="td-actions">
             {!t.demoHidden && <a className="premium-button" href={demoLink(t.slug)} rel="noopener"><Play size={15} aria-hidden="true" /> Start live demo</a>}
             <a className="premium-button premium-button-ghost" href={startTemplateLink(t.slug)} rel="noopener">Use template <span>→</span></a>
@@ -93,10 +95,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </section>
 
       <section className="premium-container td-steps" aria-label={`What you can customize in ${t.name}`}>
-        <div className="section-heading"><p className="section-kicker">ABOUT THIS DESIGN</p><h2>{t.name}: {label} website template</h2><p>{t.description} This design is intended for {copy?.audience || 'a personal occasion or message'}. Its language is labelled {t.language}; use the live preview to check the exact visitor experience.</p></div>
+        <div className="section-heading"><p className="section-kicker">ABOUT THIS DESIGN</p><h2>{t.name}: {label} website template</h2><p>{t.description} Its language is labelled {t.language}; use the live preview to check the exact visitor experience.</p></div>
         <div className="td-step-grid">{custom.map(([h, d], i) => <article key={h} className="td-step"><b>{String(i + 1).padStart(2, '0')}</b><h3>{h}</h3><p>{d}</p></article>)}</div>
         {copy && <div className="global-template-note"><p className="global-overline">A NOTE FOR THIS OCCASION</p><h2>{copy.tips[1][0]}</h2><p>{copy.tips[1][1]}</p><p>{copy.closing}</p></div>}
-        <div className="global-template-note"><p className="global-overline">BEFORE YOU USE THIS DESIGN</p><h2>Preview the exact experience</h2><p>Template controls are not identical. Check whether this design supports the text fields, photographs, music, video or interactions you want to use. Then test the mobile preview and confirm every name, date and link before publishing.</p><p>The account and editor are on the main Wishly website. The “Use template” action takes you there to create or manage your page.</p></div>
+        <div className="global-template-note"><p className="global-overline">BEFORE YOU USE THIS DESIGN</p><h2>{detail ? `What to prepare for ${t.name}` : 'Preview the exact experience'}</h2>{detail && <p>{detail.prepare}</p>}<p>Template controls are not identical. Check whether this design supports the text fields, photographs, music, video or interactions you want to use. Then test the mobile preview and confirm every name, date and link before publishing.</p><p>The account and editor are on the main Wishly website. The “Use template” action takes you there to create or manage your page.</p></div>
       </section>
 
       <section className="premium-container global-template-faq"><div className="section-heading"><p className="section-kicker">TEMPLATE QUESTIONS</p><h2>Using the {t.name} design</h2></div><div className="global-guide-faq-list">{detailFaqs.map(([q, a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div><JsonLd data={faqLd(detailFaqs)} /></section>

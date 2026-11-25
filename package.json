@@ -7,7 +7,11 @@
     "build": "next build",
     "typecheck": "tsc --noEmit",
     "css": "node scripts/build-css.mjs",
-    "indexnow": "node scripts/indexnow.mjs"
+    "indexnow": "node scripts/indexnow.mjs",
+    "audit:countries": "node scripts/audit-country-indexing.mjs && node scripts/audit-country-content-similarity.mjs",
+    "localize-images": "node scripts/localize-guide-images.mjs",
+    "postbuild": "node scripts/create-github-pages-redirects.mjs",
+    "audit:content-similarity": "node scripts/audit-country-content-similarity.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import PageShell from '@/components/PageShell';
-import Faq from '@/components/Faq';
+import FaqExplorer from '@/components/FaqExplorer';
+import './faq-page.css';
 import JsonLd from '@/components/JsonLd';
 import { faqLd, pageMeta } from '@/lib/seo';
 import { faqs } from '@/lib/content';
@@ -16,7 +17,7 @@ export const metadata = pageMeta({
 
 export default function Page() {
   return (
-    <PageShell kicker="HELP & ANSWERS" title={<>Good to know, <em>before you create.</em></>} lead="Straightforward answers about exploring designs, choosing a template, personalising a page and sharing it. And a clear explanation of when to visit the main Wishly website." path="/faq/" name="Frequently asked questions" cta={false}>
+    <PageShell kicker="HELP & ANSWERS" title={<>Good to know, <em>before you create.</em></>} lead="Straightforward answers about exploring designs, choosing a template, personalising a page and sharing it. And a clear explanation of when to visit the main Wishly website." path="/faq/" name="Frequently asked questions" cta={false} className="faq-page">
       <JsonLd data={faqLd(faqs)} />
 
       <section className="faq-page-route global-wrap" aria-label="Where to explore and where to create">
@@ -28,8 +29,8 @@ export default function Page() {
         <div className="faq-page-route-cards">
           <article className="faq-route-card">
             <span className="faq-route-icon"><BookOpen size={20}/></span>
-            <div><small>YOU ARE HERE</small><h3>Explore and learn</h3><p>Browse guides, occasion collections and template previews.</p></div>
-            <Link href="/guides/" aria-label="Explore Wishly guides"><ArrowUpRight size={18}/></Link>
+            <div><small>YOU ARE HERE</small><h3>Explore and learn</h3><p>Browse insights, occasion collections and template previews.</p></div>
+            <Link href="/insights/" aria-label="Explore Wishly Insights"><ArrowUpRight size={18}/></Link>
           </article>
           <article className="faq-route-card faq-route-card-main">
             <span className="faq-route-icon"><Sparkles size={20}/></span>
@@ -40,16 +41,12 @@ export default function Page() {
       </section>
 
       <section className="faq-page-content global-wrap" aria-labelledby="faq-list-title">
-        <div className="faq-page-content-head">
-          <div><p className="global-overline">THE ANSWERS</p><h2 id="faq-list-title">Frequently asked questions</h2><p>Open a question to read the answer. If you are ready to browse, the links alongside the answers will take you to the right place.</p></div>
-          <span className="faq-count"><b>{faqs.length.toString().padStart(2, '0')}</b><small>helpful answers</small></span>
-        </div>
-        <Faq faqs={faqs} heading="Questions about templates, editing and sharing." lead="From choosing a design to managing a published page, start with the topic you want to understand." />
+        <FaqExplorer faqs={faqs} />
       </section>
 
       <section className="faq-page-resources global-wrap" aria-label="More Wishly resources">
         <Link href="/templates/" className="faq-resource-card"><span><LayoutTemplate size={19}/></span><div><small>FIND A DESIGN</small><b>Browse templates</b><p>Compare designs by occasion, language and style.</p></div><ArrowUpRight size={18}/></Link>
-        <Link href="/guides/" className="faq-resource-card"><span><BookOpen size={19}/></span><div><small>GET INSPIRED</small><b>Explore guides</b><p>Read practical ideas for birthdays, letters and more.</p></div><ArrowUpRight size={18}/></Link>
+        <Link href="/insights/" className="faq-resource-card"><span><BookOpen size={19}/></span><div><small>GET INSPIRED</small><b>Explore insights</b><p>Read practical ideas for birthdays, letters and more.</p></div><ArrowUpRight size={18}/></Link>
       </section>
     </PageShell>
   );

@@ -64,3 +64,9 @@
 @media(max-width:900px){.sf-cta{align-self:stretch}}
 .international-site .sf-cta h3{color:#fff!important}
 .international-site .sf-cta p{color:#b3b6c9!important}
+
+/* Force full-width rows inside .sf-bottom (app/globals.css makes it a flex row) */
+.sf .sf-bottom{display:block}
+.sf .sf-bottom .sf-bottom-meta{display:flex;width:100%;justify-content:space-between;align-items:center}
+@media(min-width:561px){.sf .sf-bottom .sf-bottom-meta .sf-made{margin-inline-start:auto;text-align:right;white-space:nowrap}}
+@media(max-width:560px){.sf .sf-bottom .sf-bottom-meta{flex-direction:column;justify-content:center;text-align:center}}

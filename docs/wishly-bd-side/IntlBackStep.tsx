@@ -30,11 +30,16 @@ export default function IntlBackStep() {
     }
 
     const targetState = window.history.state;
-    // 1) Current entry becomes the home page (state without Next's __NA flag,
-    //    so Next.js does a normal full load of "/" when the user comes back).
-    window.history.replaceState({ intlBackStep: true }, '', '/');
+    // Call the browser's ORIGINAL History methods. Next.js patches
+    // window.history.pushState/replaceState and copies its own internal state
+    // (__NA, router tree) into whatever we pass, which would make the home
+    // entry restore as a client-side navigation with the wrong tree.
+    const proto = Object.getPrototypeOf(window.history) as History;
+    // 1) Current entry becomes the home page. Its state has no Next.js flag,
+    //    so Next.js does a normal full load of "/" when the user comes back.
+    proto.replaceState.call(window.history, { intlBackStep: true }, '', '/');
     // 2) A new entry is added for the page the visitor really opened.
-    window.history.pushState(targetState, '', clean);
+    proto.pushState.call(window.history, targetState, '', clean);
 
     // Fallback for routers that ignore unknown history states.
     const onPop = (e: PopStateEvent) => {

@@ -26,3 +26,19 @@
   .ea-card-lead .ea-art { flex: none; height: 250px; min-height: 0; }
   .ea-card-lead .ea-copy, .ea-card:not(.ea-card-lead) .ea-copy { padding: 8px 22px 24px; }
 }
+
+/* Intro column: sits at the top and follows the scroll beside the tall card stack,
+   instead of floating in the vertical middle with empty space above it. */
+.international-site .global-editorial { align-items: start; gap: clamp(40px, 5vw, 72px); }
+@media (min-width: 761px) {
+  .international-site .global-editorial > .global-section-intro { position: sticky; top: 112px; align-self: start; }
+}
+.international-site .global-editorial .global-section-intro > p:not(.global-overline) { font-size: 16px; line-height: 1.75; }
+.international-site .ea-cta {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 18px;
+  border: 1px solid rgba(255,255,255,.14); border-radius: 999px; background: rgba(255,255,255,.04);
+  font-size: 14px; font-weight: 650; color: #f7f7fb; text-decoration: none;
+  transition: background .2s ease, border-color .2s ease;
+}
+.international-site .ea-cta:hover { background: rgba(255,255,255,.09); border-color: rgba(240,75,154,.5); }
+.international-site .ea-cta:focus-visible { outline: 2px solid #f29ac0; outline-offset: 3px; }

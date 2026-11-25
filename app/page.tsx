@@ -13,6 +13,7 @@ import { occasionList, templates } from '@/lib/templates';
 import { guides } from '@/lib/guides';
 import './occasion-strip.css';
 import './editorial-art.css';
+import './what-is-wishly-section.css';
 
 export const metadata: Metadata = pageMeta({
   title: SITE.title,
@@ -119,9 +120,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="global-wrap" aria-labelledby="quick-answer-title" style={{ maxWidth: 860, padding: '40px 0' }}>
-        <h2 id="quick-answer-title">What is Wishly?</h2>
-        <p><strong>Wishly is a no-code website builder for personal wishes.</strong> Choose a template for a birthday, proposal, anniversary, love letter, apology or invitation, personalise it in a visual editor and share the published page as one link that opens in any browser. No coding or design skills are needed, and it is free to start. <Link href="/wish-website-maker/">How a wish website maker works</Link> · <Link href="/what-is-wishly/">What is Wishly?</Link></p>
+      <section className="global-wrap wi-section" aria-labelledby="quick-answer-title">
+        <div className="wi-panel">
+          <div className="wi-copy">
+            <h2 id="quick-answer-title">What is Wishly?</h2>
+            <p className="wi-lede">Wishly is a no-code website builder for personal wishes.</p>
+            <p className="wi-body">Choose a template for a birthday, proposal, anniversary, love letter, apology or invitation, personalise it in a visual editor and share the published page as one link that opens in any browser. No coding or design skills are needed, and it is free to start.</p>
+            <div className="wi-links">
+              <Link href="/wish-website-maker/" className="wi-link wi-link-main">How a wish website maker works <ArrowUpRight size={14} aria-hidden="true" /></Link>
+              <Link href="/what-is-wishly/" className="wi-link">Read what Wishly is</Link>
+            </div>
+          </div>
+          <ul className="wi-facts">
+            <li>
+              <span className="wi-icon"><PenLine size={18} strokeWidth={1.7} aria-hidden="true" /></span>
+              <span><strong>Edit it visually</strong>Pick a design, then change words and photos right on the page.</span>
+            </li>
+            <li>
+              <span className="wi-icon"><Send size={18} strokeWidth={1.7} aria-hidden="true" /></span>
+              <span><strong>Share one link</strong>The published page opens in any browser, no app needed.</span>
+            </li>
+            <li>
+              <span className="wi-icon"><Check size={18} strokeWidth={1.7} aria-hidden="true" /></span>
+              <span><strong>Free to start</strong>No coding or design skills required.</span>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section className="global-template-section">
@@ -165,7 +189,7 @@ export default function Home() {
           <p className="global-overline">A DIFFERENT KIND OF GREETING</p>
           <h2>A digital gift can be a place, not just a message.</h2>
           <p>A personal web page lets a message arrive with a little atmosphere. It can open like a letter, reveal a memory or gather event details in one place. The design sets the scene; your words make it matter.</p>
-          <Link href="/how-to-make-website/" className="global-underlined-link">See how the process works <span>↗</span></Link>
+          <Link href="/how-to-make-website/" className="ea-cta">See how the process works <ArrowUpRight size={14} aria-hidden="true" /></Link>
         </div>
         <div className="ea-cards">
           <article className="ea-card ea-card-lead">

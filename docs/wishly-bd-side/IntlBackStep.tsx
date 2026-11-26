@@ -61,7 +61,11 @@ function parents(url: URL): string[] {
 export default function IntlBackStep() {
   useEffect(() => {
     const url = new URL(window.location.href);
-    if (url.searchParams.get('via') !== 'intl') return;
+    // Marker: ?via=intl in the URL, or the short-lived cookie set by proxy.ts
+    // (it survives server redirects such as logged-in /signup -> /dashboard).
+    const hasCookie = /(?:^|;\s*)intl_via=1(?:;|$)/.test(document.cookie);
+    if (url.searchParams.get('via') !== 'intl' && !hasCookie) return;
+    document.cookie = 'intl_via=; path=/; max-age=0';
 
     url.searchParams.delete('via');
     const clean = url.pathname + url.search + url.hash;

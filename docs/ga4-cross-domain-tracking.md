@@ -32,6 +32,7 @@ Wanted history: Back retraces how the same page is reached inside wishly.bd; the
 - "Use template": `international page → / → /templates → /template/<slug> → /builder/new?template=<slug>`.
 - Insight article: `international page → / → /insights → /insights/<slug>`.
 - Signup, login, dashboard and other pages: `international page → / → that page`.
+On wishly.bd, `proxy.ts` also sets a 2-minute `intl_via` cookie when it sees `?via=intl`, so the Back step still works after server redirects (for example logged-in `/signup` → `/dashboard`).
 The flows live in `parents()` inside `docs/wishly-bd-side/IntlBackStep.tsx`.
 
 A site cannot edit another origin's history, so wishly.bd must do it: add `docs/wishly-bd-side/IntlBackStep.tsx` to the wishly.bd root layout. It reacts to `?via=intl`, makes the current entry the home page (adds /templates too for template demos), pushes the real page, and removes `via` from the URL. Do not change links to `target="_blank"` or programmatic redirects.

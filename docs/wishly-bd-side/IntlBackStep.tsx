@@ -3,17 +3,60 @@
 /**
  * Put this component ONCE in the wishly.bd root layout (inside <body>).
  *
- * Goal: visitor comes from wishly.rafahim.com to a wishly.bd inner page
- * (e.g. /signup?next=...&via=intl). Pressing Back must show the wishly.bd
- * HOME page first; pressing Back again goes to wishly.rafahim.com.
+ * A visitor comes from wishly.rafahim.com to a wishly.bd page carrying
+ * ?via=intl. Pressing Back must retrace the way the same page is reached
+ * when browsing wishly.bd itself, and only the last Back leaves for the
+ * international site. Examples:
  *
- * History after this runs:
- *   [wishly.rafahim.com page] -> [wishly.bd /] -> [wishly.bd /signup ...]
+ *   template demo      [intl] -> / -> /templates -> /template/<slug>
+ *   builder (template) [intl] -> / -> /templates -> /template/<slug> -> /builder/new?template=<slug>
+ *   insight article    [intl] -> / -> /insights -> /insights/<slug>
+ *   signup, login, dashboard, anything else: [intl] -> / -> that page
+ *
+ * To change a flow, edit parents() below: it returns the pages that sit
+ * BEFORE the current one, in order (always starting with "/").
  *
  * It only touches history; the Google Analytics script is not changed.
  * The `via` parameter is removed from the URL straight away.
  */
 import { useEffect } from 'react';
+
+function templateChain(slug: string | null): string[] {
+  const base = ['/', '/templates'];
+  return slug ? [...base, `/template/${encodeURIComponent(slug)}`] : base;
+}
+
+/** wishly.bd pages the visitor passes through (in order) before reaching `url`. */
+function parents(url: URL): string[] {
+  const path = url.pathname;
+
+  // Template demo / full-screen demo: home -> templates list -> this template.
+  let m = path.match(/^\/template\/([^/]+)\/full/);
+  if (m) return templateChain(decodeURIComponent(m[1]));
+  if (/^\/template\/[^/]+/.test(path)) return templateChain(null);
+
+  // Templates list pages (category, how-to guides): home -> templates list.
+  if (/^\/templates\/.+/.test(path)) return ['/', '/templates'];
+
+  // "Use template": the visitor was on that template's page just before.
+  if (path === '/builder/new') {
+    const slug = url.searchParams.get('template');
+    return slug ? templateChain(slug) : ['/', '/create'];
+  }
+
+  // Signup / login are reachable straight from home: home -> this page.
+  // (handled by the default below)
+
+  // Insights articles: home -> insights list.
+  if (/^\/insights\/.+/.test(path)) return ['/', '/insights'];
+
+  // Dashboard area and editing an existing page: home -> dashboard.
+  if (/^\/dashboard\/.+/.test(path) || /^\/builder\/[^/]+/.test(path)) return ['/', '/dashboard'];
+
+  if (/^\/donate\/.+/.test(path)) return ['/', '/donate'];
+
+  return ['/'];
+}
 
 export default function IntlBackStep() {
   useEffect(() => {
@@ -29,16 +72,21 @@ export default function IntlBackStep() {
       return;
     }
 
+    const chain = parents(url).filter((p, i, a) => p !== clean && a.indexOf(p) === i);
+    if (!chain.length) chain.push('/');
     const targetState = window.history.state;
     // Call the browser's ORIGINAL History methods. Next.js patches
     // window.history.pushState/replaceState and copies its own internal state
-    // (__NA, router tree) into whatever we pass, which would make the home
-    // entry restore as a client-side navigation with the wrong tree.
+    // (__NA, router tree) into whatever we pass, which would make the parent
+    // entries restore as client-side navigations with the wrong tree.
     const proto = Object.getPrototypeOf(window.history) as History;
-    // 1) Current entry becomes the home page. Its state has no Next.js flag,
-    //    so Next.js does a normal full load of "/" when the user comes back.
-    proto.replaceState.call(window.history, { intlBackStep: true }, '', '/');
-    // 2) A new entry is added for the page the visitor really opened.
+    // 1) Current entry becomes the first parent (home). Its state has no
+    //    Next.js flag, so Back does a normal full load of that page.
+    proto.replaceState.call(window.history, { intlBackStep: true }, '', chain[0]);
+    // 2) Remaining parents (e.g. /templates, /template/<slug>), then the real page.
+    for (const path of chain.slice(1)) {
+      proto.pushState.call(window.history, { intlBackStep: true }, '', path);
+    }
     proto.pushState.call(window.history, targetState, '', clean);
 
     // Fallback for routers that ignore unknown history states.

@@ -27,10 +27,14 @@ If the sites use different GA4 properties or Measurement IDs, UTMs can still sho
 
 ## Browser Back behavior
 
-Wanted history: `wishly.rafahim.com page → wishly.bd home → wishly.bd inner page`.
-Back from the inner page shows wishly.bd home first; one more Back returns here.
+Wanted history: Back retraces how the same page is reached inside wishly.bd; the last Back returns to the international page.
+- Template demo: `international page → / → /templates → /template/<slug>`.
+- "Use template": `international page → / → /templates → /template/<slug> → /builder/new?template=<slug>`.
+- Insight article: `international page → / → /insights → /insights/<slug>`.
+- Signup, login, dashboard and other pages: `international page → / → that page`.
+The flows live in `parents()` inside `docs/wishly-bd-side/IntlBackStep.tsx`.
 
-A site cannot edit another origin's history, so wishly.bd must do it: add `docs/wishly-bd-side/IntlBackStep.tsx` to the wishly.bd root layout. It reacts to `?via=intl`, makes the current entry the home page, pushes the real page, and removes `via` from the URL. Do not change links to `target="_blank"` or programmatic redirects.
+A site cannot edit another origin's history, so wishly.bd must do it: add `docs/wishly-bd-side/IntlBackStep.tsx` to the wishly.bd root layout. It reacts to `?via=intl`, makes the current entry the home page (adds /templates too for template demos), pushes the real page, and removes `via` from the URL. Do not change links to `target="_blank"` or programmatic redirects.
 
 ## Occasion browsing behavior
 
